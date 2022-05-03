@@ -190,7 +190,7 @@
           </div>
 
           <div class="col-lg-6">
-            <img src="assets/img/features-2.png" class="img-fluid" alt="">
+            <img src="assets/img/book1.svg" class="img-fluid" alt="">
           </div>
 
         </div><!-- End Feature Tabs -->
@@ -219,7 +219,7 @@
 <div class="row">
   <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
       <div class="box">
-        <img src="assets/img/values-1.png" class="img-fluid" alt="">
+        <img src="assets/img/div4.svg" class="img-fluid" alt="">
         <h3>Divisi Organisasi</h3>
         <p>Penanggung jawab dalam pembinaan dan pengembangan karakter anggota CE.</p>
       </div>
@@ -227,7 +227,7 @@
 
       <div class="col-lg-6 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="400">
         <div class="box">
-          <img src="assets/img/values-2.png" class="img-fluid" alt="">
+          <img src="assets/img/div1.svg" class="img-fluid" alt="">
           <h3>Divisi Komputer</h3>
           <p>Penanggung jawab dalam kegiatan akademik dan yang berhubungan tentang pembelajaran di bidang software.
     </p>
@@ -257,7 +257,7 @@
           <div class="row">
 
             <div class="col-xl-4 text-center" data-aos="fade-right" data-aos-delay="100">
-              <img src="assets/img/features-3.png" class="img-fluid p-4" alt="">
+              <img src="assets/img/benefit1.svg" class="img-fluid p-2" alt="">
             </div>
 
             <div class="col-xl-8 d-flex content">
