@@ -498,7 +498,7 @@
                 "Hidup di dunia ini tak selalu tentang kebahagian dan ucapkanlah selalu Alhamdullah karena Allah masih ada di sisimu."
                 </p>
                 <div class="profile mt-auto">
-                  <img src="assets/img/pengurus/yolan1.jpeg" class="testimonial-img" alt="">
+                  <img src="assets/img/pengurus/yolan3.jpeg" class="testimonial-img" alt="">
                   <h3>Yolandita</h3>
                   <h4>Bendahara Acara</h4>
                 </div>
@@ -537,10 +537,10 @@
               <div class="testimonial-item">
          
                 <p>
-                "Hambatan tidak bisa menghentikan Anda. Masalah tidak bisa menghentikan Anda. Orang lain tidak bisa menghentikan Anda. Hanya Anda yang bisa menghentikan Anda."
+                "Setiap bunga memiliki waktu mekarnya masing-masing. Setiap orang memiliki waktu sukses yang berbeda-beda."
                 </p>
                 <div class="profile mt-auto">
-                  <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                  <img src="assets/img/pengurus/rosmel.jpeg" class="testimonial-img" alt="">
                   <h3>Rosmelindah</h3>
                   <h4>Sekertaris Acara</h4>
                 </div>
@@ -551,10 +551,10 @@
               <div class="testimonial-item">
          
                 <p>
-                "Sesekali berhentilah sekedar untuk bersantai. Bukan untuk terlena, namun membangun semangat untuk perjuangan berikutnya."
+                "Jangan memulai sesuatu jika masih ada keraguan di dalamnya."
                 </p>
                 <div class="profile mt-auto">
-                  <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                  <img src="assets/img/pengurus/wulan1.jpeg" class="testimonial-img" alt="">
                   <h3>Wulan</h3>
                   <h4>Bendahara Umum</h4>
                 </div>
