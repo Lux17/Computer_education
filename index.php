@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -680,7 +681,53 @@ Divisi Komputer mempelajari yang berhubungan tentang pembelajaran di bidang soft
 
     </section><!-- End F.A.Q Section -->  
 
+    <?php
+    
+    // function get_token()
+    // {
 
+    //   $curl = curl_init();
+
+    //   curl_setopt_array($curl, array(
+    //     CURLOPT_URL => 'http://localhost/apice/token/token.php?show',
+    //     CURLOPT_RETURNTRANSFER => true,
+    //     CURLOPT_ENCODING => '',
+    //     CURLOPT_MAXREDIRS => 10,
+    //     CURLOPT_TIMEOUT => 0,
+    //     CURLOPT_FOLLOWLOCATION => true,
+    //     CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+    //     CURLOPT_CUSTOMREQUEST => 'POST',
+    //   ));
+      
+    //   $response = curl_exec($curl);
+      
+    //   curl_close($curl);
+    //   echo $response;
+
+    // };
+    
+
+    //   $curl = curl_init();
+    //   // get_token();
+    //   $token = get_token();
+    //   $tkn = $token;
+    //   echo $tkn;
+    //   $auth_data = array(
+    //     'token' 		=> 'f5d1552fe0ba83996769b20709c7b717',
+    //   );
+    //   curl_setopt($curl, CURLOPT_POST, 1);
+    //   curl_setopt($curl, CURLOPT_POSTFIELDS, $auth_data);
+    //   curl_setopt($curl, CURLOPT_URL, 'http://localhost/apice/api/tbl_article/read.php');
+    //   curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+    //   curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
+    //   $result = curl_exec($curl);
+    //   if(!$result){die("Connection Failure");}
+    //   curl_close($curl);
+    //   $data = json_decode($result, true);
+    //   echo $result;
+    //   echo $data;
+  
+    ?>
 
     <!-- ======= Recent Blog Posts Section ======= -->
     <section id="artikel" class="recent-blog-posts" href="#artikel">
@@ -692,13 +739,14 @@ Divisi Komputer mempelajari yang berhubungan tentang pembelajaran di bidang soft
           <p>Artikel</p>
         </header>
 
-        <div class="row">
-
+        <div class="row" id = "#post-list">
+          
           <div class="col-lg-4">
             <div class="post-box">
+              
               <div class="post-img"><img src="assets/img/blog/blog-1.jpg" class="img-fluid" alt=""></div>
               <span class="post-date">Tue, September 15</span>
-              <h3 class="post-title">Pengembangan Sistem Digital Computer Education</h3>
+              <h3 class="post-title"><?php $data['title'] ?></h3>
               <a href="artikel.php" class="readmore stretched-link mt-auto"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
@@ -800,7 +848,9 @@ Divisi Komputer mempelajari yang berhubungan tentang pembelajaran di bidang soft
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="article.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
