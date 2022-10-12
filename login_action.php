@@ -19,10 +19,10 @@ if($jumlah > 0){
  // cek jika user login sebagai admin
  if($data['rolename']=="admin"){
 
-	$_SESSION['id'] = $data_user['id'];
-	$_SESSION['username'] = $username;
-	$_SESSION['rolename'] = $rolename;
-	$_SESSION['status'] = "login";
+	// $_SESSION['id'] = $data_user['id'];
+	// $_SESSION['username'] = $username;
+	// $_SESSION['rolename'] = $rolename;
+	// $_SESSION['status'] = "login";
 
 	header("Location:admin/dashboard.php");
 
@@ -30,19 +30,19 @@ if($jumlah > 0){
 
  // cek jika user login sebagai pegawai
  }else if($data['rolename']=="sekertaris"){
-	$_SESSION['id'] = $data_user['id'];
-	$_SESSION['username'] = $username;
-	$_SESSION['rolename'] = $rolename;
-	$_SESSION['status'] = "login";
+	// $_SESSION['id'] = $data_user['id'];
+	// $_SESSION['username'] = $username;
+	// $_SESSION['rolename'] = $rolename;
+	// $_SESSION['status'] = "login";
 
 	header("Location:admin/dashboard_sekertaris.php");
 
  // cek jika user login sebagai pengurus
  }else if($data['rolename']=="bendahara"){
-	$_SESSION['id'] = $data_user['id'];
-	$_SESSION['username'] = $username;
-	$_SESSION['rolename'] = $rolename;
-	$_SESSION['status'] = "login";
+	// $_SESSION['id'] = $data_user['id'];
+	// $_SESSION['username'] = $username;
+	// $_SESSION['rolename'] = $rolename;
+	// $_SESSION['status'] = "login";
 
 	header("Location:admin/dashboard_bendahara.php");
 

@@ -17,7 +17,7 @@ include 'koneksi.php';
       die ("Query gagal dijalankan: ".mysqli_errno($kon).
                                          " - ".mysqli_error($kon));
   } else {                      
-  echo "<script>alert('Data berhasil ditambah.');window.location='../kas.php';</script>";
+  echo "<script>alert('Data berhasil diubah.');window.location='../kas.php';</script>";
   }
               
 

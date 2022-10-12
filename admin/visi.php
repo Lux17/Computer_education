@@ -43,6 +43,7 @@
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="../assets/img/favicon1.png" rel="icon">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
@@ -64,7 +65,7 @@
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard.php">
                 <div class="sidebar-brand-icon">
-                    <img src="../img/ce_icon.png" alt="" width="43" height="45" class="d-inline-block align-text-top">
+                    <img src="../assets/img/favicon1.png" alt="" width="43" height="45" class="d-inline-block align-text-top">
                 </div>
                 <div class="sidebar-brand-text mx-3">Computer Education </div>
             </a>
@@ -87,21 +88,6 @@
                 Interface
             </div>
 
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>Components</span>
-                </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Components:</h6>
-                        <a class="collapse-item" href="#">Buttons</a>
-                        <a class="collapse-item" href="#">Cards</a>
-                    </div>
-                </div>
-            </li>
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
@@ -116,8 +102,6 @@
                         <h6 class="collapse-header">Custom Utilities:</h6>
                         <a class="collapse-item" href="visi.php">Visi& Misi</a>
                         <a class="collapse-item" href="surat.php">Generate Surat</a>
-                        <a class="collapse-item" href="#">Animations</a>
-                        <a class="collapse-item" href="#">Other</a>
                     </div>
                 </div>
             </li>
@@ -130,26 +114,7 @@
                 Addons
             </div>
 
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-                    aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Pages</span>
-                </a>
-                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Login Screens:</h6>
-                        <a class="collapse-item" href="#">Login</a>
-                        <a class="collapse-item" href="#">Register</a>
-                        <a class="collapse-item" href="#">Forgot Password</a>
-                        <div class="collapse-divider"></div>
-                        <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="#">404 Page</a>
-                        <a class="collapse-item" href="#">Blank Page</a>
-                    </div>
-                </div>
-            </li>
+
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
@@ -204,59 +169,6 @@
                     <ul class="navbar-nav ml-auto">
 
                        
-                        <!-- Nav Item - Alerts -->
-                        <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-bell fa-fw"></i>
-                                <!-- Counter - Alerts -->
-                                <span class="badge badge-danger badge-counter">3+</span>
-                            </a>
-                            <!-- Dropdown - Alerts -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="alertsDropdown">
-                                <h6 class="dropdown-header">
-                                    Alerts Center
-                                </h6>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-primary">
-                                            <i class="fas fa-file-alt text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 12, 2019</div>
-                                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-success">
-                                            <i class="fas fa-donate text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 7, 2019</div>
-                                        $290.29 has been deposited into your account!
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-warning">
-                                            <i class="fas fa-exclamation-triangle text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 2, 2019</div>
-                                        Spending Alert: We've noticed unusually high spending for your account.
-                                    </div>
-                                </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
-                            </div>
-                        </li>
-
-                    
-
                         <div class="topbar-divider d-none d-sm-block"></div>
 
                         <!-- Nav Item - User Information -->
@@ -277,14 +189,6 @@
                                 <a class="dropdown-item" href="#">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Settings
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Activity Log
                                 </a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="logout.php" data-toggle="modal" data-target="#logoutModal">
@@ -315,7 +219,7 @@
                                            
                                                          <!-- Button trigger modal -->
 <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
-  Tambah Kas
+  Tambah
 </button>
     <br>
                    <!-- Modal -->
@@ -323,7 +227,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Tambah Kas</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Tambah</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>
@@ -331,14 +235,21 @@
             <div class="modal-body">
             <form method="POST" action="ketum/tambah_visi.php" enctype="multipart/form-data" >
                         <section class="base align-items-center ">
-                            <div>
-                            <label >Visi </label>
-                            <input type="text" name="visi" autofocus="" required="" />
-                            </div>
-                            <div>
-                            <label> Misi</label>
-                            <input type="text" name="misi"  required="" />
-                            </div>
+
+                        
+                        <div class="row mb-3">
+                        <label for="Visi" class="col-sm-2 col-form-label">Visi</label>
+                        <div class="col-sm-10">
+                        <input type="text" class="form-control"  name="visi" autofocus="" required="" />
+                        </div>
+                        </div>
+
+                        <div class="row mb-3">
+                        <label for="Misi" class="col-sm-2 col-form-label">Misi</label>
+                        <div class="col-sm-10">
+                        <input type="text" class="form-control"  name="misi"  required="" />
+                        </div>
+                        </div>
            
                         </section>
                         
@@ -385,18 +296,18 @@
                     <tr>
                         <td  scope="row"><?php echo $no; ?></td>
                         <td  scope="row"><?php echo $row['visi']; ?></td>
-                        <td  scope="row">Rp <?php echo $row['misi']; ?></td>
+                        <td  scope="row"><?php echo $row['misi']; ?></td>
                     
                         <td  scope="row">
-                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal2">
+                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal<?php echo $row['id'];?>">
                             Edit
                             </button>
    
-        <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="exampleModal<?php echo $row['id'];?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Edit Kas</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Edit Visi</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>
@@ -406,17 +317,26 @@
             
                         <section class="base align-items-center ">
                         <div>
-                            <label >ID </label>
-                            <input type="text" value="<?php echo $row['id']; ?>" name="id" required="" />
+                            
+                            <input type="hidden" value="<?php echo $row['id']; ?>" name="id" required="" />
                             </div>
                             <div>
-                            <label >Bulan </label>
-                            <input type="text" value="<?php echo $row['visi']; ?>" name="visi" autofocus="" required="" />
+                            
+                            <div class="row mb-3">
+                            <label for="Visi" class="col-sm-2 col-form-label">Visi</label>
+                            <div class="col-sm-10">
+                            <input type="text" class="form-control" value="<?php echo $row['visi']; ?>" name="visi" autofocus="" required="" />
                             </div>
-                            <div>
-                            <label> Jumlah Kas </label>
-                            <input type="text" value="<?php echo $row['misi']; ?>"  name="misi" required="" />
                             </div>
+
+                            <div class="row mb-3">
+                            <label for="Misi" class="col-sm-2 col-form-label">Misi</label>
+                            <div class="col-sm-10">
+                            <input type="text" class="form-control" value="<?php echo $row['misi']; ?>"  name="misi" required=""  />
+                            </div>
+                            </div>  
+
+
 
                         </section>
                         

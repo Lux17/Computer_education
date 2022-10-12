@@ -43,6 +43,7 @@
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="../assets/img/favicon1.png" rel="icon">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
@@ -64,7 +65,7 @@
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard.php">
                 <div class="sidebar-brand-icon">
-                    <img src="../img/ce_icon.png" alt="" width="43" height="45" class="d-inline-block align-text-top">
+                    <img src="../assets/img/favicon1.png" alt="" width="43" height="45" class="d-inline-block align-text-top">
                 </div>
                 <div class="sidebar-brand-text mx-3">Computer Education </div>
             </a>
@@ -87,21 +88,6 @@
                 Interface
             </div>
 
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>Components</span>
-                </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Components:</h6>
-                        <a class="collapse-item" href="#">Buttons</a>
-                        <a class="collapse-item" href="#">Cards</a>
-                    </div>
-                </div>
-            </li>
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
@@ -116,8 +102,7 @@
                         <h6 class="collapse-header">Custom Utilities:</h6>
                         <a class="collapse-item" href="visi.php">Visi& Misi</a>
                         <a class="collapse-item" href="surat.php">Generate Surat</a>
-                        <a class="collapse-item" href="#">Animations</a>
-                        <a class="collapse-item" href="#">Other</a>
+
                     </div>
                 </div>
             </li>
@@ -130,26 +115,6 @@
                 Addons
             </div>
 
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-                    aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Pages</span>
-                </a>
-                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Login Screens:</h6>
-                        <a class="collapse-item" href="#">Login</a>
-                        <a class="collapse-item" href="#">Register</a>
-                        <a class="collapse-item" href="#">Forgot Password</a>
-                        <div class="collapse-divider"></div>
-                        <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="#">404 Page</a>
-                        <a class="collapse-item" href="#">Blank Page</a>
-                    </div>
-                </div>
-            </li>
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
@@ -204,58 +169,6 @@
                     <ul class="navbar-nav ml-auto">
 
                         
-
-                        <!-- Nav Item - Alerts -->
-                        <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-bell fa-fw"></i>
-                                <!-- Counter - Alerts -->
-                                <span class="badge badge-danger badge-counter">3+</span>
-                            </a>
-                            <!-- Dropdown - Alerts -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="alertsDropdown">
-                                <h6 class="dropdown-header">
-                                    Alerts Center
-                                </h6>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-primary">
-                                            <i class="fas fa-file-alt text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 12, 2019</div>
-                                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-success">
-                                            <i class="fas fa-donate text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 7, 2019</div>
-                                        $290.29 has been deposited into your account!
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-warning">
-                                            <i class="fas fa-exclamation-triangle text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 2, 2019</div>
-                                        Spending Alert: We've noticed unusually high spending for your account.
-                                    </div>
-                                </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
-                            </div>
-                        </li>
-
                         
                         <div class="topbar-divider d-none d-sm-block"></div>
 
@@ -278,14 +191,7 @@
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
                                 </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Settings
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Activity Log
-                                </a>
+        
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="logout.php" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -314,9 +220,9 @@
                                         <center><h3>Daftar surat</h3><center>
                                            
                                                          <!-- Button trigger modal -->
-<button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+<!-- <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
   Tambah
-</button>
+</button> -->
     <br>
                    <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -377,23 +283,139 @@ Buat Surat
             </div>
             <div class="modal-body">
             <form method="POST" action="surat/surat.php" enctype="multipart/form-data" >
-                        <section class="base align-items-center ">
-                            <div>
-                            <label >Nama </label>
-                            <input type="text" name="nama" autofocus="" required="" />
+                        <section class="base align-items-center "> 
+                        <div>
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Nomer Surat</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control" name="number" autofocus="" required=""/>
+                        </div>
+                        </div>
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Lampiran</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control" name="lampiran" autofocus="" />
+                        </div>
+                        </div>
+
+
+                        
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Perihal</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control"  name="perihal" autofocus="" />
+                        </div>
+                        </div>
+
+                                                
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Jabatan</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control"  name="jabatan" autofocus="" />
+                        </div>
+                        </div>
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Nama</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control"  name="nama" autofocus="" />
+                        </div>
+                        </div>
+
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Nama Acara</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control"  name="acara" autofocus="" required=""  />
+                        </div>
+                        </div>
+
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Tanggal</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control" name="tgl" autofocus="" required=""  />
+                        </div>
+                        </div>
+
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Waktu</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control"  name="pukul" autofocus="" required="" />
+                        </div>
+                        </div>
+
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Tempat</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control"  name="tempat" autofocus="" required=""/>
+                        </div>
+                        </div>
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Titimangsa</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control" name="titimangsa" autofocus="" required="" />
+                        </div>
+                        </div>
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Ketua Pelaksana</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control" name="ketuplak" autofocus="" required="" />
+                        </div>
+                        </div>
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">No CE Ketua</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control" name="noceketu" autofocus="" required="" />
+                        </div>
+                        </div>
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Sekertaris</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control" name="sekertaris" autofocus="" required="" />
+                        </div>
+                        </div>
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">No CE Sekertaris</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control" name="nocesek" autofocus="" required="" />
+                        </div>
+                        </div>
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Ketua Umum</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control" name="ketum" autofocus="" required="" />
+                        </div>
+                        </div>
+
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label"> No CE Ketum</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control" name="nocetum" autofocus="" required=""/>
+                        </div>
+                        </div>
+       
                             </div>
                             <div>
-                            <label >Alamat </label>
-                            <input type="text" name="alamat" autofocus="" required="" />
-                            </div>
-                            <div>
-                            <label> Status</label>
+                            <label> Jenis</label>
                             <div class="input-group">
                                 <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="jenis" >
-                                    <option selected>Choose...</option>
-                                    <option value="0">surat izin</option>
-                                    <option  value="1">surat undangan</option>
-                                    
+                                    <option selected>PILIH...</option>
+                                    <option value="0">Surat Pemberitahuan</option>
+                                    <option  value="1">Surat Permohonan</option>
+                                    <option  value="2">Surat Peminjaman</option>
+                                    <option  value="3">Surat Undangan</option>
+                                    <option  value="4">Surat Dana Sponsor</option>
 
                                 </select>
                                 <div class="input-group-append">
@@ -404,7 +426,7 @@ Buat Surat
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="submit" value = "print" class="btn btn-primary">Print</button>
+                <button type="submit" value = "print" class="btn btn-primary">Buat Surat</button>
             </div>
             </form>
             </div>
@@ -425,36 +447,33 @@ Buat Surat
                     </thead>
                     <tbody>
                     <?php
-                    // jalankan query untuk menampilkan semua data diurutkan berdasarkan nim
-                    $query = "SELECT * FROM proker ORDER BY id ASC";
-                    $result = mysqli_query($kon, $query);
-                    //mengecek apakah ada error ketika menjalankan query
-                    if(!$result){
-                        die ("Query Error: ".mysqli_errno($kon).
-                        " - ".mysqli_error($kon));
-                    }
+           
 
-                    //buat perulangan untuk element tabel dari data mahasiswa
-                    $no = 1; //variabel untuk membuat nomor urut
-                    // hasil query akan disimpan dalam variabel $data dalam bentuk array
-                    // kemudian dicetak dengan perulangan while
-                    while($row = mysqli_fetch_assoc($result))
-                    {
+
                     ?>
                     <tr>
-                        <td  scope="row"><?php echo $no; ?></td>
-                        <td  scope="row"><?php echo $row['nama_proker']; ?></td>
-                        <td  scope="row"><?php  if($row['stat']==1){
-                                    echo  "Finish";
-                        }else{
-                            echo "On Progress";
-                        };
-                         ?></td>
-                    
-                        <td  scope="row">
-                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal2">
+                        <td  scope="row">1</td>
+                        <td  scope="row">Surat Pemberitahuan Acara</td>
+                    </tr>
+                    <tr>
+                        <td  scope="row">2</td>
+                        <td  scope="row">Surat Permohonan</td>
+                    </tr>
+                    <tr>
+                        <td  scope="row">3</td>
+                        <td  scope="row">Surat Peminjaman</td>
+                    </tr>
+                    <tr>
+                        <td  scope="row">4</td>
+                        <td  scope="row">Surat Undangan Acara</td>
+                    </tr>
+                    <tr>
+                        <td  scope="row">5</td>
+                        <td  scope="row">Surat Pengajuan Kerja Sama (sponsorship)</td>
+                    </tr>
+                        <!-- <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal2">
                             Edit
-                            </button>
+                            </button> -->
    
         <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -501,14 +520,10 @@ Buat Surat
             </div>
         </div>
         </div>
-                            <a href="proker/hapus_proker.php?id=<?php echo $row['id']; ?>" onclick="return confirm('Anda yakin akan menghapus data ini?')">Hapus</a>
+                            
                         </td>
                     </tr>
-                        
-                    <?php
-                        $no++; //untuk nomor urut terus bertambah 1
-                    }
-                    ?>
+
                     </tbody>
                     </table>
                         </div>

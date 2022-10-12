@@ -5,6 +5,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta name="google-site-verification" content="7fI6NwUVytvCca5733F3-aHeZdU8S7asIBGpX_Abevo" />
 
   <title>Computer Education</title>
   <meta content="" name="description">
@@ -12,7 +13,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/favicon1.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -60,9 +61,9 @@
           <li class="nav-item">
             <a class="nav-link" style="color: #348A0C;" href="#pengurus">Pengurus</a>
           </li>
-          <li class="nav-item ">
+          <!-- <li class="nav-item ">
             <a class="nav-link" style="color: #348A0C;" href="#artikel">Artikel</a>
-          </li>
+          </li> -->
   
           <li><a class="getstarted scrollto" href="masuk.php"type="submit">Masuk</a></li>
 
@@ -78,10 +79,10 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-lg-6 d-flex flex-column justify-content-center">
-          <h1 data-aos="fade-up">Selamat Datang  Computer Education</h1>
-          <h2 data-aos="fade-up" data-aos-delay="400">Membangun Mahasiswa Berteknologi berlandaskan islami</h2>
-          <div data-aos="fade-up" data-aos-delay="600">
+        <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="zoom-out" data-aos-delay="200">
+          <h1 >Selamat Datang di Computer Education</h1>
+          <h2 >Membangun Mahasiswa Berteknologi berlandaskan islami</h2>
+          <div >
             <div class="text-center text-lg-start">
               <a href="#sejarah" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
                 <span>Get Started</span>
@@ -91,7 +92,7 @@
           </div>
         </div>
         <div class="col-lg-6 " data-aos="zoom-out" data-aos-delay="200">
-          <img src="assets/img/hero-img.png" class="img-fluid" alt="">
+          <img src="assets/img/maskot.png" class="img-fluid" alt="">
         </div>
       </div>
     </div>
@@ -101,10 +102,10 @@
       <!-- ======= About Section ======= -->
     <section id="about" class="about">
 
-      <div class="container" data-aos="fade-up">
+      <div class="container" >
         <div class="row gx-0">
 
-          <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-6 d-flex flex-column justify-content-center">
             <div class="content">
               <h3>Tentang Kami</h3>
               <h2>Unit Kegiatan Mahasiswa Computer Education.</h2>
@@ -114,8 +115,8 @@
             </div>
           </div>
 
-          <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
-            <img src="assets/img/about.jpg" class="img-fluid" alt="">
+          <div class="col-lg-6 d-flex align-items-center" >
+            <img src="assets/img/about1.jpeg" class="img-fluid" alt="">
           </div>
 
         </div>
@@ -129,7 +130,7 @@
     <!-- ======= Values Section ======= -->
     <section id="sejarah" class="values" href="#sejarah">
       
-      <div class="container" data-aos="fade-up">
+      <div class="container" >
 
         <header class="section-header">
           <h2>Sejarah</h2>
@@ -138,7 +139,7 @@
 
         <div class="row">
                   <!-- Feature Tabs -->
-        <div class="row feture-tabs" data-aos="fade-up">
+        <div class="row feture-tabs" >
           <div class="col-lg-6">
             <h3>Sejarah Computer Education</h3>
 
@@ -208,7 +209,7 @@
 
 
     <section id="divisi" class="values" href="#divisi">
-    <div class="container" data-aos="fade-up">
+    <div class="container" >
 
 
 <header class="section-header">
@@ -218,7 +219,7 @@
 
 
 <div class="row">
-  <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+  <div class="col-lg-6">
       <div class="box">
         <img src="assets/img/div4.svg" class="img-fluid" alt="">
         <h3>Divisi Organisasi</h3>
@@ -226,7 +227,7 @@
       </div>
     </div>
 
-      <div class="col-lg-6 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="400">
+      <div class="col-lg-6 mt-4 mt-lg-0" >
         <div class="box">
           <img src="assets/img/div1.svg" class="img-fluid" alt="">
           <h3>Divisi Komputer</h3>
@@ -246,9 +247,9 @@
     <!-- ======= Features Section ======= -->
     <section id="features" class="features">
 
-      <div class="container" data-aos="fade-up">
+      <div class="container">
         <!-- Feature Icons -->
-        <div class="row feature-icons" data-aos="fade-up">
+        <div class="row feature-icons" >
         <header class="section-header">
           <h2>Benefits</h2>
           <p>Pembelajaran Computer Education</p>
@@ -257,14 +258,14 @@
 
           <div class="row">
 
-            <div class="col-xl-4 text-center" data-aos="fade-right" data-aos-delay="100">
+            <div class="col-xl-4 text-center" >
               <img src="assets/img/benefit1.svg" class="img-fluid p-2" alt="">
             </div>
 
             <div class="col-xl-8 d-flex content">
               <div class="row align-self-center gy-4">
 
-                <div class="col-md-6 icon-box" data-aos="fade-up">
+                <div class="col-md-6 icon-box" >
                   <i class="ri-computer-line"></i>
                   <div>
                     <h4>Dasar Komputer</h4>
@@ -272,7 +273,7 @@
                   </div>
                 </div>
 
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-md-6 icon-box" >
                   <i class="ri-vidicon-2-line"></i>
                   <div>
                     <h4>Editing Video</h4>
@@ -280,7 +281,7 @@
                   </div>
                 </div>
 
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-md-6 icon-box" >
                   <i class="ri-code-s-slash-fill"></i>
                   <div>
                     <h4>Programming</h4>
@@ -288,7 +289,7 @@
                   </div>
                 </div>
 
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+                <div class="col-md-6 icon-box" >
                   <i class="ri-magic-line"></i>
                   <div>
                     <h4>Editing Foto</h4>
@@ -296,7 +297,7 @@
                   </div>
                 </div>
 
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+                <div class="col-md-6 icon-box" >
                   <i class="ri-file-word-2-line"></i>
                   <div>
                     <h4>Penggunaan Software</h4>
@@ -304,7 +305,7 @@
                   </div>
                 </div>
 
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
+                <div class="col-md-6 icon-box" >
                   <i class="ri-radar-line"></i>
                   <div>
                     <h4>Public Speaking</h4>
@@ -327,34 +328,34 @@
     <!-- ======= Portfolio Section ======= -->
     <section id="galeri" class="portfolio" href="#galeri">
 
-      <div class="container" data-aos="fade-up">
+      <div class="container" >
 
         <header class="section-header">
           <h2>Galeri</h2>
           <p>Galeri CE</p>
         </header>
 
-        <div class="row" data-aos="fade-up" data-aos-delay="100">
+        <div class="row">
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">Semua</li>
-              <li data-filter=".filter-app">Pengurus</li>
+              <!-- <li data-filter=".filter-app">Pengurus</li>
               <li data-filter=".filter-card">Anggota</li>
-              <li data-filter=".filter-web">Event</li>
+              <li data-filter=".filter-web">Event</li> -->
             </ul>
           </div>
         </div>
 
-        <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
+        <div class="row gy-4 portfolio-container" >
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/app1.jpg" class="img-fluid" alt="">
+              <img src="assets/img/portfolio/web45.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>App 1</h4>
-                <p>App</p>
+                <h4>PAB 2022</h4>
+                <p>PAB 2022</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/app1.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 1"><i class="bi bi-plus"></i></a>
+                  <a href="assets/img/portfolio/web45.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 1"><i class="bi bi-plus"></i></a>
                   
                 </div>
               </div>
@@ -363,12 +364,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/web3.jpg" class="img-fluid" alt="">
+              <img src="assets/img/portfolio/web3.jpeg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
+                <h4>Kajian CE</h4>
+                <p>Kajian CE</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/web3.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
+                  <a href="assets/img/portfolio/web3.jpeg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
                   
                 </div>
               </div>
@@ -377,19 +378,19 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/app2.jpg" class="img-fluid" alt="">
+              <img src="assets/img/portfolio/app2.jpeg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>App 2</h4>
-                <p>App</p>
+                <h4>Milad CE</h4>
+                <p>Festival Harlah Computer Education 21</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/app2.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 2"><i class="bi bi-plus"></i></a>
+                  <a href="assets/img/portfolio/app2.jpeg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 2"><i class="bi bi-plus"></i></a>
                   
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/card2.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
@@ -401,23 +402,23 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/web2.jpg" class="img-fluid" alt="">
+              <img src="assets/img/portfolio/web4.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Web 2</h4>
                 <p>Web</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/web2.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Web 2"><i class="bi bi-plus"></i></a>
+                  <a href="assets/img/portfolio/web4.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Web 2"><i class="bi bi-plus"></i></a>
                   
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/app3.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
@@ -429,16 +430,16 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/card1.jpg" class="img-fluid" alt="">
+              <img src="assets/img/portfolio/card1.jpeg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Card 1</h4>
-                <p>Card</p>
+                <h4>Pelantikan Kepengurusan 2021/2022</h4>
+                <p>Pelantikan Kepengurusan Baru 2021/2022</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/card1.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Card 1"><i class="bi bi-plus"></i></a>
+                  <a href="assets/img/portfolio/card1.jpeg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Card 1"><i class="bi bi-plus"></i></a>
                   
                 </div>
               </div>
@@ -447,12 +448,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/card3.jpg" class="img-fluid" alt="">
+              <img src="assets/img/portfolio/card3.jpeg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Card 3</h4>
-                <p>Card</p>
+                <h4>PAB 2021</h4>
+                <p>PAB 2021</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/card3.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Card 3"><i class="bi bi-plus"></i></a>
+                  <a href="assets/img/portfolio/card3.jpeg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Card 3"><i class="bi bi-plus"></i></a>
                  
                 </div>
               </div>
@@ -461,12 +462,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/web3.jpg" class="img-fluid" alt="">
+              <img src="assets/img/portfolio/web4.jpeg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
+                <h4>IT Camp</h4>
+                <p>Makrab IT Camp</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/web3.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
+                  <a href="assets/img/portfolio/web4.jpeg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
                  
                 </div>
               </div>
@@ -482,14 +483,14 @@
     <!-- ======= Testimonials Section ======= -->
     <section id="pengurus" class="testimonials" href="#pengurus">
 
-      <div class="container" data-aos="fade-up">
+      <div class="container" >
 
         <header class="section-header">
           <h2>Pengurus</h2>
           <p>Periode 2021/2022</p>
         </header>
 
-        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="200">
+        <div class="testimonials-slider swiper" >
           <div class="swiper-wrapper">
 
             <div class="swiper-slide">
@@ -574,7 +575,7 @@
     <!-- ======= F.A.Q Section ======= -->
     <section id="faq" class="faq">
 
-      <div class="container" data-aos="fade-up">
+      <div class="container" >
 
         <header class="section-header">
           <h2>F.A.Q</h2>
@@ -681,101 +682,6 @@ Divisi Komputer mempelajari yang berhubungan tentang pembelajaran di bidang soft
 
     </section><!-- End F.A.Q Section -->  
 
-    <?php
-    
-    // function get_token()
-    // {
-
-    //   $curl = curl_init();
-
-    //   curl_setopt_array($curl, array(
-    //     CURLOPT_URL => 'http://localhost/apice/token/token.php?show',
-    //     CURLOPT_RETURNTRANSFER => true,
-    //     CURLOPT_ENCODING => '',
-    //     CURLOPT_MAXREDIRS => 10,
-    //     CURLOPT_TIMEOUT => 0,
-    //     CURLOPT_FOLLOWLOCATION => true,
-    //     CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-    //     CURLOPT_CUSTOMREQUEST => 'POST',
-    //   ));
-      
-    //   $response = curl_exec($curl);
-      
-    //   curl_close($curl);
-    //   echo $response;
-
-    // };
-    
-
-    //   $curl = curl_init();
-    //   // get_token();
-    //   $token = get_token();
-    //   $tkn = $token;
-    //   echo $tkn;
-    //   $auth_data = array(
-    //     'token' 		=> 'f5d1552fe0ba83996769b20709c7b717',
-    //   );
-    //   curl_setopt($curl, CURLOPT_POST, 1);
-    //   curl_setopt($curl, CURLOPT_POSTFIELDS, $auth_data);
-    //   curl_setopt($curl, CURLOPT_URL, 'http://localhost/apice/api/tbl_article/read.php');
-    //   curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-    //   curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
-    //   $result = curl_exec($curl);
-    //   if(!$result){die("Connection Failure");}
-    //   curl_close($curl);
-    //   $data = json_decode($result, true);
-    //   echo $result;
-    //   echo $data;
-  
-    ?>
-
-    <!-- ======= Recent Blog Posts Section ======= -->
-    <section id="artikel" class="recent-blog-posts" href="#artikel">
-
-      <div class="container" data-aos="fade-up" >
-
-        <header class="section-header" >
-          <h2 >Blog</h2>
-          <p>Artikel</p>
-        </header>
-
-        <div class="row" id = "#post-list">
-          
-          <div class="col-lg-4">
-            <div class="post-box">
-              
-              <div class="post-img"><img src="assets/img/blog/blog-1.jpg" class="img-fluid" alt=""></div>
-              <span class="post-date">Tue, September 15</span>
-              <h3 class="post-title"><?php $data['title'] ?></h3>
-              <a href="artikel.php" class="readmore stretched-link mt-auto"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4">
-            <div class="post-box">
-              <div class="post-img"><img src="assets/img/blog/blog-2.jpg" class="img-fluid" alt=""></div>
-              <span class="post-date">Fri, August 28</span>
-              <h3 class="post-title">Malam Keakraban Computer Education</h3>
-              <a href="artikel.php" class="readmore stretched-link mt-auto"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4">
-            <div class="post-box">
-              <div class="post-img"><img src="assets/img/blog/blog-3.jpg" class="img-fluid" alt=""></div>
-              <span class="post-date">Mon, July 11</span>
-              <h3 class="post-title">Pemenang Lomba Mobile Legend Festival Fundemic CE</h3>
-              <a href="artikel.php" class="readmore stretched-link mt-auto"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- End Recent Blog Posts Section -->
-
-
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
@@ -792,10 +698,10 @@ Divisi Komputer mempelajari yang berhubungan tentang pembelajaran di bidang soft
             </a>
             <p>Unit Kegiatan Mahasiswa Computer Education adalah sarana pengembangan Mahasiswa di bidang IPTEK.</p>
             <div class="social-links mt-3">
-              <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-              <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+
+              <a href="http://instagram.com/computereducation_" class="instagram"><i class="bi bi-instagram"></i></a>
+              <a href="https://www.youtube.com/channel/UCdtVMq63VKfnjJGDr5O1Kkw/featured" class="youtube"><i class="bi bi-youtube"></i></a>
+
             </div>
           </div>
 
@@ -823,7 +729,7 @@ Divisi Komputer mempelajari yang berhubungan tentang pembelajaran di bidang soft
           <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
             <h4>Kontak Kami </h4>
               <strong>Email:</strong> <br>
-              Computereducation@Gmail.com<br>
+              Computer.education1306@gmail.com<br>
             </p>
 
           </div>

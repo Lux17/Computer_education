@@ -1,8 +1,8 @@
 <?php
 $host="localhost";
-$user="root";
-$password="";
-$db="ce";
+$user="id19679134_lucky";
+$password="<7oQSM?ynpH#[nK]";
+$db="id19679134_ce";
 
 $kon = mysqli_connect($host,$user,$password,$db);
 if (!$kon){

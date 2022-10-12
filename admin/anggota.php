@@ -43,6 +43,7 @@
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="../assets/img/favicon1.png" rel="icon">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
@@ -64,7 +65,7 @@
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard.php">
                 <div class="sidebar-brand-icon">
-                    <img src="../img/ce_icon.png" alt="" width="43" height="45" class="d-inline-block align-text-top">
+                    <img src="../assets/img/favicon1.png" alt="" width="43" height="45" class="d-inline-block align-text-top">
                 </div>
                 <div class="sidebar-brand-text mx-3">Computer Education </div>
             </a>
@@ -87,21 +88,6 @@
                 Interface
             </div>
 
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>Components</span>
-                </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Components:</h6>
-                        <a class="collapse-item" href="#">Buttons</a>
-                        <a class="collapse-item" href="#">Cards</a>
-                    </div>
-                </div>
-            </li>
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
@@ -116,8 +102,7 @@
                         <h6 class="collapse-header">Custom Utilities:</h6>
                         <a class="collapse-item" href="visi.php">Visi& Misi</a>
                         <a class="collapse-item" href="surat.php">Generate Surat</a>
-                        <a class="collapse-item" href="#">Animations</a>
-                        <a class="collapse-item" href="#">Other</a>
+    
                     </div>
                 </div>
             </li>
@@ -129,27 +114,6 @@
             <div class="sidebar-heading">
                 Addons
             </div>
-
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-                    aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Pages</span>
-                </a>
-                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Login Screens:</h6>
-                        <a class="collapse-item" href="#">Login</a>
-                        <a class="collapse-item" href="#">Register</a>
-                        <a class="collapse-item" href="#">Forgot Password</a>
-                        <div class="collapse-divider"></div>
-                        <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="#">404 Page</a>
-                        <a class="collapse-item" href="#">Blank Page</a>
-                    </div>
-                </div>
-            </li>
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
@@ -205,57 +169,7 @@
 
                        
 
-                        <!-- Nav Item - Alerts -->
-                        <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-bell fa-fw"></i>
-                                <!-- Counter - Alerts -->
-                                <span class="badge badge-danger badge-counter">3+</span>
-                            </a>
-                            <!-- Dropdown - Alerts -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="alertsDropdown">
-                                <h6 class="dropdown-header">
-                                    Alerts Center
-                                </h6>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-primary">
-                                            <i class="fas fa-file-alt text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 12, 2019</div>
-                                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-success">
-                                            <i class="fas fa-donate text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 7, 2019</div>
-                                        $290.29 has been deposited into your account!
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-warning">
-                                            <i class="fas fa-exclamation-triangle text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 2, 2019</div>
-                                        Spending Alert: We've noticed unusually high spending for your account.
-                                    </div>
-                                </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
-                            </div>
-                        </li>
-
+                        
                        
 
                         <div class="topbar-divider d-none d-sm-block"></div>
@@ -278,14 +192,6 @@
                                 <a class="dropdown-item" href="#">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Settings
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Activity Log
                                 </a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="logout.php" data-toggle="modal" data-target="#logoutModal">
@@ -318,9 +224,17 @@
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                          <!-- Button trigger modal -->
+
+
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
 <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
   Tambah Anggota
 </button>
+                
+                    </div>
+                    <a href="export.php" class="d-sm-inline-block btn btn-sm btn-success shadow-sm"><i
+                        class="fas fa-download fa-sm text-white-50"></i> Download</a>
+
    
 
 
@@ -337,34 +251,56 @@
             <div class="modal-body">
             <form method="POST" action="anggota/tambah_anggota.php" enctype="multipart/form-data" >
                         <section class="base align-items-center ">
-                            <div>
-                            <label >Nama </label>
-                            <input type="text" name="nama_anggota" autofocus="" required="" />
+                            <div class="row mb-3">
+                            <label for="Nama" class="col-sm-2 col-form-label">Nama</label>
+                            <div class="col-sm-10">
+                            <input type="text" class="form-control" name="nama_anggota" autofocus="" required=""  />
                             </div>
-                            <div>
-                            <label> No Anggota</label>
-                            <input type="text" name="no_anggota" />
                             </div>
-                            <div>
-                            <label> Tempat, Tanggal lahir</label>
-                            <input type="text" name="lahir" required="" />
+
+                            <div class="row mb-3">
+                            <label for="Nama" class="col-sm-2 col-form-label">No CE</label>
+                            <div class="col-sm-10">
+                            <input type="text" class="form-control" name="no_anggota" />
                             </div>
-                            <div>
-                            <label> Nomer Hp</label>
-                            <input type="text" name="nomer_hp" required="" />
                             </div>
-                            <div>
-                            <label> Prodi</label>
-                            <input type="text" name="prodi" required="" />
+                            <div class="row mb-3">
+
+                            <label for="TTL" class="col-sm-2 col-form-label">TTL</label>
+                            <div class="col-sm-10">
+                            <input type="text"  class="form-control"  name="lahir" required="" />
                             </div>
-                            <div>
-                            <label>Alamat</label>
-                            <input type="text" name="alamat" required="" />
                             </div>
-                            <div>
-                            <label>Jabatan</label>
-                            <input type="text" name="jabatan" required="" />
+
+                            
+                            <div class="row mb-3">
+                            <label for="Alamat" class="col-sm-2 col-form-label">NO HP</label>
+                            <div class="col-sm-10">
+                            <input type="text" class="form-control" name="nomer_hp" required="" />
                             </div>
+                            </div>
+
+                            <div class="row mb-3">
+                            <label for="Prodi" class="col-sm-2 col-form-label">Prodi</label>
+                            <div class="col-sm-10">
+                            <input type="text" class="form-control" name="prodi" required="" />
+                            </div>
+                            </div>
+
+                            <div class="row mb-3">
+                            <label for="Alamat" class="col-sm-2 col-form-label">Alamat</label>
+                            <div class="col-sm-10">
+                            <input type="text" class="form-control" name="alamat" required="" />
+                            </div>
+                            </div>
+
+                            <div class="row mb-3">
+                            <label for="Jabatan" class="col-sm-2 col-form-label">Jabatan</label>
+                            <div class="col-sm-10">
+                            <input type="text" class="form-control" name="jabatan" required="" />
+                            </div>
+                            </div>
+                            
                         </section>
                         
             </div>
@@ -381,7 +317,7 @@
                                             <th>No</th>
                                             <th>Nama</th>
                                             <th>Nomer Anggota</th>
-                                            <th>Alamat</th>
+                                            <th>Tempat, Tanggal Lahir</th>
                                             <th>Nomer HP</th>
                                             <th>Prodi</th>
                                             <th>Alamat</th>
@@ -394,7 +330,7 @@
                                         <th>No</th>
                                             <th>Nama</th>
                                             <th>Nomer Anggota</th>
-                                            <th>Alamat</th>
+                                            <th>Tempat, Tanggal Lahir</th>
                                             <th>Nomer HP</th>
                                             <th>Prodi</th>
                                             <th>Alamat</th>
@@ -404,8 +340,8 @@
                                     </tfoot>
                                     <tbody>
                                     <?php
-                                  
-                                    // jalankan query untuk menampilkan semua data diurutkan berdasarkan nim
+                           
+                                    // jalankan query untuk menampilkan semua data diurutkan berdasarkan 
                                     $query = "SELECT * FROM anggota ORDER BY id ASC";
                                     $result = mysqli_query($kon, $query);
                                     //mengecek apakah ada error ketika menjalankan query
@@ -433,11 +369,11 @@
                                         
 
                                         <td>
-                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal2">
+                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal<?php echo $row['id'];?>">
                             Edit
                             </button>
    
-        <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="exampleModal<?php echo $row['id'];?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
             <div class="modal-header">
@@ -451,37 +387,58 @@
             
                         <section class="base align-items-center ">
                         <div>
-                            <label >ID </label>
-                            <input type="text" value="<?php echo $row['id']; ?>" name="id" required="" />
-                            </div>
-                            <div>
-                            <label >Nama </label>
-                            <input type="text" value="<?php echo $row['nama']; ?>" name="nama_anggota" autofocus="" required="" />
-                            </div>
-                            <div>
-                            <label> No Anggota</label>
-                            <input type="text" value="<?php echo $row['no_anggota']; ?>"  name="no_anggota" required="" />
-                            </div>
-                            <div>
-                            <label> Tempat, Tanggal lahir</label>
-                            <input type="text" value="<?php echo $row['lahir']; ?>" name="lahir" required="" />
-                            </div>
-                            <div>
-                            <label> Nomer Hp</label>
-                            <input type="text" value="<?php echo $row['nomer_hp']; ?>" name="nomer_hp" required="" />
-                            </div>
-                            <div>
-                            <label> Prodi</label>
-                            <input type="text" value="<?php echo $row['prodi']; ?>" name="prodi" required="" />
-                            </div>
-                            <div>
-                            <label>Alamat</label>
-                            <input type="text" value="<?php echo $row['alamat']; ?>" name="alamat" required="" />
-                            </div>
-                            <div>
-                            <label>Jabatan</label>
-                            <input type="text" value="<?php echo $row['jabatan']; ?>" name="jabatan" required="" />
-                            </div>
+                            <input type="hidden" value="<?php echo $row['id']; ?>" name="id" required="" />
+                        </div>
+                        <div class="row mb-3">
+                        <label for="Nama" class="col-sm-2 col-form-label">Nama</label>
+                        <div class="col-sm-10">
+                        <input type="text" class="form-control" value="<?php echo $row['nama']; ?>" name="nama_anggota" autofocus="" required="" />
+                        </div>
+                        </div>
+
+                        <div class="row mb-3">
+                        <label for="No CE" class="col-sm-2 col-form-label">No CE</label>
+                        <div class="col-sm-10">
+                        <input type="text" class="form-control" value="<?php echo $row['no_anggota']; ?>"  name="no_anggota" required="" />
+                        </div>
+                        </div>
+                        
+                        <div class="row mb-3">
+                        <label for="Alamat" class="col-sm-2 col-form-label">NO HP</label>
+                        <div class="col-sm-10">
+                        <input type="text" class="form-control" value="<?php echo $row['nomer_hp']; ?>" name="nomer_hp" required="" />
+                        </div>
+                        </div>
+
+                        <div class="row mb-3">
+                        <label for="TTL" class="col-sm-2 col-form-label">TTL</label>
+                        <div class="col-sm-10">
+                        <input type="text"  class="form-control"  value="<?php echo $row['lahir']; ?>" name="lahir" required="" />
+                        </div>
+                        </div>
+
+                        <div class="row mb-3">
+                        <label for="Prodi" class="col-sm-2 col-form-label">Prodi</label>
+                        <div class="col-sm-10">
+                        <input type="text" class="form-control" value="<?php echo $row['prodi']; ?>" name="prodi" required="" />
+                        </div>
+                        </div>
+
+                        <div class="row mb-3">
+                        <label for="Alamat" class="col-sm-2 col-form-label">Alamat</label>
+                        <div class="col-sm-10">
+                        <input type="text" class="form-control" value="<?php echo $row['alamat']; ?>" name="alamat" required="" />
+                        </div>
+                        </div>
+
+
+                        <div class="row mb-3">
+                        <label for="Jabatan" class="col-sm-2 col-form-label">Jabatan</label>
+                        <div class="col-sm-10">
+                        <input type="text" class="form-control" value="<?php echo $row['jabatan']; ?>" name="jabatan" required="" />
+                        </div>
+                        </div>
+
                         </section>
                         
             </div>
