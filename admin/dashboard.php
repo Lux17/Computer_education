@@ -232,7 +232,17 @@ session_start();
                                             </div>
                                             <div class="row no-gutters align-items-center">
                                                 <div class="col-auto">
-                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">10%</div>
+                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">
+                                                    <?php
+
+                                                    $data_proker = mysqli_query($kon,"SELECT * FROM proker WHERE stat LIKE '1'");
+
+                                                    // menghitung data barang
+                                                    $jmlh_proker= mysqli_num_rows($data_proker);
+                                                    ?>
+                                                    
+                                                    <p><?php echo  $jmlh_proker;  ?></b></p>
+                                                    </div>
                                                 </div>
                                                 <div class="col">
                                                     <div class="progress progress-sm mr-2">
