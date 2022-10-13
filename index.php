@@ -172,18 +172,18 @@
               <div class="tab-pane fade show" id="tab2">
                 <p>Pendirian Computer Mania Club (CMC) dipelopori oleh mahasiswa Teknik Informatika pada saat itu untuk menjadi sarana interaksi mahasiswa untuk menyalurkan hobi, minat, dan bakat dibidang IPTEK (Ilmu Pengetahuan dan Teknologi).</p>
         
-                <p>Pada awal masa terbentuknya Computer Mania Club (CMC), hanya mahasiswa podi Teknik Informatika saja yang menjalankan or  ganisasi tersebut, dan tidak begitu didukung kegiatan – kegiatan yang akan dilakukan, karena universitas masih berfokus pada pembangunan kampus. Sehingga alokasi – alokasi dana hanya diperuntukan untuk pembangunan kampus.
+                <p>Pada awal masa terbentuknya Computer Mania Club (CMC), hanya mahasiswa prodi Teknik Informatika saja yang menjalankan organisasi tersebut, dan tidak begitu didukung kegiatan – kegiatan yang akan dilakukan, karena universitas masih berfokus pada pembangunan kampus. Sehingga alokasi – alokasi dana hanya diperuntukan untuk pembangunan kampus.
 </p>
   
-                <p>Pada tahun 2010 Computer Mania Club (CMC) yang dijabat oleh ketua umum bernama Afhey Filla Fery, ST mulai diminati oleh mahasiswa dari prodi lain (selain prodi Teknik Informatika). Karena begitu besar peran penting computer dari zaman ke zaman, membuat mahasiswa dari prodi lain tertarik untuk bergabung menjadi anggota, hingga saat ini berganti nama menjadi Computer Education (CE).
+                <p>Pada tahun 2010 Computer Mania Club (CMC) yang dijabat oleh ketua umum bernama Afhey Filla Fery, ST mulai diminati oleh mahasiswa dari prodi lain (selain prodi Teknik Informatika). <br> <br>Karena begitu besar peran penting computer dari zaman ke zaman, membuat mahasiswa dari prodi lain tertarik untuk bergabung menjadi anggota, hingga saat ini berganti nama menjadi Computer Education (CE).
 </p>
               </div><!-- End Tab 2 Content -->
 
               <div class="tab-pane fade show" id="tab3">
-                <p>Dalam perjalanan roda organisasi Computer Mania Club (CMC) mengalami perubahan nama pada tanggal 22 Juni 2019 di Universitas Muhammadiyah Cirebon menjadi Computer Education yang disingkat CE, 
+                <p>Dalam perjalanan roda organisasi Computer Mania Club (CMC) mengalami perubahan nama pada tanggal 22 Juni 2019 di Universitas Muhammadiyah Cirebon menjadi Computer Education yang disingkat CE. 
 </p>
            
-                <p>dikarenakan nama Compueter Education lebih mencangkup dengan maksud dan tujuan untuk meningkatkan kualitas dan kemampuan mahasiswa dalam pengawasan bidang IPTEK (Ilmu Pengetahuan dan Teknologi) sesuai dengan nama yang baru yaitu Computer Education yang memiliki arti pembelajaran komputer.</p>
+                <p>Dikarenakan nama Compueter Education lebih mencangkup dengan maksud dan tujuan untuk meningkatkan kualitas dan kemampuan mahasiswa dalam pengawasan bidang IPTEK (Ilmu Pengetahuan dan Teknologi) sesuai dengan nama yang baru yaitu Computer Education yang memiliki arti pembelajaran komputer.</p>
 
               </div><!-- End Tab 3 Content -->
 
