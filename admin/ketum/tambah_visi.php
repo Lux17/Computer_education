@@ -3,38 +3,36 @@
 include 'koneksi.php';
 session_start();	
 	
-$visi = isset($_POST['visi']) ? $_POST['visi'] : '';
-$misi = isset($_POST['misi']) ? $_POST['misi'] : '';
+      
+if (isset($_POST['simpan'])) {
+  
+   
+    $query = mysqli_query($kon, "SELECT * FROM ketum"); 
+   
+    if($query->num_rows > 0) {
+        echo "<script>alert('Gagal !! Data sudah Terdaftar');window.location='../visi.php';</script>";
+    } else {
+        $visi = isset($_POST['visi']) ? $_POST['visi'] : '';
+        $misi = isset($_POST['misi']) ? $_POST['misi'] : '';
+        
+        
+        $query = "INSERT INTO ketum (visi, misi) VALUES ('$visi', '$misi')";
+        $result = mysqli_query($kon, $query);
+                          // periska query apakah ada error
+        // $jumlah = mysqli_num_rows($result);
+        
+        if(!$result){
+            die ("Query gagal dijalankan: ".mysqli_errno($kon).
+                                               " - ".mysqli_error($kon));
+        } else {                      
+        echo "<script>alert('Data berhasil ditambah.');window.location='../visi.php';</script>";
+        }
+                
+                    
+        
+    }
+};
 
-
-$query = "INSERT INTO ketum (visi, misi) VALUES ('$visi', '$misi')";
-$result = mysqli_query($kon, $query);
-                  // periska query apakah ada error
-// $jumlah = mysqli_num_rows($result);
-
-if(!$result){
-    die ("Query gagal dijalankan: ".mysqli_errno($kon).
-                                       " - ".mysqli_error($kon));
-} else {                      
-echo "<script>alert('Data berhasil ditambah.');window.location='../visi.php';</script>";
-}
-            
-
-// if ($jumlah>0) {
-// 	$row = mysqli_fetch_assoc($hasil);
-// 	$_SESSION['id'] = $data['id'];
-// 	$_SESSION['nama'] = $username;
-// 	$_SESSION['no_anggota'] = $nomer;
-//     $_SESSION['lahir'] = $lahir;
-// 	$_SESSION['nomer_hp'] = $nomer;
-//     $_SESSION['prodi'] = $prodi;
-// 	$_SESSION['alamat'] = $alamat;
-//     $_SESSION['jabatan'] = $jabatan;
-//     echo "<script>alert('Data berhasil ditambah.');window.location='../anggota.php';</script>";
-
-// else{
-//     echo "<script>alert('Data Gagal ditambah.');</script>";
-// }
 
 
 

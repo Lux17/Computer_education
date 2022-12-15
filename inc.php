@@ -1,1 +1,0 @@
-http://localhost/apice/api/

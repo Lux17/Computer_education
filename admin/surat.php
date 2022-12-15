@@ -73,8 +73,8 @@
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
+<!-- Nav Item - Dashboard -->
+<li class="nav-item active">
                 <a class="nav-link" href="dashboard.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
@@ -94,14 +94,13 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-wrench"></i>
-                    <span>Utilities</span>
+                    <span>Alat</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Utilities:</h6>
-                        <a class="collapse-item" href="visi.php">Visi& Misi</a>
-                        <a class="collapse-item" href="surat.php">Generate Surat</a>
+                        <h6 class="collapse-header">Alat:</h6>
+                        <a class="collapse-item" href="surat.php">Auto Create Surat</a>
 
                     </div>
                 </div>
@@ -112,39 +111,53 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Addons
+                Data
             </div>
 
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+                <a class="nav-link" href="visi.php">
+                    <i class="fas fa-fw fa-bullseye"></i>
+                    <span>Visi-Misi</span></a>
+            </li>
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
                 <a class="nav-link" href="kas.php">
-                    <i class="fas fa-fw fa-chart-area"></i>
+                    <i class="fas fa-fw fa-dollar-sign"></i>
                     <span>Kas</span></a>
             </li>
 
             <li class="nav-item">
                 <a class="nav-link" href="proker.php">
-                    <i class="fas fa-fw fa-chart-area"></i>
+                    <i class="fas fa-fw fa-clipboard-check"></i>
                     <span>Proker</span></a>
             </li>
-            
-            <!-- Nav Item - Tables -->
             <li class="nav-item">
                 <a class="nav-link" href="anggota.php">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Anggota</span></a>
             </li>
+            
+            <!-- Nav Item - Tables -->
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
+            <div class="sidebar-heading">
+                Kelola
+            </div>
+
+
+            <li class="nav-item">
+                <a class="nav-link" href="Users.php">
+                    <i class="fas fa-fw fa-user-circle"></i>
+                    <span>Users</span></a>
+            </li>
 
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
-
-
+            </div>  
 
         </ul>
         <!-- End of Sidebar -->
@@ -215,7 +228,7 @@
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-success">list daftar surat</h6>
+                            <h6 class="m-0 font-weight-bold text-success">List Daftar Surat</h6>
                         </div>
                                         <center><h3>Daftar surat</h3><center>
                                            
@@ -223,60 +236,14 @@
 <!-- <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
   Tambah
 </button> -->
-    <br>
+
+
                    <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                   <div class="modal fade" id="suratacara" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Tambah Surat</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-            <form method="POST" action="proker/tambah_proker.php" enctype="multipart/form-data" >
-                        <section class="base align-items-center ">
-                            <div>
-                            <label >Nama Proker </label>
-                            <input type="text" name="nama_proker" autofocus="" required="" />
-                            </div>
-                            <div>
-                            <label> Status</label>
-                            <div class="input-group">
-                                <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="stat" >
-                                    <option selected>Choose...</option>
-                                    <option value="0">On Progress</option>
-                                    <option  value="1">Finish</option>
-                                    
-
-                                </select>
-                                <div class="input-group-append">
-                            </div>
-           
-                        </section>
-                        
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary">Save changes</button>
-            </div>
-            </form>
-            </div>
-        </div>
-        </div>
-
-
-        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal2">
-Buat Surat
-</button>
-    <br>
-                   <!-- Modal -->
-        <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Tambah Surat</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Surat Acara</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>
@@ -296,15 +263,6 @@ Buat Surat
                         <label for="Nama Proker" class="col-sm-3 col-form-label">Lampiran</label>
                         <div class="col-sm-7">
                         <input type="text" class="form-control" name="lampiran" autofocus="" />
-                        </div>
-                        </div>
-
-
-                        
-                        <div class="row mb-4">
-                        <label for="Nama Proker" class="col-sm-3 col-form-label">Perihal</label>
-                        <div class="col-sm-7">
-                        <input type="text" class="form-control"  name="perihal" autofocus="" />
                         </div>
                         </div>
 
@@ -410,11 +368,576 @@ Buat Surat
                             <label> Jenis</label>
                             <div class="input-group">
                                 <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="jenis" >
-                                    <option selected>PILIH...</option>
                                     <option value="0">Surat Pemberitahuan</option>
+                                </select>
+                                <div class="input-group-append">
+                            </div>
+
+                        </section>
+                        
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" value = "print" class="btn btn-primary">Buat Surat</button>
+            </div>
+            </form>
+            </div>
+        </div>
+        </div>
+
+                           <!-- Modal -->
+        <div class="modal fade" id="suratpermohonan" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Tambah Surat</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+            <form method="POST" action="surat/surat.php" enctype="multipart/form-data" >
+                        <section class="base align-items-center "> 
+                        <div>
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Nomer Surat</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control" name="number" autofocus="" required=""/>
+                        </div>
+                        </div>
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Lampiran</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control" name="lampiran" autofocus="" />
+                        </div>
+                        </div>
+
+
+                            
+                            <div class="row mb-4">
+                            <label for="Nama Proker" class="col-sm-3 col-form-label">Perihal</label>
+                            <div class="col-sm-7">
+                            <input type="text" class="form-control"  name="perihal" autofocus="" />
+                            </div>
+                            </div>
+
+                                                
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Nama</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control"  name="nama" autofocus="" />
+                        </div>
+                        </div>
+
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Nama Acara</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control"  name="acara" autofocus="" required=""  />
+                        </div>
+                        </div>
+
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Tanggal</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control" name="tgl" autofocus="" required=""  />
+                        </div>
+                        </div>
+
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Waktu</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control"  name="pukul" autofocus="" required="" />
+                        </div>
+                        </div>
+
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Tempat</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control"  name="tempat" autofocus="" required=""/>
+                        </div>
+                        </div>
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Titimangsa</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control" name="titimangsa" autofocus="" required="" />
+                        </div>
+                        </div>
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Ketua Pelaksana</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control" name="ketuplak" autofocus="" required="" />
+                        </div>
+                        </div>
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">No CE Ketua</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control" name="noceketu" autofocus="" required="" />
+                        </div>
+                        </div>
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Sekertaris</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control" name="sekertaris" autofocus="" required="" />
+                        </div>
+                        </div>
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">No CE Sekertaris</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control" name="nocesek" autofocus="" required="" />
+                        </div>
+                        </div>
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Ketua Umum</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control" name="ketum" autofocus="" required="" />
+                        </div>
+                        </div>
+
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label"> No CE Ketum</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control" name="nocetum" autofocus="" required=""/>
+                        </div>
+                        </div>
+       
+                            </div>
+                            <div>
+                            <label> Jenis</label>
+                            <div class="input-group">
+                                <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="jenis" >
                                     <option  value="1">Surat Permohonan</option>
+
+                                </select>
+                                <div class="input-group-append">
+                            </div>
+
+                        </section>
+                        
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" value = "print" class="btn btn-primary">Buat Surat</button>
+            </div>
+            </form>
+            </div>
+        </div>
+        </div>
+
+                   <!-- Modal -->
+                   <div class="modal fade" id="suratpeminjaman" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Tambah Surat</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+            <form method="POST" action="surat/surat.php" enctype="multipart/form-data" >
+                        <section class="base align-items-center "> 
+                        <div>
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Nomer Surat</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control" name="number" autofocus="" required=""/>
+                        </div>
+                        </div>
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Lampiran</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control" name="lampiran" autofocus="" />
+                        </div>
+                        </div>
+
+
+   
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Nama</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control"  name="nama" autofocus="" />
+                        </div>
+                        </div>
+
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Nama Acara</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control"  name="acara" autofocus="" required=""  />
+                        </div>
+                        </div>
+
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Tanggal</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control" name="tgl" autofocus="" required=""  />
+                        </div>
+                        </div>
+
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Waktu</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control"  name="pukul" autofocus="" required="" />
+                        </div>
+                        </div>
+
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Tempat</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control"  name="tempat" autofocus="" required=""/>
+                        </div>
+                        </div>
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Titimangsa</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control" name="titimangsa" autofocus="" required="" />
+                        </div>
+                        </div>
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Ketua Pelaksana</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control" name="ketuplak" autofocus="" required="" />
+                        </div>
+                        </div>
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">No CE Ketua</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control" name="noceketu" autofocus="" required="" />
+                        </div>
+                        </div>
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Sekertaris</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control" name="sekertaris" autofocus="" required="" />
+                        </div>
+                        </div>
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">No CE Sekertaris</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control" name="nocesek" autofocus="" required="" />
+                        </div>
+                        </div>
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Ketua Umum</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control" name="ketum" autofocus="" required="" />
+                        </div>
+                        </div>
+
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label"> No CE Ketum</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control" name="nocetum" autofocus="" required=""/>
+                        </div>
+                        </div>
+       
+                            </div>
+                            <div>
+                            <label> Jenis</label>
+                            <div class="input-group">
+                                <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="jenis" >
                                     <option  value="2">Surat Peminjaman</option>
+
+                                </select>
+                                <div class="input-group-append">
+                            </div>
+
+                        </section>
+                        
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" value = "print" class="btn btn-primary">Buat Surat</button>
+            </div>
+            </form>
+            </div>
+        </div>
+        </div>
+
+        
+                   <!-- Modal -->
+        <div class="modal fade" id="suratundangan" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Tambah Surat</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+            <form method="POST" action="surat/surat.php" enctype="multipart/form-data" >
+                        <section class="base align-items-center "> 
+                        <div>
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Nomer Surat</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control" name="number" autofocus="" required=""/>
+                        </div>
+                        </div>
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Lampiran</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control" name="lampiran" autofocus="" />
+                        </div>
+                        </div>
+
+
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Nama Acara</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control"  name="acara" autofocus="" required=""  />
+                        </div>
+                        </div>
+
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Tanggal</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control" name="tgl" autofocus="" required=""  />
+                        </div>
+                        </div>
+
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Waktu</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control"  name="pukul" autofocus="" required="" />
+                        </div>
+                        </div>
+
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Tempat</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control"  name="tempat" autofocus="" required=""/>
+                        </div>
+                        </div>
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Titimangsa</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control" name="titimangsa" autofocus="" required="" />
+                        </div>
+                        </div>
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Ketua Pelaksana</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control" name="ketuplak" autofocus="" required="" />
+                        </div>
+                        </div>
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">No CE Ketua</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control" name="noceketu" autofocus="" required="" />
+                        </div>
+                        </div>
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Sekertaris</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control" name="sekertaris" autofocus="" required="" />
+                        </div>
+                        </div>
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">No CE Sekertaris</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control" name="nocesek" autofocus="" required="" />
+                        </div>
+                        </div>
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Ketua Umum</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control" name="ketum" autofocus="" required="" />
+                        </div>
+                        </div>
+
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label"> No CE Ketum</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control" name="nocetum" autofocus="" required=""/>
+                        </div>
+                        </div>
+       
+                            </div>
+                            <div>
+                            <label> Jenis</label>
+                            <div class="input-group">
+                                <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="jenis" >
                                     <option  value="3">Surat Undangan</option>
+                                
+
+                                </select>
+                                <div class="input-group-append">
+                            </div>
+
+                        </section>
+                        
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" value = "print" class="btn btn-primary">Buat Surat</button>
+            </div>
+            </form>
+            </div>
+        </div>
+        </div>
+
+                     <!-- Modal -->
+                     <div class="modal fade" id="suratsponsor" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Tambah Surat</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+            <form method="POST" action="surat/surat.php" enctype="multipart/form-data" >
+                        <section class="base align-items-center "> 
+                        <div>
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Nomer Surat</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control" name="number" autofocus="" required=""/>
+                        </div>
+                        </div>
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Lampiran</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control" name="lampiran" autofocus="" />
+                        </div>
+                        </div>
+
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Nama</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control"  name="nama" autofocus="" />
+                        </div>
+                        </div>
+
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Nama Acara</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control"  name="acara" autofocus="" required=""  />
+                        </div>
+                        </div>
+
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Tanggal</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control" name="tgl" autofocus="" required=""  />
+                        </div>
+                        </div>
+
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Waktu</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control"  name="pukul" autofocus="" required="" />
+                        </div>
+                        </div>
+
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Tempat</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control"  name="tempat" autofocus="" required=""/>
+                        </div>
+                        </div>
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Titimangsa</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control" name="titimangsa" autofocus="" required="" />
+                        </div>
+                        </div>
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Ketua Pelaksana</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control" name="ketuplak" autofocus="" required="" />
+                        </div>
+                        </div>
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">No CE Ketua</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control" name="noceketu" autofocus="" required="" />
+                        </div>
+                        </div>
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Sekertaris</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control" name="sekertaris" autofocus="" required="" />
+                        </div>
+                        </div>
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">No CE Sekertaris</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control" name="nocesek" autofocus="" required="" />
+                        </div>
+                        </div>
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label">Ketua Umum</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control" name="ketum" autofocus="" required="" />
+                        </div>
+                        </div>
+
+
+                        <div class="row mb-4">
+                        <label for="Nama Proker" class="col-sm-3 col-form-label"> No CE Ketum</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control" name="nocetum" autofocus="" required=""/>
+                        </div>
+                        </div>
+       
+                            </div>
+                            <div>
+                            <label> Jenis</label>
+                            <div class="input-group">
+                                <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="jenis" >
                                     <option  value="4">Surat Dana Sponsor</option>
 
                                 </select>
@@ -432,6 +955,7 @@ Buat Surat
             </div>
         </div>
         </div>
+
                     <br/>
 
                     <table class="table table-hover">
@@ -454,72 +978,53 @@ Buat Surat
                     <tr>
                         <td  scope="row">1</td>
                         <td  scope="row">Surat Pemberitahuan Acara</td>
+                        <td>         
+                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#suratacara">
+                        Buat
+                        </button>
+                        </td>
                     </tr>
                     <tr>
                         <td  scope="row">2</td>
                         <td  scope="row">Surat Permohonan</td>
+                        <td>         
+                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#suratpermohonan">
+                        Buat
+                        </button>
+                        </td>
                     </tr>
                     <tr>
                         <td  scope="row">3</td>
                         <td  scope="row">Surat Peminjaman</td>
+                        <td>         
+                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#suratpeminjaman">
+                        Buat
+                        </button>
+                        </td>
                     </tr>
                     <tr>
                         <td  scope="row">4</td>
                         <td  scope="row">Surat Undangan Acara</td>
+                        <td>         
+                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#suratundangan">
+                        Buat
+                        </button>
+                        </td>
                     </tr>
                     <tr>
                         <td  scope="row">5</td>
                         <td  scope="row">Surat Pengajuan Kerja Sama (sponsorship)</td>
+                        <td>         
+                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#suratsponsor">
+                        Buat
+                        </button>
+                        </td>
                     </tr>
                         <!-- <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal2">
                             Edit
                             </button> -->
    
-        <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Edit Kas</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-            <form method="POST" action="proker/edit_proker.php" enctype="multipart/form-data" >
-            
-                        <section class="base align-items-center ">
-                        <div>
-                            <label >ID </label>
-                            <input type="text" value="<?php echo $row['id']; ?>" name="id" required="" />
-                            </div>
-                            <div>
-                            <label >Nama Proker </label>
-                            <input type="text" value="<?php echo $row['nama_proker']; ?>" name="nama_proker" autofocus="" required="" />
-                            </div>
-                            <div>
-                            <label>Status</label>
-                            <div class="input-group">
-                                <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="stat" >
-                                    <option selected>Choose...</option>
-                                    <option value="0">On Progress</option>
-                                    <option  value="1">Finish</option>
-                                    
 
-                                </select>
-                                <div class="input-group-append">
-                            </div>
-
-                        </section>
-                        
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary">Save changes</button>
-            </div>
-            </form>
-            </div>
-        </div>
-        </div>
                             
                         </td>
                     </tr>

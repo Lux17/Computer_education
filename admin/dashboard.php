@@ -47,8 +47,8 @@ session_start();
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
+<!-- Nav Item - Dashboard -->
+<li class="nav-item active">
                 <a class="nav-link" href="dashboard.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
@@ -62,22 +62,20 @@ session_start();
                 Interface
             </div>
 
-            <!-- Nav Item - Pages Collapse Menu -->
-
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-wrench"></i>
-                    <span>Utilities</span>
+                    <span>Alat</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Utilities:</h6>
-                        <a class="collapse-item" href="visi.php">Visi& Misi</a>
-                        <a class="collapse-item" href="surat.php">Generate Surat</a>
+                        <h6 class="collapse-header">Alat:</h6>
+                        <a class="collapse-item" href="surat.php">Auto Create Surat</a>
+
                     </div>
                 </div>
             </li>
@@ -87,38 +85,53 @@ session_start();
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Addons
+                Data
             </div>
 
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+                <a class="nav-link" href="visi.php">
+                    <i class="fas fa-fw fa-bullseye"></i>
+                    <span>Visi-Misi</span></a>
+            </li>
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
                 <a class="nav-link" href="kas.php">
-                    <i class="fas fa-fw fa-chart-area"></i>
+                    <i class="fas fa-fw fa-dollar-sign"></i>
                     <span>Kas</span></a>
             </li>
 
             <li class="nav-item">
                 <a class="nav-link" href="proker.php">
-                    <i class="fas fa-fw fa-chart-area"></i>
+                    <i class="fas fa-fw fa-clipboard-check"></i>
                     <span>Proker</span></a>
             </li>
-            
-            <!-- Nav Item - Tables -->
             <li class="nav-item">
                 <a class="nav-link" href="anggota.php">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Anggota</span></a>
             </li>
+            
+            <!-- Nav Item - Tables -->
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
+            <div class="sidebar-heading">
+                Kelola
+            </div>
+
+
+            <li class="nav-item">
+                <a class="nav-link" href="Users.php">
+                    <i class="fas fa-fw fa-user-circle"></i>
+                    <span>Users</span></a>
+            </li>
 
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
-
 
 
         </ul>
@@ -234,8 +247,7 @@ session_start();
                                                 <div class="col-auto">
                                                     <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">
                                                     <?php
-
-                                                    $data_proker = mysqli_query($kon,"SELECT * FROM proker WHERE stat LIKE '1'");
+                                                    $data_proker = mysqli_query($kon,"SELECT * FROM proker");
 
                                                     // menghitung data barang
                                                     $jmlh_proker= mysqli_num_rows($data_proker);
@@ -245,11 +257,7 @@ session_start();
                                                     </div>
                                                 </div>
                                                 <div class="col">
-                                                    <div class="progress progress-sm mr-2">
-                                                        <div class="progress-bar bg-success" role="progressbar"
-                                                            style="width: 50%" aria-valuenow="50" aria-valuemin="0"
-                                                            aria-valuemax="100"></div>
-                                                    </div>
+                                  
                                                 </div>
                                             </div>
                                         </div>
@@ -307,7 +315,7 @@ session_start();
 
                                             <?php
 
-                                            $data_anggota = mysqli_query($kon,"SELECT * FROM anggota");
+                                            $data_anggota = mysqli_query($kon,"SELECT * FROM anggota WHERE jabatan LIKE 'Anggota'");
  
                                             // menghitung data barang
                                             $jmlh_anggota = mysqli_num_rows($data_anggota);
@@ -319,14 +327,182 @@ session_start();
                                             </div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-comments fa-2x text-gray-300"></i>
+                                            <i class="fas fa-users fa-2x text-gray-300"></i>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                 
+
+                    <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-dark shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-dark text-uppercase mb-1">
+                                                Divisi Organisasi</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+
+                                            
+                                            <?php
+
+                                            $data_pengurus = mysqli_query($kon,"SELECT * FROM anggota WHERE divisi LIKE 'organisasi'");
+ 
+                                            // menghitung data barang
+                                            $jmlh_pengurus = mysqli_num_rows($data_pengurus);
+                                            ?>
+                                             
+                                            <p><?php echo  $jmlh_pengurus;  ?></b></p>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-network-wired fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-danger shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
+                                                Divisi Komputer</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+
+                                            
+                                            <?php
+
+                                            $data_pengurus = mysqli_query($kon,"SELECT * FROM anggota WHERE divisi LIKE 'komputer'");
+ 
+                                            // menghitung data barang
+                                            $jmlh_pengurus = mysqli_num_rows($data_pengurus);
+                                            ?>
+                                             
+                                            <p><?php echo  $jmlh_pengurus;  ?></b></p>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-desktop fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary  text-uppercase mb-1">
+                                                Jumlah User</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+
+                                            
+                                            <?php
+
+                                            $data_pengurus = mysqli_query($kon,"SELECT * FROM admin ");
+ 
+                                            // menghitung data barang
+                                            $jmlh_pengurus = mysqli_num_rows($data_pengurus);
+                                            ?>
+                                             
+                                            <p><?php echo  $jmlh_pengurus;  ?></b></p>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-user-circle fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-secondary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">
+                                                Pembina</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+
+                            
+                                             
+                                            <p>Khairul Anwarudin, M.Kom</p>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-user-tie fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
                     </div>
 
+                    <div class="row">
+                         <!-- Card Body -->
+                        <div class="card-body mr-3">
+                        <h5>Visi & Misi</h5>
+                        <hr>
+                        <?php
+                           
+                           // jalankan query untuk menampilkan semua data diurutkan berdasarkan 
+                           $query = "SELECT * FROM ketum ORDER BY id ASC";
+                           $result = mysqli_query($kon, $query);
+                           //mengecek apakah ada error ketika menjalankan query
+                           if(!$result){
+                               die ("Query Error: ".mysqli_errno($kon).
+                               " - ".mysqli_error($kon));
+                           }
+
+                           //buat perulangan untuk element tabel dari data mahasiswa
+                           $no = 1; //variabel untuk membuat nomor urut
+                           // hasil query akan disimpan dalam variabel $data dalam bentuk array
+                           // kemudian dicetak dengan perulangan while
+                           while($row = mysqli_fetch_assoc($result))
+                           {
+                           ?>
+
+                        <!-- Pie Chart -->
+                       
+                        <div class="col-md-6 col-md-6 align-items-center">
+                            <div class="card shadow mb-4">
+                                <!-- Card Header - Dropdown -->
+                                <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                            
+                                </div>
+                                <div class="card-body">
+                                <h6 class="m-0 font-weight-bold text-primary">Visi</h6>
+                                    <p><?php echo $row['visi']; ?></p>
+                                    <h6 class="m-0 font-weight-bold text-primary">Misi</h6>
+                                    <p><?php echo $row['misi']; ?></p>
+                                </div>
+                            </div>
+                                <!-- Card Body -->
+            
+                            </div>
+                           </div>
+                    </div>
+                           </div>
+
+                    <?php
+                           };
+                    ?>
                     <!-- Content Row -->
 
                     <div class="row">

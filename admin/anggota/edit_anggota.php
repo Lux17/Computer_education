@@ -11,9 +11,11 @@ include 'koneksi.php';
   $prodi= isset($_POST['prodi']) ? $_POST['prodi'] : '';
   $alamat = isset($_POST['alamat']) ? $_POST['alamat'] : '';
   $jabatan = isset($_POST['jabatan']) ? $_POST['jabatan'] : '';
+  $divisi = isset($_POST['divisi']) ? $_POST['divisi'] : '';
+  $sub_divisi = isset($_POST['sub_divisi']) ? $_POST['sub_divisi'] : '';
  
  
-  $query  = "UPDATE anggota SET nama = '$nama', no_anggota = '$nomer', lahir = '$lahir', nomer_hp = '$nomer_hp', prodi = '$prodi', alamat = '$alamat', jabatan = '$jabatan'";
+  $query  = "UPDATE anggota SET nama = '$nama', no_anggota = '$nomer', lahir = '$lahir', nomer_hp = '$nomer_hp', prodi = '$prodi', alamat = '$alamat', jabatan = '$jabatan', divisi = '$divisi', sub_divisi = '$sub_divisi'";
   $query .= "WHERE id = '$id'";
   $result = mysqli_query($kon, $query);
                     // periska query apakah ada error

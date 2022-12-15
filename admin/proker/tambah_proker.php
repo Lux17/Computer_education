@@ -4,14 +4,14 @@ include 'koneksi.php';
 session_start();	
 	
 $nama_proker = isset($_POST['nama_proker']) ? $_POST['nama_proker'] : '';
-
 $stat= isset($_POST['stat']) ? $_POST['stat'] : '';
+$divisi= isset($_POST['divisi']) ? $_POST['divisi'] : '';
 
 
-$query = "INSERT INTO proker (nama_proker,stat) VALUES ('$nama_proker', '$stat')";
+$query = "INSERT INTO proker (nama_proker,stat,divisi) VALUES ('$nama_proker', '$stat', '$divisi')";
 $result = mysqli_query($kon, $query);
 
-$jumlah = mysqli_num_rows($result);
+// $jumlah = mysqli_num_rows($result);
 
 if(!$result){
     die ("Query gagal dijalankan: ".mysqli_errno($kon).

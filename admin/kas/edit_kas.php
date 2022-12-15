@@ -7,9 +7,9 @@ include 'koneksi.php';
   $bulan = isset($_POST['bulan']) ? $_POST['bulan'] : '';
   $jumlah_kas = isset($_POST['jumlah_kas']) ? $_POST['jumlah_kas'] : '';
 
+  $angka= str_replace(".", "", $jumlah_kas);
  
- 
-  $query  = "UPDATE kas SET bulan = '$bulan', jumlah_kas = '$jumlah_kas'";
+  $query  = "UPDATE kas SET bulan = '$bulan', jumlah_kas = '$angka'";
   $query .= "WHERE id = '$id'";
   $result = mysqli_query($kon, $query);
                     // periska query apakah ada error

@@ -79,7 +79,7 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="zoom-out" data-aos-delay="200">
+        <div class="col-lg-6 d-flex flex-column justify-content-center" >
           <h1 >Selamat Datang di Computer Education</h1>
           <h2 >Membangun Mahasiswa Berteknologi berlandaskan islami</h2>
           <div >
@@ -91,7 +91,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-6 " data-aos="zoom-out" data-aos-delay="200">
+        <div class="col-lg-6 ">
           <img src="assets/img/maskot.png" class="img-fluid" alt="">
         </div>
       </div>

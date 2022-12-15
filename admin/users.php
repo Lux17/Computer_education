@@ -4,12 +4,12 @@
   
 
   // mengecek apakah di url ada nilai GET id
-  if (isset($_GET['id'])) {
-    // ambil nilai id dari url dan disimpan dalam variabel $id
-    $id = ($_GET["id"]);
+  if (isset($_GET['id_user'])) {
+    // ambil nilai id dari url dan dpasswordmpan dalam variabel $id
+    $id = ($_GET["id_user"]);
 
     // menampilkan data dari database yang mempunyai id=$id
-    $query = "SELECT * FROM proker WHERE id='$id'";
+    $query = "SELECT * FROM admin WHERE id_user='$id'";
     $result = mysqli_query($kon, $query);
     // jika data gagal diambil maka akan tampil error berikut
     if(!$result){
@@ -73,8 +73,8 @@
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
-           <!-- Nav Item - Dashboard -->
-           <li class="nav-item active">
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
                 <a class="nav-link" href="dashboard.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
@@ -178,35 +178,15 @@
                         <i class="fa fa-bars"></i>
                     </button>
 
+        
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
-                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-                        <li class="nav-item dropdown no-arrow d-sm-none">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-search fa-fw"></i>
-                            </a>
-                            <!-- Dropdown - Messages -->
-                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                aria-labelledby="searchDropdown">
-                                <form class="form-inline mr-auto w-100 navbar-search">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-0 small"
-                                            placeholder="Search for..." aria-label="Search"
-                                            aria-describedby="basic-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-primary" type="button">
-                                                <i class="fas fa-search fa-sm"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </li>
+                        
 
-                      
+                        
+                        
                         <div class="topbar-divider d-none d-sm-block"></div>
 
                         <!-- Nav Item - User Information -->
@@ -224,14 +204,14 @@
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
+                                <!-- <a class="dropdown-item" href="#">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
-                                </a>
+                                </a> -->
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="logout.php" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
+                                    Keluar
                                 </a>
                             </div>
                         </li>
@@ -245,19 +225,20 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Program Kerja</h1>
-                    <p class="mb-4">List Program Kerja Computer Education</p>
+                    <h1 class="h3 mb-2 text-gray-800">Kelola Akun</h1>
+                    <p class="mb-4">Kelola Akun.</p>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-success">Program Kerja</h6>
+                            <h6 class="m-0 font-weight-bold text-success">Data Tabel Akun</h6>
                         </div>
-                                        <center><h3>Program Kerja</h3><center>
+                       
+                                        <center><h3>Data Akun</h3><center>
                                            
                                                          <!-- Button trigger modal -->
 <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
-  Tambah
+  Tambah Users
 </button>
     <br>
                    <!-- Modal -->
@@ -265,59 +246,60 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Tambah Proker</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Tambah Users</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-            <form method="POST" action="proker/tambah_proker.php" enctype="multipart/form-data" >
+            <div>
+            <form method="POST" action="users/tambah_users.php" enctype="multipart/form-data" >
                         <section class="base align-items-center ">
-                            
-                        <div class="row mb-3">
-                            <label for="Nama Proker" class="col-sm-3 col-form-label">Nama Proker</label>
+
+                            <div class="row mb-3">
+                            <label for="username" class="col-sm-3 col-form-label">Username</label>
                             <div class="col-sm-8">
-                            <input type="text" class="form-control"  name="nama_proker" autofocus="" required="" />
+                            <input type="text" class="form-control" name="username" autofocus="" required="" />
                             </div>
                             </div>
-
                             
                             <div class="row mb-3">
-                            <label class="col-sm-3">Status</label>
-                            <div class="input-group col-sm-8">
-                            <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="stat" >
-                                    <option selected>Pilih...</option>
-                                    <option value="Soon">Soon</option>
-                                    <option value="On Progress">On Progress</option>
-                                    <option  value="Finish">Finish</option>
-                                    
-                            </select>
-                            <div class="input-group-append">
+                            <label for="password" class="col-sm-3 col-form-label">Password</label>
+                            <div class="col-sm-8">
+                            <input type="password" class="form-control" name="password" id="password" aria-describedby="passwordHelpInline" data-toggle="password"  />
+                            <div class= "input-group-append">
+                            <span class="input-group-text" onclick="password_show_hide();">
+                                <i class="mb-2 fas fa-eye" id="show_eye"></i>
+                                <i class="mb-2 fas fa-eye-slash d-none" id="hide_eye"></i>
+                            </span>
                             </div>
                             </div>
                             </div>
-                   
-                            <div class="row mb-3">
-                            <label class="col-sm-3">Divisi</label>
-                            <div class="input-group col-sm-8">
-                                <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="divisi" required="" >
-                                <option selected>Pilih...</option>
-                                <option value="Organisasi">Organisasi</option>
-                                <option  value="Komputer">Komputer</option>
-                                <option  value="BPH">BPH</option>
 
+                            <div class="row mb-3">
+                            <label class="col-sm-3"> Rolename</label>
+                            <div class="input-group col-sm-8">
+                                <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="rolename" required="" >
+                                <option selected value="">Pilih</option> 
+                                <option value="admin">Admin</option>
+                                <option  value="sekertaris">Sekertaris</option>
+                                <option  value="bendahara">Bendahara</option>
                                 </select>
                                 <div class="input-group-append">
                             </div>
                             </div>
                             </div>
 
+
+   
+           
                         </section>
                         
             </div>
+</div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Tutup</button>
-                <button type="submit" class="btn btn-primary">Simpan</button>
+                <button type="submit" name ="simpan" class="btn btn-primary">Simpan</button>
             </div>
             </form>
             </div>
@@ -330,9 +312,9 @@
                     <thead>
                         <tr>
                         <th scope="col">No</th>
-                        <th scope="col">Nama Proker</th>
-                        <th scope="col">Divisi</th>
-                        <th scope="col">Status</th>
+                        <th scope="col">Username</th>
+                        <th scope="col">Password</th>
+                        <th scope="col">Rolename</th>
                         <th scope="col"></th>
                    
                         </tr>
@@ -340,7 +322,7 @@
                     <tbody>
                     <?php
                     // jalankan query untuk menampilkan semua data diurutkan berdasarkan nim
-                    $query = "SELECT * FROM proker ORDER BY id ASC";
+                    $query = "SELECT * FROM admin ORDER BY id_user ASC";
                     $result = mysqli_query($kon, $query);
                     //mengecek apakah ada error ketika menjalankan query
                     if(!$result){
@@ -350,79 +332,77 @@
 
                     //buat perulangan untuk element tabel dari data mahasiswa
                     $no = 1; //variabel untuk membuat nomor urut
-                    // hasil query akan disimpan dalam variabel $data dalam bentuk array
+                    // hasil query akan dpasswordmpan dalam variabel $data dalam bentuk array
                     // kemudian dicetak dengan perulangan while
                     while($row = mysqli_fetch_assoc($result))
                     {
                     ?>
                     <tr>
                         <td  scope="row"><?php echo $no; ?></td>
-                        <td  scope="row"><?php echo $row['nama_proker']; ?></td>
-                        <td  scope="row"><?php echo $row['divisi'];?></td>
-                        <td  scope="row"><?php echo $row['stat'];?></td>
-                       
+                        <td  scope="row"><?php echo $row['username']; ?></td>
+                        <td  scope="row"><?php echo $row['password']; ?></td>
+                        <td  scope="row"><?php echo $row['rolename']; ?></td>
                     
                         <td  scope="row">
-                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal<?php echo $row['id'];?>">
+                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal<?php echo $row['id_user'];?>">
                             Edit
                             </button>
    
-        <div class="modal fade" id="exampleModal<?php echo $row['id'];?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="exampleModal<?php echo $row['id_user'];?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Edit Kas</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Edit users</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-            <form method="POST" action="proker/edit_proker.php" enctype="multipart/form-data" >
+            <form method="POST" action="users/edit_users.php" enctype="multipart/form-data" >
             
                         <section class="base align-items-center ">
                         <div>
-                        
-                            <input type="hidden" value="<?php echo $row['id']; ?>" name="id" required="" />
-                            </div>
-
-                            <div class="row mb-3">
-                            <label for="Nama Proker" class="col-sm-3 col-form-label">Nama Proker</label>
-                            <div class="col-sm-8">
-                            <input type="text" class="form-control" value="<?php echo $row['nama_proker']; ?>" name="nama_proker" autofocus="" required=""  />
-                            </div>
-                            </div>
-
-
                             
+                            <input type="hidden" value="<?php echo $row['id_user']; ?>" name="iduser" required="" />
+                            </div>
+                            <div>
                             <div class="row mb-3">
-                            <label class="col-sm-3">Status</label>
-                            <div class="input-group col-sm-8">
-                            <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="stat" >
-                                    <option selected value="<?php echo $row['stat']; ?>"><?php echo $row['stat']; ?></option>
-                                    <option value="Soon">Soon</option>
-                                    <option value="On Progress">On Progress</option>
-                                    <option  value="Finish">Finish</option>
-                                    
-                            </select>
-                            <div class="input-group-append">
+                            <label for="username" class="col-sm-3 col-form-label">username</label>
+                            <div class="col-sm-8">
+                            <input type="text" class="form-control" value="<?php echo $row['username']; ?>" name="username" autofocus="" required="" />
                             </div>
                             </div>
-                            </div>
-                   
-                            <div class="row mb-3">
-                            <label class="col-sm-3">Divisi</label>
-                            <div class="input-group col-sm-8">
-                                <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="divisi" required="" >
-                                <option selected value="<?php echo $row['divisi']; ?>"><?php echo $row['divisi']; ?></option> 
-                                <option value="Organisasi">Organisasi</option>
-                                <option  value="Komputer">Komputer</option>
-                                <option  value="BPH">BPH</option>
 
+                            <div class="row mb-3">
+                            <label for="password" class="col-sm-3 col-form-label">password</label>
+                            <div class="col-sm-8">
+                            <input type="text" class="form-control" name="password" required="" />
+                            </div>
+                            </div>
+
+                            <div class="row mb-3">
+                            <label class="col-sm-3"> Rolename</label>
+                            <div class="input-group col-sm-8">
+                                <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="rolename" required="" >
+                                <option selected value="<?php echo $row['rolename']; ?>"><?php echo $row['rolename']; ?></option> 
+                                <option value="admin">admin</option>
+                                <option  value="sekertaris">sekertaris</option>
+                                <option  value="bendahara">bendahara</option>
                                 </select>
                                 <div class="input-group-append">
                             </div>
                             </div>
                             </div>
+
+                            <!-- <div class="row mb-3">
+                            <label for="rolename" class="col-sm-3 col-form-label">rolename</label>
+                            <div class="col-sm-8">
+                            <input type="text" class="form-control"  value="<?php echo $row['rolename']; ?>"  name="rolename" required="" />
+                            </div>
+                            </div> -->
+
+                            </div>
+
                         </section>
                         
             </div>
@@ -434,7 +414,7 @@
             </div>
         </div>
         </div>
-                            <a href="proker/hapus_proker.php?id=<?php echo $row['id']; ?>" onclick="return confirm('Anda yakin akan menghapus data ini?')">Hapus</a>
+                            <a href="users/hapus_users.php?id=<?php echo $row['id_user']; ?>" onclick="return confirm('Anda yakin akan menghapus data ini?')">Hapus</a>
                         </td>
                     </tr>
                         
@@ -473,20 +453,36 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Anda Yakin Ingin Keluar?</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-body">Pilih "Keluar" jika anda ingin mengakhiri sesi ini.</div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="logout.php">Logout</a>
+                    <button class="btn btn-danger" type="button" data-dismiss="modal">Batal</button>
+                    <a class="btn btn-primary" href="logout.php">Keluar</a>
                 </div>
             </div>
         </div>
     </div>
-
+    <script type="text/javascript">
+    function password_show_hide() {
+    var x = document.getElementById("password");
+    var show_eye = document.getElementById("show_eye");
+    var hide_eye = document.getElementById("hide_eye");
+    hide_eye.classList.remove("d-none");
+    if (x.type === "password") {
+        x.type = "text";
+        show_eye.style.display = "none";
+        hide_eye.style.display = "block";
+    } else {
+        x.type = "password";
+        show_eye.style.display = "block";
+        hide_eye.style.display = "none";
+    }
+    }
+    </script>
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

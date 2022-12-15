@@ -73,8 +73,8 @@
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
+<!-- Nav Item - Dashboard -->
+<li class="nav-item active">
                 <a class="nav-link" href="dashboard.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
@@ -94,14 +94,14 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-wrench"></i>
-                    <span>Utilities</span>
+                    <span>Alat</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Utilities:</h6>
-                        <a class="collapse-item" href="visi.php">Visi& Misi</a>
-                        <a class="collapse-item" href="surat.php">Generate Surat</a>
+                        <h6 class="collapse-header">Alat:</h6>
+                        <a class="collapse-item" href="surat.php">Auto Create Surat</a>
+
                     </div>
                 </div>
             </li>
@@ -111,33 +111,48 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Addons
+                Data
             </div>
 
-
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+                <a class="nav-link" href="visi.php">
+                    <i class="fas fa-fw fa-bullseye"></i>
+                    <span>Visi-Misi</span></a>
+            </li>
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
                 <a class="nav-link" href="kas.php">
-                    <i class="fas fa-fw fa-chart-area"></i>
+                    <i class="fas fa-fw fa-dollar-sign"></i>
                     <span>Kas</span></a>
             </li>
 
             <li class="nav-item">
                 <a class="nav-link" href="proker.php">
-                    <i class="fas fa-fw fa-chart-area"></i>
+                    <i class="fas fa-fw fa-clipboard-check"></i>
                     <span>Proker</span></a>
             </li>
-            
-            <!-- Nav Item - Tables -->
             <li class="nav-item">
                 <a class="nav-link" href="anggota.php">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Anggota</span></a>
             </li>
+            
+            <!-- Nav Item - Tables -->
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
+            <div class="sidebar-heading">
+                Kelola
+            </div>
+
+
+            <li class="nav-item">
+                <a class="nav-link" href="Users.php">
+                    <i class="fas fa-fw fa-user-circle"></i>
+                    <span>Users</span></a>
+            </li>
 
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
@@ -240,14 +255,14 @@
                         <div class="row mb-3">
                         <label for="Visi" class="col-sm-2 col-form-label">Visi</label>
                         <div class="col-sm-10">
-                        <input type="text" class="form-control"  name="visi" autofocus="" required="" />
+                        <textarea type="text" class="form-control"  name="visi" autofocus="" required="" ></textarea>
                         </div>
                         </div>
 
                         <div class="row mb-3">
                         <label for="Misi" class="col-sm-2 col-form-label">Misi</label>
                         <div class="col-sm-10">
-                        <input type="text" class="form-control"  name="misi"  required="" />
+                        <textarea type="text" class="form-control"  name="misi"  required="" > </textarea>  
                         </div>
                         </div>
            
@@ -255,8 +270,8 @@
                         
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Tutup</button>
+                <button type="submit" name= "simpan" class="btn btn-primary">Simpan</button>
             </div>
             </form>
             </div>
@@ -325,14 +340,14 @@
                             <div class="row mb-3">
                             <label for="Visi" class="col-sm-2 col-form-label">Visi</label>
                             <div class="col-sm-10">
-                            <input type="text" class="form-control" value="<?php echo $row['visi']; ?>" name="visi" autofocus="" required="" />
+                            <textarea type="text" class="form-control" value="<?php echo $row['visi']; ?>" name="visi" autofocus="" required="" > </textarea>
                             </div>
                             </div>
 
                             <div class="row mb-3">
                             <label for="Misi" class="col-sm-2 col-form-label">Misi</label>
                             <div class="col-sm-10">
-                            <input type="text" class="form-control" value="<?php echo $row['misi']; ?>"  name="misi" required=""  />
+                            <textarea type="text" class="form-control" value="<?php echo $row['misi']; ?>"  name="misi" required=""  > </textarea>
                             </div>
                             </div>  
 
@@ -342,8 +357,8 @@
                         
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">tutup</button>
+                <button type="submit" class="btn btn-primary">Simpan</button>
             </div>
             </form>
             </div>

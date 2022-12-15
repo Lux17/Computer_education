@@ -8,6 +8,8 @@
                                             <td>Prodi</td>
                                             <td>Alamat</td>
                                             <td>Jabatan</td>
+                                            <td>Divisi</td>
+                                            <td>Sub Divisi</td>
                                             <td></td>
     </tr>
     <?php
@@ -24,8 +26,10 @@
                                         <td><?php echo $row['lahir']; ?></td>
                                         <td><?php echo $row['nomer_hp']; ?></td>
                                         <td><?php echo $row['prodi']; ?></td>
-                                        <td><?php echo substr($row['alamat'], 0, 20); ?></td>
+                                        <td><?php echo $row['alamat']; ?></td>
                                         <td><?php echo $row['jabatan']; ?></td>
+                                        <td><?php echo $row['divisi']; ?></td>
+                                        <td><?php echo $row['sub_divisi']; ?></td>
     </tr>
     <?php
         }
