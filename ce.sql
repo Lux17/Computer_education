@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 15, 2022 at 02:30 PM
+-- Generation Time: Dec 17, 2022 at 05:36 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -40,7 +40,8 @@ CREATE TABLE `admin` (
 
 INSERT INTO `admin` (`id_user`, `username`, `password`, `rolename`) VALUES
 (1, 'ketum', 'b8f504b6a7f1374bd9d165f8bea29579c79b7ed8', 'admin'),
-(3, 'sekertaris', '9fecf78d4126417f320dcac4c4e867313c8ebacb', 'sekertaris');
+(3, 'sekertaris', '9fecf78d4126417f320dcac4c4e867313c8ebacb', 'sekertaris'),
+(5, 'publikasi', 'b8f504b6a7f1374bd9d165f8bea29579c79b7ed8', 'publikasi');
 
 -- --------------------------------------------------------
 
@@ -68,6 +69,28 @@ CREATE TABLE `anggota` (
 INSERT INTO `anggota` (`id`, `nama`, `no_anggota`, `lahir`, `nomer_hp`, `prodi`, `alamat`, `jabatan`, `divisi`, `sub_divisi`) VALUES
 (1, 'Lucky  Saputra', 'CE 20.21.031', 'Cirebon, 17 Januari 2002', '08818285309', 'Teknik Informatika', 'Jl.Luwung Blok Sigebang Kec Mundu Kab Cirebon', 'Pengurus', 'Ketua Div Komputer', ''),
 (4, 'Mohammad Ridwan', 'CE 20.21.019', 'Cirebon, 19 November 2022', '08818377223', 'Teknik Informatika', ' ', 'Pengurus', 'Ketua umum', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `blog`
+--
+
+CREATE TABLE `blog` (
+  `id` int(11) NOT NULL,
+  `title` varchar(60) NOT NULL,
+  `description` varchar(200) NOT NULL,
+  `date` varchar(20) NOT NULL,
+  `image` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data for table `blog`
+--
+
+INSERT INTO `blog` (`id`, `title`, `description`, `date`, `image`) VALUES
+(1, 'RAKER DIVISI KOMPUTER', '<p>Disini Adalah BLOG</p><div class=\"raw-html-embed\"></div>', '17 Desember 2022', 'https://drive.google.com/file/d/1cJFQ5iy6Qw3tQkkl1-Jr2LRGmbo2IbCt/preview'),
+(22, 'Harlah CE33', '<p>yuk harlah233</p>', '17 Desember 2022', 'https://drive.google.com/file/d/1oYVI6dIWgciubRMq0MJ5A8obq3uZG6fO/preview');
 
 -- --------------------------------------------------------
 
@@ -145,6 +168,12 @@ ALTER TABLE `anggota`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `blog`
+--
+ALTER TABLE `blog`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `kas`
 --
 ALTER TABLE `kas`
@@ -170,13 +199,19 @@ ALTER TABLE `proker`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `anggota`
 --
 ALTER TABLE `anggota`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `blog`
+--
+ALTER TABLE `blog`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `kas`
