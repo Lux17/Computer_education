@@ -75,7 +75,8 @@ session_start();
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Alat:</h6>
                         <a class="collapse-item" href="surat.php">Auto Create Surat</a>
-
+                        <a class="collapse-item" href="qr.php">Qr Code Generate</a>
+                        
                     </div>
                 </div>
             </li>
@@ -112,9 +113,19 @@ session_start();
                     <i class="fas fa-fw fa-table"></i>
                     <span>Anggota</span></a>
             </li>
-            
-            <!-- Nav Item - Tables -->
 
+            <li class="nav-item">
+                <a class="nav-link" href="https://drive.google.com/drive/folders/1VYcc5us97qQ0FQz44hLzqBNcPw6N_Nfp?usp=share_link">
+                    <i class="fas fa-fw fa-upload"></i>
+                    <span>File</span></a>
+            </li>
+
+            
+            <li class="nav-item">
+                <a class="nav-link" href="blog.php">
+                    <i class="fas fa-fw fa-globe"></i>
+                    <span>Blog</span></a>
+            </li>
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
             <div class="sidebar-heading">
@@ -195,8 +206,8 @@ session_start();
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+                        <!-- <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm"><i
+                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a> -->
                     </div>
 
                     <!-- Content Row -->

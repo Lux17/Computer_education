@@ -1,4 +1,9 @@
 
+<?php
+include('koneksi.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -61,9 +66,9 @@
           <li class="nav-item">
             <a class="nav-link" style="color: #348A0C;" href="#pengurus">Pengurus</a>
           </li>
-          <!-- <li class="nav-item ">
+          <li class="nav-item ">
             <a class="nav-link" style="color: #348A0C;" href="#artikel">Artikel</a>
-          </li> -->
+          </li>
   
           <li><a class="getstarted scrollto" href="masuk.php"type="submit">Masuk</a></li>
 
@@ -681,6 +686,59 @@ Divisi Komputer mempelajari yang berhubungan tentang pembelajaran di bidang soft
       </div>
 
     </section><!-- End F.A.Q Section -->  
+
+
+    <!-- ======= Recent Blog Posts Section ======= -->
+    <section id="artikel" class="recent-blog-posts" >
+
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h2>Artikel</h2>
+          <p>Blog CE</p>
+        </header>
+
+        <div class="row">
+
+        <div class="hr"></div> <br>
+        <?php
+                           
+                           // jalankan query untuk menampilkan semua data diurutkan berdasarkan 
+                           $query = "SELECT * FROM blog ORDER BY date DESC";
+                           $result = mysqli_query($kon, $query);
+                           //mengecek apakah ada error ketika menjalankan query
+                           if(!$result){
+                               die ("Query Error: ".mysqli_errno($kon).
+                               " - ".mysqli_error($kon));
+                           }
+
+                           //buat perulangan untuk element tabel dari data mahasiswa
+                           $no = 1; //variabel untuk membuat nomor urut
+                           // hasil query akan disimpan dalam variabel $data dalam bentuk array
+                           // kemudian dicetak dengan perulangan while
+                           while($row = mysqli_fetch_assoc($result))
+                           {
+                           ?>
+        
+          <div class="col-lg-4">
+            <div class="post-box">
+              <div class="post-img"><img src="" class="img-fluid" alt=""><iframe src="<?php echo $row['image']; ?>" width="640" height="480" allow="autoplay"></iframe></div>
+              <span class="post-date"><?php echo $row['date']; ?></span>
+              <h3 class="post-title"><?php echo $row['title']; ?></h3>
+              <a href="blog-single.php?id=<?php echo $row['id']; ?>" class="readmore stretched-link mt-auto"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+         <?php
+
+                           };
+
+          ?>
+        </div>
+
+      </div>
+
+    </section><!-- End Recent Blog Posts Section -->
+
 
   </main><!-- End #main -->
 

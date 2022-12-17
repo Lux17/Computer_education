@@ -9,7 +9,7 @@
     $id = ($_GET["id"]);
 
     // menampilkan data dari database yang mempunyai id=$id
-    $query = "SELECT * FROM ketum WHERE id='$id'";
+    $query = "SELECT * FROM Blog WHERE id='$id'";
     $result = mysqli_query($kon, $query);
     // jika data gagal diambil maka akan tampil error berikut
     if(!$result){
@@ -20,11 +20,11 @@
     $data = mysqli_fetch_assoc($result);
       // apabila data tidak ada pada database maka akan dijalankan perintah ini
 //        if (!count($data)) {
-//           echo "<script>alert('Data tidak ditemukan pada database');window.location='../anggota.php';</script>";
+//           echo "<script>alert('Data tidak ditemukan pada database');window.location='../Blog.php';</script>";
 //        }
 //   } else {
 //     // apabila tidak ada data GET id pada akan di redirect ke index.php
-//     echo "<script>alert('Masukkan data id.');window.location='../anggota.php';</script>";
+//     echo "<script>alert('Masukkan data id.');window.location='../Blog.php';</script>";
   }         
   ?>
 
@@ -73,8 +73,8 @@
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
-<!-- Nav Item - Dashboard -->
-<li class="nav-item active">
+           <!-- Nav Item - Dashboard -->
+           <li class="nav-item active">
                 <a class="nav-link" href="dashboard.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
@@ -144,13 +144,12 @@
                     <i class="fas fa-fw fa-upload"></i>
                     <span>File</span></a>
             </li>
-
             <li class="nav-item">
                 <a class="nav-link" href="blog.php">
                     <i class="fas fa-fw fa-globe"></i>
                     <span>Blog</span></a>
             </li>
-            <!-- Nav Item - Tables -->
+            <!-- Nav Item - Tables -->  
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -165,12 +164,11 @@
                     <span>Users</span></a>
             </li>
 
-  
+ 
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
-
 
 
         </ul>
@@ -190,12 +188,16 @@
                         <i class="fa fa-bars"></i>
                     </button>
 
-                   
+      
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
                        
+
+                        
+                       
+
                         <div class="topbar-divider d-none d-sm-block"></div>
 
                         <!-- Nav Item - User Information -->
@@ -234,159 +236,112 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Visi & Misi</h1>
-                    <p class="mb-4">Visi & Misi Ketua Umum</p>
+                    <h1 class="h3 mb-2 text-gray-800">Blog</h1>
+                    <p class="mb-4">List Blog Computer Education.</p>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-success">Visi & Misi</h6>
+                            <h6 class="m-0 font-weight-bold text-success">Data Tabel Blog</h6>
                         </div>
-                                        <center><h3>Visi& Misi</h3><center>
-                                           
-                                                         <!-- Button trigger modal -->
-<button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
-  Tambah
-</button>
-    <br>
-                   <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Tambah</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                </button>
+
+                
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                         <!-- Button trigger modal -->
+
+
+            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <a type="button" class="btn btn-success" href="blog/tambah_blog.php">
+            Tambah Blog
+            </a>
+                            
             </div>
-            <div class="modal-body">
-            <form method="POST" action="ketum/tambah_visi.php" enctype="multipart/form-data" >
-                        <section class="base align-items-center ">
 
-                        
-                        <div class="row mb-3">
-                        <label for="Visi" class="col-sm-2 col-form-label">Visi</label>
-                        <div class="col-sm-10">
-                        <textarea type="text" class="form-control"  name="visi" autofocus="" required="" ></textarea>
-                        </div>
-                        </div>
 
-                        <div class="row mb-3">
-                        <label for="Misi" class="col-sm-2 col-form-label">Misi</label>
-                        <div class="col-sm-10">
-                        <textarea type="text" class="form-control"  name="misi"  required="" > </textarea>  
-                        </div>
-                        </div>
-           
-                        </section>
-                        
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Tutup</button>
-                <button type="submit" name= "simpan" class="btn btn-primary">Simpan</button>
-            </div>
-            </form>
-            </div>
-        </div>
-        </div>
-                    <br/>
-
-                    <table class="table table-hover">
-
-                    <thead>
-                        <tr>
-                        <th scope="col">No</th>
-                        <th scope="col">Visi</th>
-                        <th scope="col">Misi</th>
-                        <th scope="col"></th>
-                   
-                        </tr>
-                    </thead>
-                    <tbody>
-                    <?php
-                    // jalankan query untuk menampilkan semua data diurutkan berdasarkan nim
-                    $query = "SELECT * FROM ketum ORDER BY id ASC";
-                    $result = mysqli_query($kon, $query);
-                    //mengecek apakah ada error ketika menjalankan query
-                    if(!$result){
-                        die ("Query Error: ".mysqli_errno($kon).
-                        " - ".mysqli_error($kon));
-                    }
-
-                    //buat perulangan untuk element tabel dari data mahasiswa
-                    $no = 1; //variabel untuk membuat nomor urut
-                    // hasil query akan disimpan dalam variabel $data dalam bentuk array
-                    // kemudian dicetak dengan perulangan while
-                    while($row = mysqli_fetch_assoc($result))
-                    {
-                    ?>
-                    <tr>
-                        <td  scope="row"><?php echo $no; ?></td>
-                        <td  scope="row"><?php echo $row['visi']; ?></td>
-                        <td  scope="row"><?php echo $row['misi']; ?></td>
-                    
-                        <td  scope="row">
-                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal<?php echo $row['id'];?>">
-                            Edit
-                            </button>
    
-        <div class="modal fade" id="exampleModal<?php echo $row['id'];?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Edit Visi</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-            <form method="POST" action="ketum/edit_visi.php" enctype="multipart/form-data" >
-            
-                        <section class="base align-items-center ">
-                        <div>
-                            
-                            <input type="hidden" value="<?php echo $row['id']; ?>" name="id" required="" />
-                            </div>
-                            <div>
-                            
-                            <div class="row mb-3">
-                            <label for="Visi" class="col-sm-2 col-form-label">Visi</label>
-                            <div class="col-sm-10">
-                            <textarea type="text" class="form-control" value="<?php echo $row['visi']; ?>" name="visi" autofocus="" required="" > </textarea>
-                            </div>
-                            </div>
-
-                            <div class="row mb-3">
-                            <label for="Misi" class="col-sm-2 col-form-label">Misi</label>
-                            <div class="col-sm-10">
-                            <textarea type="text" class="form-control" value="<?php echo $row['misi']; ?>"  name="misi" required=""  > </textarea>
-                            </div>
-                            </div>  
 
 
+<!-- Modal -->
 
-                        </section>
-                        
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">tutup</button>
-                <button type="submit" class="btn btn-primary">Simpan</button>
-            </div>
-            </form>
-            </div>
+         
         </div>
         </div>
-                            <a href="ketum/hapus_visi.php?id=<?php echo $row['id']; ?>" onclick="return confirm('Anda yakin akan menghapus data ini?')">Hapus</a>
-                        </td>
-                    </tr>
-                        
-                    <?php
-                        $no++; //untuk nomor urut terus bertambah 1
-                    }
-                    ?>
-                    </tbody>
-                    </table>
+
+
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Judul</th>
+                                            <th>Tanggal</th>
+                                            <th>ISI</th>
+                                            <th>Image</th>
+                                            <th></th>
+                 
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                        <th>No</th>
+                                        <th>Judul</th>
+                                        <th>Tanggal</th>
+                                        <th>ISI</th>
+                                        <th>Image</th>
+                                        <th></th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                    <?php
+                           
+                           // jalankan query untuk menampilkan semua data diurutkan berdasarkan 
+                           $query = "SELECT * FROM blog ORDER BY id ASC";
+                           $result = mysqli_query($kon, $query);
+                           //mengecek apakah ada error ketika menjalankan query
+                           if(!$result){
+                               die ("Query Error: ".mysqli_errno($kon).
+                               " - ".mysqli_error($kon));
+                           }
+
+                           //buat perulangan untuk element tabel dari data mahasiswa
+                           $no = 1; //variabel untuk membuat nomor urut
+                           // hasil query akan disimpan dalam variabel $data dalam bentuk array
+                           // kemudian dicetak dengan perulangan while
+                           while($row = mysqli_fetch_assoc($result))
+                           {
+                           ?>
+                                    <tr>
+                                        <td><?php echo $no; ?></td>
+                                        <td><?php echo $row['title']; ?></td>
+                                        <td><?php echo $row['date']; ?></td>
+                                        <td><?php echo $row['description']; ?></td>
+                                        <td><?php echo $row['image']; ?></td>
+
+                                        <td>
+                            <a type="button" class="btn btn-success" href="blog/edit_blog.php?id=<?php echo $row['id']; ?>">
+                            Edit
+                           </a>
+        </div>
+                                        |
+                                            <a  href="blog/hapus_blog.php?id=<?php echo $row['id']; ?>" onclick="return confirm('Anda yakin akan menghapus data ini?')">Hapus</a>
+                                        </td>
+                                    </tr>
+                                        
+                                    <?php
+                                        $no++; //untuk nomor urut terus bertambah 1
+                                    }
+                                    ?>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
 
             <!-- Footer -->
             <footer class="sticky-footer bg-white">

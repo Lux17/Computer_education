@@ -38,7 +38,19 @@ if($jumlah > 0){
 	header("Location:admin/dashboard.php");
 
  // cek jika user login sebagai pengurus
- }else if($data['rolename']=="bendahara"){
+ 
+}else if($data['rolename']=="publikasi"){
+	$_SESSION['id_user'] = $data_user['id_user'];
+	$_SESSION['username'] = $username;
+	$_SESSION['rolename'] = $rolename;
+	$_SESSION['status'] = "login";
+
+	header("Location:publikasi/blog.php");
+
+ // cek jika user login sebagai pengurus
+ }
+ 
+ else if($data['rolename']=="bendahara"){
 	$_SESSION['id_user'] = $data_user['id_user'];
 	$_SESSION['username'] = $username;
 	$_SESSION['rolename'] = $rolename;

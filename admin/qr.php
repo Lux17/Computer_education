@@ -1,32 +1,26 @@
+
 <?php
-  include('../koneksi.php'); 
-  session_start();
-  
+include ('../koneksi.php');
+session_start();
 
-  // mengecek apakah di url ada nilai GET id
-  if (isset($_GET['id'])) {
-    // ambil nilai id dari url dan disimpan dalam variabel $id
-    $id = ($_GET["id"]);
+if(isset($_POST["submit"])){
+$data=$_POST["data"];
+if($_POST["width"]!=""){
+  $width=$_POST["width"];
+}else{
+  $width="250";
+} 
+if($_POST["height"]!=""){
+  $height=$_POST["height"];
+}else{
+  $height="250";
+} 
+$url="https://chart.googleapis.com/chart?cht=qr&chs={$width}x{$height}&chl={$data}";  
+$qr["img"]= $url;
 
-    // menampilkan data dari database yang mempunyai id=$id
-    $query = "SELECT * FROM ketum WHERE id='$id'";
-    $result = mysqli_query($kon, $query);
-    // jika data gagal diambil maka akan tampil error berikut
-    if(!$result){
-      die ("Query Error: ".mysqli_errno($kon).
-         " - ".mysqli_error($kon));
-    }
-    // mengambil data dari database
-    $data = mysqli_fetch_assoc($result);
-      // apabila data tidak ada pada database maka akan dijalankan perintah ini
-//        if (!count($data)) {
-//           echo "<script>alert('Data tidak ditemukan pada database');window.location='../anggota.php';</script>";
-//        }
-//   } else {
-//     // apabila tidak ada data GET id pada akan di redirect ke index.php
-//     echo "<script>alert('Masukkan data id.');window.location='../anggota.php';</script>";
-  }         
-  ?>
+}
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -38,6 +32,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <script
+    src="https://code.jquery.com/jquery-3.5.1.slim.js"
+    integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM="
+    crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <title>Computer Education- Dashboard</title>
 
@@ -47,12 +46,13 @@
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
-
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
 </head>
-
 
 <body id="page-top">
 
@@ -102,6 +102,7 @@
                         <h6 class="collapse-header">Alat:</h6>
                         <a class="collapse-item" href="surat.php">Auto Create Surat</a>
                         <a class="collapse-item" href="qr.php">Qr Code Generate</a>
+                        
                     </div>
                 </div>
             </li>
@@ -138,20 +139,19 @@
                     <i class="fas fa-fw fa-table"></i>
                     <span>Anggota</span></a>
             </li>
-            
+
             <li class="nav-item">
                 <a class="nav-link" href="https://drive.google.com/drive/folders/1VYcc5us97qQ0FQz44hLzqBNcPw6N_Nfp?usp=share_link">
                     <i class="fas fa-fw fa-upload"></i>
                     <span>File</span></a>
             </li>
 
+            <!-- Nav Item - Tables -->
             <li class="nav-item">
                 <a class="nav-link" href="blog.php">
                     <i class="fas fa-fw fa-globe"></i>
                     <span>Blog</span></a>
             </li>
-            <!-- Nav Item - Tables -->
-
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
             <div class="sidebar-heading">
@@ -165,12 +165,10 @@
                     <span>Users</span></a>
             </li>
 
-  
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
-
 
 
         </ul>
@@ -190,14 +188,11 @@
                         <i class="fa fa-bars"></i>
                     </button>
 
-                   
-
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
-                       
-                        <div class="topbar-divider d-none d-sm-block"></div>
 
+                    
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
@@ -217,6 +212,7 @@
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
                                 </a>
+            
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="logout.php" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -234,159 +230,68 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Visi & Misi</h1>
-                    <p class="mb-4">Visi & Misi Ketua Umum</p>
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">QR Code Generator </h1>
+                    </div>
 
-                    <!-- DataTales Example -->
-                    <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-success">Visi & Misi</h6>
-                        </div>
-                                        <center><h3>Visi& Misi</h3><center>
-                                           
-                                                         <!-- Button trigger modal -->
-<button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
-  Tambah
-</button>
-    <br>
-                   <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Tambah</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                </button>
+                    <!-- Content Row -->
+                    <div class="row">
+
+                  
+<div class="bg-light">
+<div class="container py-5">
+<div class="row">
+<div class="col-mid-5 col-8 shadow bg-white border mx-auto p-4">
+
+<form action="" method="POST">
+
+<div class="form-group mb-3">
+<label for="" class="form-label">Kode CE </label>
+<input type="text" class="form-control" name="data" id="data" placeholder="Masukan Kode Anggota" required> </input>
+</div>
+
+<div class="form-group row">
+<div class="col-4">
+<label for="" class="form-label">Width </label>
+<input type="number" class="form-control" name="width" id="width" placeholder=" 250px" > </input>
+</div>
+<div class="col-4">
+<label for="" class="form-label">Hight </label>
+<input type="number" class="form-control"  name="height" id="height" placeholder=" 250px" > </input>
+</div>
+<?php if(isset($qr)){ ?>
+  <div class="col-9">
+<img src="<?php echo $qr["img"] ?>" alt ="QR Code" width=100% height=100%>
+</div>
+<?php } ?>
+
+</div>
+<div class="col-3">
+<button type="submit" name="submit" class="btn btn-success">Generate</bitton>
+</div>
+</form>
+</div>
+</div>
+
+</div>
+
+
+
+</div>
+</div>
+</div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+                       
+                    <!-- Content Row -->
+
+
+                </div>
+                <!-- /.container-fluid -->
+
             </div>
-            <div class="modal-body">
-            <form method="POST" action="ketum/tambah_visi.php" enctype="multipart/form-data" >
-                        <section class="base align-items-center ">
-
-                        
-                        <div class="row mb-3">
-                        <label for="Visi" class="col-sm-2 col-form-label">Visi</label>
-                        <div class="col-sm-10">
-                        <textarea type="text" class="form-control"  name="visi" autofocus="" required="" ></textarea>
-                        </div>
-                        </div>
-
-                        <div class="row mb-3">
-                        <label for="Misi" class="col-sm-2 col-form-label">Misi</label>
-                        <div class="col-sm-10">
-                        <textarea type="text" class="form-control"  name="misi"  required="" > </textarea>  
-                        </div>
-                        </div>
-           
-                        </section>
-                        
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Tutup</button>
-                <button type="submit" name= "simpan" class="btn btn-primary">Simpan</button>
-            </div>
-            </form>
-            </div>
-        </div>
-        </div>
-                    <br/>
-
-                    <table class="table table-hover">
-
-                    <thead>
-                        <tr>
-                        <th scope="col">No</th>
-                        <th scope="col">Visi</th>
-                        <th scope="col">Misi</th>
-                        <th scope="col"></th>
-                   
-                        </tr>
-                    </thead>
-                    <tbody>
-                    <?php
-                    // jalankan query untuk menampilkan semua data diurutkan berdasarkan nim
-                    $query = "SELECT * FROM ketum ORDER BY id ASC";
-                    $result = mysqli_query($kon, $query);
-                    //mengecek apakah ada error ketika menjalankan query
-                    if(!$result){
-                        die ("Query Error: ".mysqli_errno($kon).
-                        " - ".mysqli_error($kon));
-                    }
-
-                    //buat perulangan untuk element tabel dari data mahasiswa
-                    $no = 1; //variabel untuk membuat nomor urut
-                    // hasil query akan disimpan dalam variabel $data dalam bentuk array
-                    // kemudian dicetak dengan perulangan while
-                    while($row = mysqli_fetch_assoc($result))
-                    {
-                    ?>
-                    <tr>
-                        <td  scope="row"><?php echo $no; ?></td>
-                        <td  scope="row"><?php echo $row['visi']; ?></td>
-                        <td  scope="row"><?php echo $row['misi']; ?></td>
-                    
-                        <td  scope="row">
-                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal<?php echo $row['id'];?>">
-                            Edit
-                            </button>
-   
-        <div class="modal fade" id="exampleModal<?php echo $row['id'];?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Edit Visi</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-            <form method="POST" action="ketum/edit_visi.php" enctype="multipart/form-data" >
-            
-                        <section class="base align-items-center ">
-                        <div>
-                            
-                            <input type="hidden" value="<?php echo $row['id']; ?>" name="id" required="" />
-                            </div>
-                            <div>
-                            
-                            <div class="row mb-3">
-                            <label for="Visi" class="col-sm-2 col-form-label">Visi</label>
-                            <div class="col-sm-10">
-                            <textarea type="text" class="form-control" value="<?php echo $row['visi']; ?>" name="visi" autofocus="" required="" > </textarea>
-                            </div>
-                            </div>
-
-                            <div class="row mb-3">
-                            <label for="Misi" class="col-sm-2 col-form-label">Misi</label>
-                            <div class="col-sm-10">
-                            <textarea type="text" class="form-control" value="<?php echo $row['misi']; ?>"  name="misi" required=""  > </textarea>
-                            </div>
-                            </div>  
-
-
-
-                        </section>
-                        
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">tutup</button>
-                <button type="submit" class="btn btn-primary">Simpan</button>
-            </div>
-            </form>
-            </div>
-        </div>
-        </div>
-                            <a href="ketum/hapus_visi.php?id=<?php echo $row['id']; ?>" onclick="return confirm('Anda yakin akan menghapus data ini?')">Hapus</a>
-                        </td>
-                    </tr>
-                        
-                    <?php
-                        $no++; //untuk nomor urut terus bertambah 1
-                    }
-                    ?>
-                    </tbody>
-                    </table>
-                        </div>
+            <!-- End of Main Content -->
 
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
@@ -440,11 +345,11 @@
     <script src="js/sb-admin-2.min.js"></script>
 
     <!-- Page level plugins -->
-    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
-    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+    <script src="vendor/chart.js/Chart.min.js"></script>
 
     <!-- Page level custom scripts -->
-    <script src="js/demo/datatables-demo.js"></script>
+    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
 
 </body>
 
