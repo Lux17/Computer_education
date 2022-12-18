@@ -314,8 +314,8 @@
                                         <td><?php echo $no; ?></td>
                                         <td><?php echo $row['title']; ?></td>
                                         <td><?php echo $row['date']; ?></td>
-                                        <td><?php echo $row['description']; ?></td>
-                                        <td><?php echo $row['image']; ?></td>
+                                        <td><?php echo $row['description'] ?></td>
+                                        <td><?php echo substr($row['image'], 0, 20); ?></td>
 
                                         <td>
                             <a type="button" class="btn btn-success" href="blog/edit_blog.php?id=<?php echo $row['id']; ?>">

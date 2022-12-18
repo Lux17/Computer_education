@@ -188,7 +188,7 @@ include('koneksi.php');
                 <p>Dalam perjalanan roda organisasi Computer Mania Club (CMC) mengalami perubahan nama pada tanggal 22 Juni 2019 di Universitas Muhammadiyah Cirebon menjadi Computer Education yang disingkat CE. 
 </p>
            
-                <p>Dikarenakan nama Compueter Education lebih mencangkup dengan maksud dan tujuan untuk meningkatkan kualitas dan kemampuan mahasiswa dalam pengawasan bidang IPTEK (Ilmu Pengetahuan dan Teknologi) sesuai dengan nama yang baru yaitu Computer Education yang memiliki arti pembelajaran komputer.</p>
+                <p>Dikarenakan nama Computer Education lebih mencangkup dengan maksud dan tujuan untuk meningkatkan kualitas dan kemampuan mahasiswa dalam pengawasan bidang IPTEK (Ilmu Pengetahuan dan Teknologi) sesuai dengan nama yang baru yaitu Computer Education yang memiliki arti pembelajaran komputer.</p>
 
               </div><!-- End Tab 3 Content -->
 
@@ -353,42 +353,42 @@ include('koneksi.php');
 
         <div class="row gy-4 portfolio-container" >
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-active">
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/web45.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>PAB 2022</h4>
                 <p>PAB 2022</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/web45.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 1"><i class="bi bi-plus"></i></a>
+                  <a href="assets/img/portfolio/web45.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="PAB 2022"><i class="bi bi-plus"></i></a>
                   
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-active">
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/web3.jpeg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Kajian CE</h4>
                 <p>Kajian CE</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/web3.jpeg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
+                  <a href="assets/img/portfolio/web3.jpeg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Kajian CE"><i class="bi bi-plus"></i></a>
                   
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-active">
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/app2.jpeg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Milad CE</h4>
                 <p>Festival Harlah Computer Education 21</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/app2.jpeg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 2"><i class="bi bi-plus"></i></a>
+                  <a href="assets/img/portfolio/app2.jpeg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Festival Harlah Computer Education 21"><i class="bi bi-plus"></i></a>
                   
                 </div>
               </div>
@@ -437,42 +437,42 @@ include('koneksi.php');
             </div>
           </div> -->
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-active">
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/card1.jpeg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Pelantikan Kepengurusan 2021/2022</h4>
                 <p>Pelantikan Kepengurusan Baru 2021/2022</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/card1.jpeg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Card 1"><i class="bi bi-plus"></i></a>
+                  <a href="assets/img/portfolio/card1.jpeg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Pelantikan Kepengurusan Baru 2021/2022"><i class="bi bi-plus"></i></a>
                   
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-active">
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/card3.jpeg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>PAB 2021</h4>
                 <p>PAB 2021</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/card3.jpeg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Card 3"><i class="bi bi-plus"></i></a>
+                  <a href="assets/img/portfolio/card3.jpeg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="PAB 2021"><i class="bi bi-plus"></i></a>
                  
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-active">
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/web4.jpeg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>IT Camp</h4>
                 <p>Makrab IT Camp</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/web4.jpeg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
+                  <a href="assets/img/portfolio/web4.jpeg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Makrab IT Camp"><i class="bi bi-plus"></i></a>
                  
                 </div>
               </div>
@@ -704,7 +704,7 @@ Divisi Komputer mempelajari yang berhubungan tentang pembelajaran di bidang soft
         <?php
                            
                            // jalankan query untuk menampilkan semua data diurutkan berdasarkan 
-                           $query = "SELECT * FROM blog ORDER BY date DESC";
+                           $query = "SELECT * FROM blog ORDER BY date DESC LIMIT 3";
                            $result = mysqli_query($kon, $query);
                            //mengecek apakah ada error ketika menjalankan query
                            if(!$result){

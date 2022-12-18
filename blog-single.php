@@ -150,7 +150,7 @@ include('koneksi.php');
                         <?php
                            };
 
-?>
+                ?>
 
             </article><!-- End blog entry -->
 
@@ -166,7 +166,7 @@ include('koneksi.php');
  
               <h3 class="sidebar-title">Recent Posts</h3>
               <?php
-                $query = "SELECT * FROM blog ORDER BY date DESC";
+                $query = "SELECT * FROM blog ORDER BY date DESC LIMIT 10";
                            $result = mysqli_query($kon, $query);
                            //mengecek apakah ada error ketika menjalankan query
                            if(!$result){
@@ -181,15 +181,21 @@ include('koneksi.php');
                            while($row = mysqli_fetch_assoc($result))
                            {
                            ?>
-              <div class="sidebar-item recent-posts">
+              <div class="sidebar-item ">
 
                 <div class="post-item clearfix">
 
                 <div class="row mb-2">
-                <iframe src="<?php echo $row['image']; ?>" width="60" height="60" allow="autoplay"></iframe>
-                  <div class="col-sm-2">
-                  <h4><a href="blog-single.php?id=<?php echo $row['id']; ?>"><?php echo $row['title']; ?></a></h4>
-                  <time ><?php echo $row['date']; ?></time>
+                <iframe  src="<?php echo $row['image']; ?>" width="60" height="60" allow="autoplay"></iframe>
+                
+                <h4><a style="font-size: 15px; font-weight: bold;   color: #012970;
+  transition: 0.3s; " href="blog-single.php?id=<?php echo $row['id']; ?>"><?php echo $row['title']; ?></a></h4>
+                <time style="  display: block;
+  font-style: italic;
+  font-size: 14px;
+  color: #aaaaaa;" ><?php echo $row['date']; ?></time>  
+                <div class="col-sm-2">
+  
                   </div>
                   </div>
 

@@ -1713,7 +1713,7 @@ section {
 .blog .sidebar .recent-posts .post-item + .post-item {
   margin-top: 15px;
 }
-.blog .sidebar .recent-posts img {
+.blog .sidebar .recent-posts iframe {
   width: 80px;
   float: left;
 }
