@@ -1,3 +1,5 @@
+
+
 <?php
 include 'koneksi.php';
 $id = $_GET["id"];
@@ -13,5 +15,7 @@ $id = $_GET["id"];
        " - ".mysqli_error($kon));
     } else {
       echo "<script>alert('Data berhasil dihapus.');window.location='../anggota.php';</script>";
+
+      
     }
 ?>

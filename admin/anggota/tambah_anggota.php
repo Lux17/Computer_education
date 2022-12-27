@@ -1,7 +1,9 @@
+
 <?php
 // memanggil file koneksi.php untuk melakukan koneksi database
 include 'koneksi.php';
 session_start();	
+
 	
 // cek nim
 if (isset($_POST['simpan'])) {

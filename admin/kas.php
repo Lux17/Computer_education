@@ -1,32 +1,8 @@
 <?php
-  include('../koneksi.php'); 
-  session_start();
-  
-
-  // mengecek apakah di url ada nilai GET id
-  if (isset($_GET['id'])) {
-    // ambil nilai id dari url dan disimpan dalam variabel $id
-    $id = ($_GET["id"]);
-
-    // menampilkan data dari database yang mempunyai id=$id
-    $query = "SELECT * FROM kas WHERE id='$id'";
-    $result = mysqli_query($kon, $query);
-    // jika data gagal diambil maka akan tampil error berikut
-    if(!$result){
-      die ("Query Error: ".mysqli_errno($kon).
-         " - ".mysqli_error($kon));
-    }
-    // mengambil data dari database
-    $data = mysqli_fetch_assoc($result);
-      // apabila data tidak ada pada database maka akan dijalankan perintah ini
-//        if (!count($data)) {
-//           echo "<script>alert('Data tidak ditemukan pada database');window.location='../anggota.php';</script>";
-//        }
-//   } else {
-//     // apabila tidak ada data GET id pada akan di redirect ke index.php
-//     echo "<script>alert('Masukkan data id.');window.location='../anggota.php';</script>";
-  }         
-  ?>
+include('../koneksi.php'); 
+session_start();
+        
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -205,7 +181,7 @@
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">                               
-                                 <?php
+                                <?php
                                 echo $_SESSION['username'];
                                 ?>
                                 </span>

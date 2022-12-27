@@ -492,7 +492,7 @@ include('koneksi.php');
 
         <header class="section-header">
           <h2>Pengurus</h2>
-          <p>Periode 2021/2022</p>
+          <p>Periode 2022/2023</p>
         </header>
 
         <div class="testimonials-slider swiper" >
@@ -502,11 +502,11 @@ include('koneksi.php');
               <div class="testimonial-item">
        
                 <p>
-                "Hidup di dunia ini tak selalu tentang kebahagian dan ucapkanlah selalu Alhamdullah karena Allah masih ada di sisimu."
+                "Berbuat baiklah tanpa perlu alasan."
                 </p>
                 <div class="profile mt-auto">
-                  <img src="assets/img/pengurus/yolan3.jpeg" class="testimonial-img" alt="">
-                  <h3>Yolandita</h3>
+                  <img src="assets/img/pengurus/rifa2.jpeg" class="testimonial-img" alt="">
+                  <h3>Rifa Nurfaizah</h3>
                   <h4>Bendahara Acara</h4>
                 </div>
               </div>
@@ -516,12 +516,12 @@ include('koneksi.php');
               <div class="testimonial-item">
          
                 <p>
-                "Jadilah manusia yang Berpemikiran AMERIKA namun berhati MAKKAH." 
+                "Tidak harus belajar dari pengalaman sendiri, Cukup melihat dan belajar dari pengalaman orang lain".
                 </p>
                 <div class="profile mt-auto">
-                  <img src="assets/img/pengurus/ketum.jpg" class="testimonial-img" alt="">
-                  <h3>Erlyn Chulyatun Nafis</h3>
-                  <h4>Ketua Umum &amp; 2021/2022</h4>
+                  <img src="assets/img/pengurus/ridwan3.jpg" class="testimonial-img" alt="">
+                  <h3>Muhammad Ridwan</h3>
+                  <h4>Ketua Umum &amp; 2022/2023</h4>
                 </div>
               </div>
             </div><!-- End testimonial item -->
@@ -530,11 +530,11 @@ include('koneksi.php');
               <div class="testimonial-item">
             
                 <p>
-                "Hidup ini memang tidak adil maka biasakanlah dirimu." 
+                "selesaikan apa yang telah kamu mulai." 
                 </p>
                 <div class="profile mt-auto">
-                  <img src="assets/img/pengurus/hilya.jpg" class="testimonial-img" alt="">
-                  <h3>Hilyah</h3>
+                  <img src="assets/img/pengurus/fani2.jpg" class="testimonial-img" alt="">
+                  <h3>Fani Ariska</h3>
                   <h4>Sekertaris Umum</h4>
                 </div>
               </div>
@@ -544,11 +544,11 @@ include('koneksi.php');
               <div class="testimonial-item">
          
                 <p>
-                "Setiap bunga memiliki waktu mekarnya masing-masing. Setiap orang memiliki waktu sukses yang berbeda-beda."
+                "Everything has it's time."
                 </p>
                 <div class="profile mt-auto">
-                  <img src="assets/img/pengurus/rosmel.jpeg" class="testimonial-img" alt="">
-                  <h3>Rosmelindah</h3>
+                  <img src="assets/img/pengurus/dewi.jpg" class="testimonial-img" alt="">
+                  <h3>Dewi Kurnia</h3>
                   <h4>Sekertaris Acara</h4>
                 </div>
               </div>
@@ -558,12 +558,124 @@ include('koneksi.php');
               <div class="testimonial-item">
          
                 <p>
-                "Jangan memulai sesuatu jika masih ada keraguan di dalamnya."
+                "Hidup sekali berguna lalu mati."
                 </p>
                 <div class="profile mt-auto">
-                  <img src="assets/img/pengurus/wulan1.jpeg" class="testimonial-img" alt="">
-                  <h3>Wulan</h3>
+                  <img src="assets/img/pengurus/lita.jpeg" class="testimonial-img" alt="">
+                  <h3>Lita Aprilia</h3>
+                  <h4>Ketua Divisi Organisasi</h4>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+         
+                <p>
+                "Kejarlah Keunggulan, Maka Kesuksesan Akan Menghampirimu."
+                </p>
+                <div class="profile mt-auto">
+                  <img src="assets/img/pengurus/azis2.jpeg" class="testimonial-img" alt="">
+                  <h3>Azis Rahman Prasetio </h3>
+                  <h4>Sub Divisi Kaderisasi</h4>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+         
+                <p>
+                "Bersikap baik kepada semua makhluk hidup."
+                </p>
+                <div class="profile mt-auto">
+                  <img src="assets/img/pengurus/fadri2.jpg" class="testimonial-img" alt="">
+                  <h3>Fadri Hidayat</h3>
+                  <h4>Sub Divisi Pengembangan Organisasi</h4>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+         
+                <p>
+                "Do good and good will come to you, because life has no CTRL+Z."
+                </p>
+                <div class="profile mt-auto">
+                  <img src="assets/img/pengurus/ila.jpg" class="testimonial-img" alt="">
+                  <h3>Ila Sahlila Bunga Fadjar</h3>
+                  <h4>Sub Divisi Hubungan Eksternal</h4>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+         
+                <p>
+                "Tidak selalu mudah, tapi itulah hidup. Jadilah kuat karena akan ada hari-hari yang lebih baik di depan."
+                </p>
+                <div class="profile mt-auto">
+                  <img src="assets/img/pengurus/refa.jpg" class="testimonial-img" alt="">
+                  <h3>Refa Agustine Surya Utami</h3>
                   <h4>Bendahara Umum</h4>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+         
+                <p>
+                "Berada di dunia ini seolah-olah kamu adalah orang asing atau seorang musafir."
+                </p>
+                <div class="profile mt-auto">
+                  <img src="assets/img/pengurus/lucky.jpeg" class="testimonial-img" alt="">
+                  <h3>Lucky Saputra</h3>
+                  <h4>Ketua Divisi Computer</h4>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+         
+                <p>
+                "Yang kamu kejar akan lari ,tapi yang kamu doakan pasti datang sendiri."
+                </p>
+                <div class="profile mt-auto">
+                  <img src="assets/img/pengurus/caknur2.jpeg" class="testimonial-img" alt="">
+                  <h3>Alfi Nurfaizi</h3>
+                  <h4>Sub Divisi Pengembangan Teknologi Informasi</h4>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+         
+                <p>
+                "Talent can get you so far, but hardwork can take you anywhere in life."
+                </p>
+                <div class="profile mt-auto">
+                  <img src="assets/img/pengurus/mahdi.jpeg" class="testimonial-img" alt="">
+                  <h3>Mahdi</h3>
+                  <h4>Sub Divisi Dokominfo</h4>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+         
+                <p>
+                "Kegagalan terjadi karena terlalu banyak berencana tapi sedikit berpikir."
+                </p>
+                <div class="profile mt-auto">
+                  <img src="assets/img/pengurus/lilis2.jpeg" class="testimonial-img" alt="">
+                  <h3>Lilis Indiyanis</h3>
+                  <h4>Sub Divisi Publikasi</h4>
                 </div>
               </div>
             </div><!-- End testimonial item -->

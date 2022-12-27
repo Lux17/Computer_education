@@ -172,7 +172,7 @@ session_start();
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">                               
-                                 <?php
+                                <?php
                                 echo $_SESSION['username'];
                                 ?>
                                 </span>
@@ -213,17 +213,16 @@ session_start();
                     <!-- Content Row -->
                     <div class="row">
 
-                  
+
                         <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-primary shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                               Total Uang kas</div>
+                                            Total Uang kas</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">
-                                           
-                                            
+
                                             <?php
 
                                             $data_kas = mysqli_query($kon,"SELECT SUM(jumlah_kas) AS total_kas FROM kas");
@@ -268,7 +267,6 @@ session_start();
                                                     </div>
                                                 </div>
                                                 <div class="col">
-                                  
                                                 </div>
                                             </div>
                                         </div>
@@ -280,7 +278,6 @@ session_start();
                             </div>
                         </div>
 
-                     
                         <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-info shadow h-100 py-2">
                                 <div class="card-body">
@@ -298,7 +295,7 @@ session_start();
                                             // menghitung data barang
                                             $jmlh_pengurus = mysqli_num_rows($data_pengurus);
                                             ?>
-                                             
+
                                             <p><?php echo  $jmlh_pengurus;  ?></b></p>
 
                                             </div>
@@ -327,11 +324,9 @@ session_start();
                                             <?php
 
                                             $data_anggota = mysqli_query($kon,"SELECT * FROM anggota WHERE jabatan LIKE 'Anggota'");
- 
                                             // menghitung data barang
                                             $jmlh_anggota = mysqli_num_rows($data_anggota);
                                             ?>
-                                             
                                             <p><?php echo $jmlh_anggota; ?></b></p>
 
 
@@ -344,7 +339,7 @@ session_start();
                                 </div>
                             </div>
                         </div>
-                 
+
 
                     <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-dark shadow h-100 py-2">
@@ -412,13 +407,13 @@ session_start();
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary  text-uppercase mb-1">
-                                                Jumlah User</div>
+                                                Demisioner & ALB</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">
 
                                             
                                             <?php
 
-                                            $data_pengurus = mysqli_query($kon,"SELECT * FROM admin ");
+                                            $data_pengurus = mysqli_query($kon,"SELECT * FROM anggota where jabatan like  'Demisioner' or jabatan like 'Anggota Luar Biasa' ");
  
                                             // menghitung data barang
                                             $jmlh_pengurus = mysqli_num_rows($data_pengurus);

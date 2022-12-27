@@ -6,14 +6,14 @@ session_start();
 if(isset($_POST["submit"])){
 $data=$_POST["data"];
 if($_POST["width"]!=""){
-  $width=$_POST["width"];
+    $width=$_POST["width"];
 }else{
-  $width="250";
+    $width="250";
 } 
 if($_POST["height"]!=""){
-  $height=$_POST["height"];
+    $height=$_POST["height"];
 }else{
-  $height="250";
+    $height="250";
 } 
 $url="https://chart.googleapis.com/chart?cht=qr&chs={$width}x{$height}&chl={$data}";  
 $qr["img"]= $url;
