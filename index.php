@@ -10,7 +10,6 @@ include('koneksi.php');
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta name="google-site-verification" content="7fI6NwUVytvCca5733F3-aHeZdU8S7asIBGpX_Abevo" />
 
   <title>Computer Education</title>
   <meta content="" name="description">
@@ -803,7 +802,7 @@ Divisi Komputer mempelajari yang berhubungan tentang pembelajaran di bidang soft
     <!-- ======= Recent Blog Posts Section ======= -->
     <section id="artikel" class="recent-blog-posts" >
 
-      <div class="container" data-aos="fade-up">
+      <div class="container" >
 
         <header class="section-header">
           <h2>Artikel</h2>
@@ -924,7 +923,6 @@ Divisi Komputer mempelajari yang berhubungan tentang pembelajaran di bidang soft
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="article.js"></script>
 

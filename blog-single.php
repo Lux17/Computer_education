@@ -9,7 +9,7 @@ include('koneksi.php');
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta name="google-site-verification" content="7fI6NwUVytvCca5733F3-aHeZdU8S7asIBGpX_Abevo" />
+
 
   <title>Computer Education</title>
   <meta content="" name="description">
