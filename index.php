@@ -504,7 +504,7 @@ include('koneksi.php');
                 "Berbuat baiklah tanpa perlu alasan."
                 </p>
                 <div class="profile mt-auto">
-                  <img src="assets/img/pengurus/rifa2.jpeg" class="testimonial-img" alt="">
+                  <img src="assets/img/pengurus/rifa6.jpg" class="testimonial-img" alt="">
                   <h3>Rifa Nurfaizah</h3>
                   <h4>Bendahara Acara</h4>
                 </div>
@@ -546,7 +546,7 @@ include('koneksi.php');
                 "Everything has it's time."
                 </p>
                 <div class="profile mt-auto">
-                  <img src="assets/img/pengurus/dewi.jpg" class="testimonial-img" alt="">
+                  <img src="assets/img/pengurus/dewi4.jpg" class="testimonial-img" alt="">
                   <h3>Dewi Kurnia</h3>
                   <h4>Sekertaris Acara</h4>
                 </div>
@@ -560,7 +560,7 @@ include('koneksi.php');
                 "Hidup sekali berguna lalu mati."
                 </p>
                 <div class="profile mt-auto">
-                  <img src="assets/img/pengurus/lita.jpeg" class="testimonial-img" alt="">
+                  <img src="assets/img/pengurus/lita.jpg" class="testimonial-img" alt="">
                   <h3>Lita Aprilia</h3>
                   <h4>Ketua Divisi Organisasi</h4>
                 </div>
@@ -574,7 +574,7 @@ include('koneksi.php');
                 "Kejarlah Keunggulan, Maka Kesuksesan Akan Menghampirimu."
                 </p>
                 <div class="profile mt-auto">
-                  <img src="assets/img/pengurus/azis2.jpeg" class="testimonial-img" alt="">
+                  <img src="assets/img/pengurus/azis5.jpg" class="testimonial-img" alt="">
                   <h3>Azis Rahman Prasetio </h3>
                   <h4>Sub Divisi Kaderisasi</h4>
                 </div>
@@ -588,7 +588,7 @@ include('koneksi.php');
                 "Bersikap baik kepada semua makhluk hidup."
                 </p>
                 <div class="profile mt-auto">
-                  <img src="assets/img/pengurus/fadri2.jpg" class="testimonial-img" alt="">
+                  <img src="assets/img/pengurus/fadri4.jpg" class="testimonial-img" alt="">
                   <h3>Fadri Hidayat</h3>
                   <h4>Sub Divisi Pengembangan Organisasi</h4>
                 </div>
@@ -644,7 +644,7 @@ include('koneksi.php');
                 "Yang kamu kejar akan lari ,tapi yang kamu doakan pasti datang sendiri."
                 </p>
                 <div class="profile mt-auto">
-                  <img src="assets/img/pengurus/caknur2.jpeg" class="testimonial-img" alt="">
+                  <img src="assets/img/pengurus/caknur4.jpg" class="testimonial-img" alt="">
                   <h3>Alfi Nurfaizi</h3>
                   <h4>Sub Divisi Pengembangan Teknologi Informasi</h4>
                 </div>
@@ -672,7 +672,7 @@ include('koneksi.php');
                 "Kegagalan terjadi karena terlalu banyak berencana tapi sedikit berpikir."
                 </p>
                 <div class="profile mt-auto">
-                  <img src="assets/img/pengurus/lilis2.jpeg" class="testimonial-img" alt="">
+                  <img src="assets/img/pengurus/lilis4.jpg" class="testimonial-img" alt="">
                   <h3>Lilis Indiyanis</h3>
                   <h4>Sub Divisi Publikasi</h4>
                 </div>
