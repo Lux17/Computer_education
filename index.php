@@ -847,7 +847,7 @@ Divisi Komputer mempelajari yang berhubungan tentang pembelajaran di bidang soft
         </div>
 
       </div>
-
+                          </div>
     </section><!-- End Recent Blog Posts Section -->
 
 

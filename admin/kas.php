@@ -136,7 +136,7 @@ session_start();
 
 
             <li class="nav-item">
-                <a class="nav-link" href="Users.php">
+                <a class="nav-link" href="users.php">
                     <i class="fas fa-fw fa-user-circle"></i>
                     <span>Users</span></a>
             </li>
@@ -329,65 +329,65 @@ session_start();
                             Edit
                             </button>
    
-        <div class="modal fade" id="exampleModal<?php echo $row['id'];?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Edit Kas</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-            <form method="POST" action="kas/edit_kas.php" enctype="multipart/form-data" >
-            
-                        <section class="base align-items-center ">
-                        <div>
-                            
-                            <input type="hidden" value="<?php echo $row['id']; ?>" name="id" required="" />
-                            </div>
-                            <div>
-                            <div class="row mb-3">
-                            <label for="Bulan" class="col-sm-3 col-form-label">Bulan</label>
-                            <div class="input-group col-sm-8">
-                                <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="bulan" required="" >
-                                <option selected velue="<?php echo $row['bulan']; ?>"><?php echo $row['bulan']; ?></option>
-                                <option value="Januari">Januari</option>
-                                <option  value="Februari">Februari</option>
-                                <option  value="Maret">Maret</option>
-                                <option value="April">April</option>
-                                <option  value="Mei">Mei</option>
-                                <option  value="Juni">Juni</option>
-                                <option value="Juli">Juli</option>
-                                <option  value="Agustus">Agustus</option>
-                                <option  value="September">September</option>
-                                <option value="Oktober">Oktober</option>
-                                <option  value="November">November</option>
-                                <option  value="Desember">Desember</option>
+                                <div class="modal fade" id="exampleModal<?php echo $row['id'];?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Edit Kas</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                    <form method="POST" action="kas/edit_kas.php" enctype="multipart/form-data" >
+                                    
+                                                <section class="base align-items-center ">
+                                                <div>
+                                                    
+                                                    <input type="hidden" value="<?php echo $row['id']; ?>" name="id" required="" />
+                                                    </div>
+                                                    <div>
+                                                    <div class="row mb-3">
+                                                    <label for="Bulan" class="col-sm-3 col-form-label">Bulan</label>
+                                                    <div class="input-group col-sm-8">
+                                                        <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="bulan" required="" >
+                                                        <option selected velue="<?php echo $row['bulan']; ?>"><?php echo $row['bulan']; ?></option>
+                                                        <option value="Januari">Januari</option>
+                                                        <option  value="Februari">Februari</option>
+                                                        <option  value="Maret">Maret</option>
+                                                        <option value="April">April</option>
+                                                        <option  value="Mei">Mei</option>
+                                                        <option  value="Juni">Juni</option>
+                                                        <option value="Juli">Juli</option>
+                                                        <option  value="Agustus">Agustus</option>
+                                                        <option  value="September">September</option>
+                                                        <option value="Oktober">Oktober</option>
+                                                        <option  value="November">November</option>
+                                                        <option  value="Desember">Desember</option>
 
-                                </select>
-                                <div class="input-group-append">
-                            </div>
-                            </div>
-                    </div>
-                            
-                            <div class="row mb-3">
-                            <label for="Jumlah Kas" class="col-sm-3 col-form-label">Jumlah Kas</label>
-                            <div class="col-sm-8">
-                            <input type="text" class="form-control"  value="<?php echo $row['jumlah_kas']; ?>"  name="jumlah_kas"  />
-                            </div>
-                            </div>
-                        </section>
-                        
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Tutup</button>
-                <button type="submit" class="btn btn-primary">Simpan</button>
-            </div>
-            </form>
-            </div>
-        </div>
-        </div>
+                                                        </select>
+                                                        <div class="input-group-append">
+                                                    </div>
+                                                    </div>
+                                            </div>
+                                                    
+                                                    <div class="row mb-3">
+                                                    <label for="Jumlah Kas" class="col-sm-3 col-form-label">Jumlah Kas</label>
+                                                    <div class="col-sm-8">
+                                                    <input type="text" class="form-control"  value="<?php echo $row['jumlah_kas']; ?>"  name="jumlah_kas"  />
+                                                    </div>
+                                                    </div>
+                                                </section>
+                                                
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Tutup</button>
+                                        <button type="submit" class="btn btn-primary">Simpan</button>
+                                    </div>
+                                    </form>
+                                    </div>
+                                </div>
+                                </div>
                             <a href="kas/hapus_kas.php?id=<?php echo $row['id']; ?>" onclick="return confirm('Anda yakin akan menghapus data ini?')">Hapus</a>
                         </td>
                     </tr>

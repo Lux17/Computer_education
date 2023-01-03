@@ -133,7 +133,7 @@
 
 
             <li class="nav-item">
-                <a class="nav-link" href="Users.php">
+                <a class="nav-link" href="users.php">
                     <i class="fas fa-fw fa-user-circle"></i>
                     <span>Users</span></a>
             </li>
@@ -217,188 +217,190 @@
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-success">Data Tabel Akun</h6>
                         </div>
-                       
-                                        <center><h3>Data Akun</h3><center>
+                        <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                        <center><h3>Data Akun</h3>
                                            
-                                                         <!-- Button trigger modal -->
-<button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
-  Tambah Users
-</button>
-    <br>
-                   <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Tambah Users</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-            <div>
-            <form method="POST" action="users/tambah_users.php" enctype="multipart/form-data" >
-                        <section class="base align-items-center ">
+                                                                                <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+                        Tambah Users
+                        </button>
+                        </center>
+                            <br>
+                                                    <!-- Modal -->
+                                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Tambah Users</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                <div>
+                                                <form method="POST" action="users/tambah_users.php" enctype="multipart/form-data" >
+                                                            <section class="base align-items-center ">
 
-                            <div class="row mb-3">
-                            <label for="username" class="col-sm-3 col-form-label">Username</label>
-                            <div class="col-sm-8">
-                            <input type="text" class="form-control" name="username" autofocus="" required="" />
-                            </div>
-                            </div>
-                            
-                            <div class="row mb-3">
-                            <label for="password" class="col-sm-3 col-form-label">Password</label>
-                            <div class="col-sm-8">
-                            <input type="password" class="form-control" name="password" id="password" aria-describedby="passwordHelpInline" data-toggle="password"  />
-                            <div class= "input-group-append">
-                            <span class="input-group-text" onclick="password_show_hide();">
-                                <i class="mb-2 fas fa-eye" id="show_eye"></i>
-                                <i class="mb-2 fas fa-eye-slash d-none" id="hide_eye"></i>
-                            </span>
-                            </div>
-                            </div>
-                            </div>
+                                                                <div class="row mb-3">
+                                                                <label for="username" class="col-sm-3 col-form-label">Username</label>
+                                                                <div class="col-sm-8">
+                                                                <input type="text" class="form-control" name="username" autofocus="" required="" />
+                                                                </div>
+                                                                </div>
+                                                                
+                                                                <div class="row mb-3">
+                                                                <label for="password" class="col-sm-3 col-form-label">Password</label>
+                                                                <div class="col-sm-8">
+                                                                <input type="password" class="form-control" name="password" id="password" aria-describedby="passwordHelpInline" data-toggle="password"  />
+                                                                <div class= "input-group-append">
+                                                                <span class="input-group-text" onclick="password_show_hide();">
+                                                                    <i class="mb-2 fas fa-eye" id="show_eye"></i>
+                                                                    <i class="mb-2 fas fa-eye-slash d-none" id="hide_eye"></i>
+                                                                </span>
+                                                                </div>
+                                                                </div>
+                                                                </div>
 
-                            <div class="row mb-3">
-                            <label class="col-sm-3"> Rolename</label>
-                            <div class="input-group col-sm-8">
-                                <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="rolename" required="" >
-                                <option selected value="">Pilih</option> 
-                                <option value="admin">Admin</option>
-                                <option  value="sekertaris">Sekertaris</option>
-                                <option  value="bendahara">Bendahara</option>
-                                <option  value="publikasi">Publikasi</option>
-                                </select>
-                                <div class="input-group-append">
-                            </div>
-                            </div>
-                            </div>
+                                                                <div class="row mb-3">
+                                                                <label class="col-sm-3"> Rolename</label>
+                                                                <div class="input-group col-sm-8">
+                                                                    <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="rolename" required="" >
+                                                                    <option selected value="">Pilih</option> 
+                                                                    <option value="admin">Admin</option>
+                                                                    <option  value="sekertaris">Sekertaris</option>
+                                                                    <option  value="bendahara">Bendahara</option>
+                                                                    <option  value="publikasi">Publikasi</option>
+                                                                    </select>
+                                                                    <div class="input-group-append">
+                                                                </div>
+                                                                </div>
+                                                                </div>
 
 
-   
-           
-                        </section>
-                        
-            </div>
-</div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Tutup</button>
-                <button type="submit" name ="simpan" class="btn btn-primary">Simpan</button>
-            </div>
-            </form>
-            </div>
-        </div>
-        </div>
-                    <br/>
+                                    
+                                            
+                                                            </section>
+                                                            
+                                                </div>
+                                    </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Tutup</button>
+                                                    <button type="submit" name ="simpan" class="btn btn-primary">Simpan</button>
+                                                </div>
+                                                </form>
+                                                </div>
+                                            </div>
+                                            </div>
+                                                        <br/>
 
-                    <table class="table table-hover">
+                                                        <table class="table table-hover">
 
-                    <thead>
-                        <tr>
-                        <th scope="col">No</th>
-                        <th scope="col">Username</th>
-                        <th scope="col">Password</th>
-                        <th scope="col">Rolename</th>
-                        <th scope="col"></th>
-                   
-                        </tr>
-                    </thead>
-                    <tbody>
-                    <?php
-                    // jalankan query untuk menampilkan semua data diurutkan berdasarkan nim
-                    $query = "SELECT * FROM admin ORDER BY id_user ASC";
-                    $result = mysqli_query($kon, $query);
-                    //mengecek apakah ada error ketika menjalankan query
-                    if(!$result){
-                        die ("Query Error: ".mysqli_errno($kon).
-                        " - ".mysqli_error($kon));
-                    }
+                                                        <thead>
+                                                            <tr>
+                                                            <th scope="col">No</th>
+                                                            <th scope="col">Username</th>
+                                                            <th scope="col">Password</th>
+                                                            <th scope="col">Rolename</th>
+                                                            <th scope="col"></th>
+                                                    
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <?php
+                                                        // jalankan query untuk menampilkan semua data diurutkan berdasarkan nim
+                                                        $query = "SELECT * FROM admin ORDER BY id_user ASC";
+                                                        $result = mysqli_query($kon, $query);
+                                                        //mengecek apakah ada error ketika menjalankan query
+                                                        if(!$result){
+                                                            die ("Query Error: ".mysqli_errno($kon).
+                                                            " - ".mysqli_error($kon));
+                                                        }
 
-                    //buat perulangan untuk element tabel dari data mahasiswa
-                    $no = 1; //variabel untuk membuat nomor urut
-                    // hasil query akan dpasswordmpan dalam variabel $data dalam bentuk array
-                    // kemudian dicetak dengan perulangan while
-                    while($row = mysqli_fetch_assoc($result))
-                    {
-                    ?>
-                    <tr>
-                        <td  scope="row"><?php echo $no; ?></td>
-                        <td  scope="row"><?php echo $row['username']; ?></td>
-                        <td  scope="row"><?php echo $row['password']; ?></td>
-                        <td  scope="row"><?php echo $row['rolename']; ?></td>
-                    
-                        <td  scope="row">
-                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal<?php echo $row['id_user'];?>">
-                            Edit
-                            </button>
-   
-        <div class="modal fade" id="exampleModal<?php echo $row['id_user'];?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Edit users</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-            <form method="POST" action="users/edit_users.php" enctype="multipart/form-data" >
-            
-                        <section class="base align-items-center ">
-                        <div>
-                            
-                            <input type="hidden" value="<?php echo $row['id_user']; ?>" name="iduser" required="" />
-                            </div>
-                            <div>
-                            <div class="row mb-3">
-                            <label for="username" class="col-sm-3 col-form-label">username</label>
-                            <div class="col-sm-8">
-                            <input type="text" class="form-control" value="<?php echo $row['username']; ?>" name="username" autofocus="" required="" />
-                            </div>
-                            </div>
+                                                        //buat perulangan untuk element tabel dari data mahasiswa
+                                                        $no = 1; //variabel untuk membuat nomor urut
+                                                        // hasil query akan dpasswordmpan dalam variabel $data dalam bentuk array
+                                                        // kemudian dicetak dengan perulangan while
+                                                        while($row = mysqli_fetch_assoc($result))
+                                                        {
+                                                        ?>
+                                                        <tr>
+                                                            <td  scope="row"><?php echo $no; ?></td>
+                                                            <td  scope="row"><?php echo $row['username']; ?></td>
+                                                            <td  scope="row"><?php echo $row['password']; ?></td>
+                                                            <td  scope="row"><?php echo $row['rolename']; ?></td>
+                                                        
+                                                            <td  scope="row">
+                                                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal<?php echo $row['id_user'];?>">
+                                                                Edit
+                                                                </button>
+                                    
+                                            <div class="modal fade" id="exampleModal<?php echo $row['id_user'];?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Edit users</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                <form method="POST" action="users/edit_users.php" enctype="multipart/form-data" >
+                                                
+                                                            <section class="base align-items-center ">
+                                                            <div>
+                                                                
+                                                                <input type="hidden" value="<?php echo $row['id_user']; ?>" name="iduser" required="" />
+                                                                </div>
+                                                                <div>
+                                                                <div class="row mb-3">
+                                                                <label for="username" class="col-sm-3 col-form-label">username</label>
+                                                                <div class="col-sm-8">
+                                                                <input type="text" class="form-control" value="<?php echo $row['username']; ?>" name="username" autofocus="" required="" />
+                                                                </div>
+                                                                </div>
 
-                            <div class="row mb-3">
-                            <label for="password" class="col-sm-3 col-form-label">password</label>
-                            <div class="col-sm-8">
-                            <input type="text" class="form-control" name="password" required="" />
-                            </div>
-                            </div>
+                                                                <div class="row mb-3">
+                                                                <label for="password" class="col-sm-3 col-form-label">password</label>
+                                                                <div class="col-sm-8">
+                                                                <input type="text" class="form-control" name="password" required="" />
+                                                                </div>
+                                                                </div>
 
-                            <div class="row mb-3">
-                            <label class="col-sm-3"> Rolename</label>
-                            <div class="input-group col-sm-8">
-                                <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="rolename" required="" >
-                                <option selected value="<?php echo $row['rolename']; ?>"><?php echo $row['rolename']; ?></option> 
-                                <option value="admin">admin</option>
-                                <option  value="sekertaris">sekertaris</option>
-                                <option  value="bendahara">bendahara</option>
-                                </select>
-                                <div class="input-group-append">
-                            </div>
-                            </div>
-                            </div>
+                                                                <div class="row mb-3">
+                                                                <label class="col-sm-3"> Rolename</label>
+                                                                <div class="input-group col-sm-8">
+                                                                    <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="rolename" required="" >
+                                                                    <option selected value="<?php echo $row['rolename']; ?>"><?php echo $row['rolename']; ?></option> 
+                                                                    <option value="admin">admin</option>
+                                                                    <option  value="sekertaris">sekertaris</option>
+                                                                    <option  value="bendahara">bendahara</option>
+                                                                    </select>
+                                                                    <div class="input-group-append">
+                                                                </div>
+                                                                </div>
+                                                                </div>
 
-                            <!-- <div class="row mb-3">
-                            <label for="rolename" class="col-sm-3 col-form-label">rolename</label>
-                            <div class="col-sm-8">
-                            <input type="text" class="form-control"  value="<?php echo $row['rolename']; ?>"  name="rolename" required="" />
-                            </div>
-                            </div> -->
+                                                                <!-- <div class="row mb-3">
+                                                                <label for="rolename" class="col-sm-3 col-form-label">rolename</label>
+                                                                <div class="col-sm-8">
+                                                                <input type="text" class="form-control"  value="<?php echo $row['rolename']; ?>"  name="rolename" required="" />
+                                                                </div>
+                                                                </div> -->
 
-                            </div>
+                                                                </div>
 
-                        </section>
-                        
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Tutup</button>
-                <button type="submit" class="btn btn-primary">Simpan</button>
-            </div>
-            </form>
-            </div>
-        </div>
-        </div>
+                                                            </section>
+                                                            
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Tutup</button>
+                                                    <button type="submit" class="btn btn-primary">Simpan</button>
+                                                </div>
+                                                </form>
+                                                </div>
+                                            </div>
+                                            </div>
                             <a href="users/hapus_users.php?id=<?php echo $row['id_user']; ?>" onclick="return confirm('Anda yakin akan menghapus data ini?')">Hapus</a>
                         </td>
                     </tr>

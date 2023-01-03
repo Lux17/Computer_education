@@ -159,7 +159,7 @@
 
 
             <li class="nav-item">
-                <a class="nav-link" href="Users.php">
+                <a class="nav-link" href="users.php">
                     <i class="fas fa-fw fa-user-circle"></i>
                     <span>Users</span></a>
             </li>

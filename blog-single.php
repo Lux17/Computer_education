@@ -96,7 +96,7 @@ include('koneksi.php');
 
     <!-- ======= Blog Single Section ======= -->
     <section id="blog" class="blog">
-      <div class="container" data-aos="fade-up">
+      <div class="container" >
 
         <div class="row">
 

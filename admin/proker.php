@@ -133,7 +133,7 @@ session_start();
 
 
             <li class="nav-item">
-                <a class="nav-link" href="Users.php">
+                <a class="nav-link" href="users.php">
                     <i class="fas fa-fw fa-user-circle"></i>
                     <span>Users</span></a>
             </li>
@@ -237,12 +237,13 @@ session_start();
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-success">Program Kerja</h6>
                         </div>
-                                        <center><h3>Program Kerja</h3><center>
+                                        <center><h3>Program Kerja</h3>
                                            
                                                          <!-- Button trigger modal -->
 <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
   Tambah
 </button>
+</center>
     <br>
                    <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

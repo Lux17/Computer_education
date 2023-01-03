@@ -135,7 +135,7 @@
 
 
             <li class="nav-item">
-                <a class="nav-link" href="Users.php">
+                <a class="nav-link" href="users.php">
                     <i class="fas fa-fw fa-user-circle"></i>
                     <span>Users</span></a>
             </li>
@@ -217,12 +217,13 @@
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-success">Visi & Misi</h6>
                         </div>
-                                        <center><h3>Visi& Misi</h3><center>
+                                        <center><h3>Visi& Misi</h3>
                                            
                                                          <!-- Button trigger modal -->
-<button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
-  Tambah
-</button>
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+                    Tambah
+                    </button>
+                    </center>
     <br>
                    <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -301,6 +302,8 @@
                         <td  scope="row"><?php echo $row['misi']; ?></td>
                     
                         <td  scope="row">
+
+                        
                         <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal<?php echo $row['id'];?>">
                             Edit
                             </button>
@@ -361,7 +364,11 @@
                     ?>
                     </tbody>
                     </table>
-                        </div>
+                    </div>
+
+
+        
+
 
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
