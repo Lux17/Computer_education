@@ -237,6 +237,9 @@ session_start();
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-success">Program Kerja</h6>
                         </div>
+
+                        <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                         <center><h3>Program Kerja</h3>
                                            
                                                          <!-- Button trigger modal -->
