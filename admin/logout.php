@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+setcookie("ceadmin", "", time()-3600);
 $_SESSION['id_user']='';
 $_SESSION['username']='';
 $_SESSION['nama']='';
@@ -15,6 +15,8 @@ unset($_SESSION['rolename']);
 
 session_unset();
 session_destroy();
+
+
 header('Location:../masuk.php');
 
 ?>

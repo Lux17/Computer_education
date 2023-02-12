@@ -1,6 +1,14 @@
 <?php
 include ('../koneksi.php');
 session_start();
+if(isset($_COOKIE['ceadmin'])&&$_COOKIE['ceadmin']=="asjbmbnsugaldsks22"){
+    echo "";
+    }else{
+        session_unset();
+        session_destroy(); 
+        header("Location:../index.php");
+    }
+    
 ?>
 
 <!DOCTYPE html>
@@ -120,7 +128,7 @@ session_start();
                     <span>File</span></a>
             </li>
 
-            
+            <!-- Nav Item - Tables -->
             <li class="nav-item">
                 <a class="nav-link" href="blog.php">
                     <i class="fas fa-fw fa-globe"></i>
@@ -143,7 +151,6 @@ session_start();
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
-
 
         </ul>
         <!-- End of Sidebar -->
@@ -559,6 +566,7 @@ session_start();
         <!-- End of Content Wrapper -->
 
     </div>
+                        </div>
     <!-- End of Page Wrapper -->
 
     <!-- Scroll to Top Button-->

@@ -1,7 +1,13 @@
 <?php
   include('../koneksi.php'); 
   session_start();
-  
+  if(isset($_COOKIE['ceadmin'])&&$_COOKIE['ceadmin']=="asjbmbnsugaldsks22"){
+    echo "";
+    }else{
+        session_unset();
+        session_destroy(); 
+        header("Location:../index.php");
+    } 
 
   // mengecek apakah di url ada nilai GET id
   if (isset($_GET['id'])) {

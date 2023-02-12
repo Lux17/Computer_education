@@ -23,6 +23,7 @@ if($jumlah > 0){
 	$_SESSION['username'] = $username;
 	$_SESSION['rolename'] = $rolename;
 	$_SESSION['status'] = "login";
+	setcookie('ceadmin', 'asjbmbnsugaldsks22', time() + 24 * 3600);
 
 	header("Location:admin/dashboard.php");
 
@@ -34,7 +35,7 @@ if($jumlah > 0){
 	$_SESSION['username'] = $username;
 	$_SESSION['rolename'] = $rolename;
 	$_SESSION['status'] = "login";
-
+	setcookie('ceadmin', 'asjbmbnsugaldsks22', time() + 24 * 3600);
 	header("Location:admin/dashboard.php");
 
  // cek jika user login sebagai pengurus
@@ -44,7 +45,7 @@ if($jumlah > 0){
 	$_SESSION['username'] = $username;
 	$_SESSION['rolename'] = $rolename;
 	$_SESSION['status'] = "login";
-
+	setcookie('ceadmin', 'asjbmbnsugaldsks22', time() + 24 * 3600);
 	header("Location:publikasi/blog.php");
 
  // cek jika user login sebagai pengurus
@@ -55,6 +56,7 @@ if($jumlah > 0){
 	$_SESSION['username'] = $username;
 	$_SESSION['rolename'] = $rolename;
 	$_SESSION['status'] = "login";
+	setcookie('ceadmin', 'asjbmbnsugaldsks22', time() + 24 * 3600);
 
 	header("Location:admin/dashboard.php");
 

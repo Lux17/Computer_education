@@ -15,6 +15,7 @@ unset($_SESSION['rolename']);
 
 session_unset();
 session_destroy();
+setcookie("ceadmin","", time() - 24 * 3600);
 header('Location:../masuk.php');
 
 ?>

@@ -1,3 +1,14 @@
+<?php
+
+if(isset($_COOKIE['ceadmin'])&&$_COOKIE['ceadmin']=="asjbmbnsugaldsks22"){
+    echo "";
+    }else{
+        session_unset();
+        session_destroy(); 
+        header("Location:../index.php");
+    } 
+
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
