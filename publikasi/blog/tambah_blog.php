@@ -1,6 +1,6 @@
 <?php
 
-if(isset($_COOKIE['ceadmin'])&&$_COOKIE['ceadmin']=="asjbmbnsugaldsks22"){
+if(isset($_COOKIE['ceadmin'])&&$_COOKIE['ceadmin']=="asjkulnyyuehksd22"){
     echo "";
     }else{
         session_unset();

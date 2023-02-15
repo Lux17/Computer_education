@@ -4,12 +4,15 @@ include 'koneksi.php';
 session_start();	
 	
 $bulan = isset($_POST['bulan']) ? $_POST['bulan'] : '';
+$tahun = isset($_POST['tahun']) ? $_POST['tahun'] : '';
+$keterangan  = isset($_POST['keterangan']) ? $_POST['keterangan'] : '';
+$jenis = isset($_POST['jenis']) ? $_POST['jenis'] : '';
 $jumlah_kas = isset($_POST['jumlah_kas']) ? $_POST['jumlah_kas'] : '';
 
 
 $angka= str_replace(".", "", $jumlah_kas);
 
-$query = "INSERT INTO kas (bulan, jumlah_kas) VALUES ('$bulan', '$angka')";
+$query = "INSERT INTO kas (bulan, jumlah_kas, tahun, keterangan, jenis) VALUES ('$bulan', '$angka','$tahun','$keterangan','$jenis')";
 $result = mysqli_query($kon, $query);
                   // periska query apakah ada error
 // $jumlah = mysqli_num_rows($result);

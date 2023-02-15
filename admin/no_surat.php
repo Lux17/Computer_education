@@ -218,27 +218,27 @@ if(isset($_COOKIE['ceadmin'])&&$_COOKIE['ceadmin']=="asjbmbnsugaldsks22"){
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Kas</h1>
-                    <p class="mb-4">Kas Computer Education.</p>
+                    <h1 class="h3 mb-2 text-gray-800">Nomer Surat</h1>
+                    <p class="mb-4">Nomer Surat Computer Education.</p>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-success">Data Tabel Kas</h6>
+                            <h6 class="m-0 font-weight-bold text-success">Data Tabel Nomer Surat</h6>
                         </div>
                         <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">    
-                                        <center><h3>Data Kas</h3>
+                                        <center><h3>Data Nomer Surat</h3>
                                            
                                                          <!-- Button trigger modal -->
 <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
-  Tambah Kas
+  Tambah
 </button>
 </center>
     <br>
 
 <div class="ml-4">
-<a href="export_kas.php" class="d-sm-inline-block btn btn-sm btn-success shadow-sm"><i
+<a href="export_surat.php" class="d-sm-inline-block btn btn-sm btn-success shadow-sm"><i
                         class="fas fa-download fa-sm text-white-50"></i> Download</a>
 </div>
                    <!-- Modal -->
@@ -253,52 +253,58 @@ if(isset($_COOKIE['ceadmin'])&&$_COOKIE['ceadmin']=="asjbmbnsugaldsks22"){
             </div>
             <div class="modal-body">
             <div>
-            <form method="POST" action="kas/tambah_kas.php" enctype="multipart/form-data" >
+            <form method="POST" action="no_surat/tambah_surat.php" enctype="multipart/form-data" >
                         <section class="base align-items-center ">
 
-                        <div class="row mb-3">
-                            <label class="col-sm-3">Bulan</label>
-                            <div class="input-group col-sm-8">
-                                <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="bulan" required="" >
-                                <option selected>Pilih...</option>
-                                <option value="Januari">Januari</option>
-                                <option  value="Februari">Februari</option>
-                                <option  value="Maret">Maret</option>
-                                <option value="April">April</option>
-                                <option  value="Mei">Mei</option>
-                                <option  value="Juni">Juni</option>
-                                <option value="Juli">Juli</option>
-                                <option  value="Agustus">Agustus</option>
-                                <option  value="September">September</option>
-                                <option value="Oktober">Oktober</option>
-                                <option  value="November">November</option>
-                                <option  value="Desember">Desember</option>
+                            
+                            <div class="row mb-3">
+                            <label for="Jumlah Kas" class="col-sm-3 col-form-label">Nomer Surat</label>
+                            <div class="col-sm-8">
+                            <input type="text" class="form-control" name="no_surat"  />
+                            </div>
+                            </div>
 
+                            <div class="row mb-3">
+                            <label class="col-sm-3">Perihal</label>
+                            <div class="input-group col-sm-8">
+                                <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="perihal" required="" >
+                                <option selected>Pilih...</option>
+                                <option value="Undangan">Undangan</option>
+                                <option  value="Peminjaman Sarana dan Prasarana">Peminjaman Sarana dan Prasarana </option>
+                                <option  value="Peminjaman Alat">Peminjaman Alat</option>
+                                <option  value="Pemberitahuan Acara">Pemberitahuan Acara</option>
+                                <option value="Surat Keterangan Aktif Kegiatan Mahasiswa">Surat Keterangan Aktif Kegiatan Mahasiswa</option>
+                                <option  value="Permohonan Menjadi Pemateri">Permohonan Menjadi Pemateri</option>
+                                <option value="Surat Dispensasi">Surat Dispensasi</option>
+                                <option  value="Surat Izin">Surat Izin</option>
+                                <option value="Permohonan Delegasi ">Permohonan Delegasi</option>
+                                <option value="Permohonan Kerja Sama(Sponsorship)">Permohonan Kerja Sama(Sponsorship)</option>
+                                <option value="Permohonan Bantuan Dana">Permohonan Bantuan Dana</option>
+                                <option  value="Peringatan pertama (SP-1)">Peringatan Pertama (SP-1)</option>
+                                <option  value="Peringatan Kedua(SP-2)">Peringatan Kedua(SP-2)</option>
+                                <option  value="Peringatan Ketiga(SP-3)">Peringatan Ketiga(SP-3)</option>
+                                <option  value="Permohonan SK">Permohonan SK</option>
+                                <option  value="Pemberitahuan Pengunduran Acara">Pemberitahuan Pengunduran Acara</option>
+                                <option value="Pernyataan Pengunduran Diri">Pernyataan Pengunduran Diri</option>
+                                <option  value="Permohonan Juri">Permohonan Juri</option>
+                                <option  value="Undangan Penutupan Kegiatan ">Undangan Penutupan Kegiatan </option>
                                 </select>
                                 <div class="input-group-append">
                             </div>
                             </div>
                             </div>
-
                             
                             <div class="row mb-3">
-                            <label for="Jumlah Kas" class="col-sm-3 col-form-label">Tahun</label>
+                            <label for="Jumlah Kas" class="col-sm-3 col-form-label">Kepada</label>
                             <div class="col-sm-8">
-                            <input type="text" class="form-control" name="tahun"  />
+                            <input type="text" class="form-control" name="kepada"  />
                             </div>
                             </div>
 
                             <div class="row mb-3">
-                            <label for="Jumlah Kas" class="col-sm-3 col-form-label">Keterangan</label>
+                            <label for="Jumlah Kas" class="col-sm-3 col-form-label">Tujuan</label>
                             <div class="col-sm-8">
-                            <textarea type="text" class="form-control" name="keterangan" > </textarea>
-                            </div>
-                            </div>
-                            
-                            <div class="row mb-3">
-                            <label for="Jumlah Kas" class="col-sm-3 col-form-label">Jumlah</label>
-                            <div class="col-sm-8">
-                            <input type="text" class="form-control" name="jumlah_kas"  />
+                            <textarea type="text" class="form-control" name="tujuan"  > </textarea>
                             </div>
                             </div>
 
@@ -307,8 +313,8 @@ if(isset($_COOKIE['ceadmin'])&&$_COOKIE['ceadmin']=="asjbmbnsugaldsks22"){
                             <div class="input-group col-sm-8">
                                 <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="jenis" required="" >
                                 <option selected>Pilih...</option>
-                                <option value="pemasukan">Pemasukan</option>
-                                <option  value="pengeluaran">Pengeluaran</option>
+                                <option value="Surat Masuk">Surat Masuk</option>
+                                <option  value="Surat Keluar">Surat Keluar</option>
                                 </select>
                                 <div class="input-group-append">
                             </div>
@@ -322,7 +328,7 @@ if(isset($_COOKIE['ceadmin'])&&$_COOKIE['ceadmin']=="asjbmbnsugaldsks22"){
 </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Tutup</button>
-                <button type="submit" class="btn btn-primary">Simpan</button>
+                <button type="submit" class="btn btn-primary" name="simpan">Simpan</button>
             </div>
             </form>
             </div>
@@ -335,10 +341,10 @@ if(isset($_COOKIE['ceadmin'])&&$_COOKIE['ceadmin']=="asjbmbnsugaldsks22"){
                     <thead>
                         <tr>
                         <th scope="col">No</th>
-                        <th scope="col">Bulan</th>
-                        <th scope="col">Tahun</th>
-                        <th scope="col">Keterangan</th>
-                        <th scope="col">Jumlah</th>
+                        <th scope="col">Nomer Surat</th>
+                        <th scope="col">Perihal</th>
+                        <th scope="col">Kepada</th>
+                        <th scope="col">Tujuan</th>
                         <th scope="col">Jenis</th>
                         <th scope="col"></th>
                    
@@ -347,7 +353,7 @@ if(isset($_COOKIE['ceadmin'])&&$_COOKIE['ceadmin']=="asjbmbnsugaldsks22"){
                     <tbody>
                     <?php
                     // jalankan query untuk menampilkan semua data diurutkan berdasarkan nim
-                    $query = "SELECT * FROM kas ORDER BY id ASC";
+                    $query = "SELECT * FROM surat ORDER BY id_surat DESC";
                     $result = mysqli_query($kon, $query);
                     //mengecek apakah ada error ketika menjalankan query
                     if(!$result){
@@ -364,92 +370,99 @@ if(isset($_COOKIE['ceadmin'])&&$_COOKIE['ceadmin']=="asjbmbnsugaldsks22"){
                     ?>
                     <tr>
                         <td  scope="row"><?php echo $no; ?></td>
-                        <td  scope="row"><?php echo $row['bulan']; ?></td>
-                        <td  scope="row"><?php echo $row['tahun']; ?></td>
-                        <td  scope="row"><?php echo $row['keterangan']; ?></td>
-                        <td  scope="row">Rp <?php echo $row['jumlah_kas']; ?></td>
+                        <td  scope="row"><?php echo $row['no_surat']; ?></td>
+                        <td  scope="row"><?php echo $row['perihal']; ?></td>
+                        <td  scope="row"><?php echo $row['kepada']; ?></td>
+                        <td  scope="row"><?php echo $row['tujuan']; ?></td>
                         <td  scope="row"><?php echo $row['jenis']; ?></td>
                     
                         <td  scope="row">
-                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal<?php echo $row['id'];?>">
+                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal<?php echo $row['id_surat'];?>">
                             Edit
                             </button>
    
-                                <div class="modal fade" id="exampleModal<?php echo $row['id'];?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal fade" id="exampleModal<?php echo $row['id_surat'];?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Edit Kas</h5>
+                                        <h5 class="modal-title" id="exampleModalLabel">Edit Surat</h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
                                     <div class="modal-body">
-                                    <form method="POST" action="kas/edit_kas.php" enctype="multipart/form-data" >
+                                    <form method="POST" action="no_surat/edit_surat.php" enctype="multipart/form-data" >
                                     
                                                 <section class="base align-items-center ">
                                                 <div>
                                                     
-                                                    <input type="hidden" value="<?php echo $row['id']; ?>" name="id" required="" />
+                                                    <input type="hidden" value="<?php echo $row['id_surat']; ?>" name="id_surat" required="" />
                                                     </div>
                                                     <div>
-                                                    <div class="row mb-3">
-                                                    <label for="Bulan" class="col-sm-3 col-form-label">Bulan</label>
-                                                    <div class="input-group col-sm-8">
-                                                        <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="bulan" required="" >
-                                                        <option selected velue="<?php echo $row['bulan']; ?>"><?php echo $row['bulan']; ?></option>
-                                                        <option value="Januari">Januari</option>
-                                                        <option  value="Februari">Februari</option>
-                                                        <option  value="Maret">Maret</option>
-                                                        <option value="April">April</option>
-                                                        <option  value="Mei">Mei</option>
-                                                        <option  value="Juni">Juni</option>
-                                                        <option value="Juli">Juli</option>
-                                                        <option  value="Agustus">Agustus</option>
-                                                        <option  value="September">September</option>
-                                                        <option value="Oktober">Oktober</option>
-                                                        <option  value="November">November</option>
-                                                        <option  value="Desember">Desember</option>
+                            
+                            <div class="row mb-3">
+                            <label for="Jumlah Kas" class="col-sm-3 col-form-label">Nomer Surat</label>
+                            <div class="col-sm-8">
+                            <input type="text" class="form-control" name="no_surat" value="<?php echo $row['no_surat'];?>" />
+                            </div>
+                            </div>
 
-                                                        </select>
-                                                        <div class="input-group-append">
-                                                    </div>
-                                                    </div>
-                                            </div>
-                                        
-                                                        <div class="row mb-3">
-                                        <label for="Jumlah Kas" class="col-sm-3 col-form-label">Tahun</label>
-                                        <div class="col-sm-8">
-                                        <input type="text" class="form-control" name="tahun" value="<?php echo $row['tahun']; ?>" />
-                                        </div>
-                                        </div>
+                            <div class="row mb-3">
+                            <label class="col-sm-3">Perihal</label>
+                            <div class="input-group col-sm-8">
+                                <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="perihal" required="" >
+                                <option selected value="<?php echo $row['perihal'];?>"><?php echo $row['perihal'];?></option>
+                                <option value="Undangan">Undangan</option>
+                                <option  value="Peminjaman Sarana dan Prasarana">Peminjaman Sarana dan Prasarana </option>
+                                <option  value="Peminjaman Alat">Peminjaman Alat</option>
+                                <option  value="Pemberitahuan Acara">Pemberitahuan Acara</option>
+                                <option value="Surat Keterangan Aktif Kegiatan Mahasiswa">Surat Keterangan Aktif Kegiatan Mahasiswa</option>
+                                <option  value="Permohonan Menjadi Pemateri">Permohonan Menjadi Pemateri</option>
+                                <option value="Surat Dispensasi">Surat Dispensasi</option>
+                                <option  value="Surat Izin">Surat Izin</option>
+                                <option value="Permohonan Delegasi ">Permohonan Delegasi</option>
+                                <option value="Permohonan Kerja Sama(Sponsorship)">Permohonan Kerja Sama(Sponsorship)</option>
+                                <option value="Permohonan Bantuan Dana">Permohonan Bantuan Dana</option>
+                                <option  value="Peringatan pertama (SP-1)">Peringatan Pertama (SP-1)</option>
+                                <option  value="Peringatan Kedua(SP-2)">Peringatan Kedua(SP-2)</option>
+                                <option  value="Peringatan Ketiga(SP-3)">Peringatan Ketiga(SP-3)</option>
+                                <option  value="Permohonan SK">Permohonan SK</option>
+                                <option  value="Pemberitahuan Pengunduran Acara">Pemberitahuan Pengunduran Acara</option>
+                                <option value="Pernyataan Pengunduran Diri">Pernyataan Pengunduran Diri</option>
+                                <option  value="Permohonan Juri">Permohonan Juri</option>
+                                <option  value="Undangan Penutupan Kegiatan ">Undangan Penutupan Kegiatan </option>
+                                </select>
+                                <div class="input-group-append">
+                            </div>
+                            </div>
+                            </div>
+                            
+                            <div class="row mb-3">
+                            <label for="Jumlah Kas" class="col-sm-3 col-form-label">Kepada</label>
+                            <div class="col-sm-8">
+                            <input type="text" class="form-control" name="kepada"  value="<?php echo $row['kepada'];?>"/>
+                            </div>
+                            </div>
 
-                                        <div class="row mb-3">
-                                        <label for="Jumlah Kas" class="col-sm-3 col-form-label">Keterangan</label>
-                                        <div class="col-sm-8">
-                                        <textarea type="text" class="form-control" name="keterangan" ><?php echo $row['keterangan']; ?> </textarea>
-                                        </div>
-                                        </div>
-                                        
-                                        <div class="row mb-3">
-                                        <label for="Jumlah Kas" class="col-sm-3 col-form-label">Jumlah</label>
-                                        <div class="col-sm-8">
-                                        <input type="text" class="form-control" name="jumlah_kas" value="<?php echo $row['jumlah_kas']; ?>" />
-                                        </div>
-                                        </div>
+                            <div class="row mb-3">
+                            <label for="Jumlah Kas" class="col-sm-3 col-form-label">Tujuan</label>
+                            <div class="col-sm-8">
+                            <textarea type="text" class="form-control" name="tujuan"  > <?php echo $row['tujuan'];?></textarea>
+                            </div>
+                            </div>
 
-                                        <div class="row mb-3">
-                                        <label class="col-sm-3">Jenis</label>
-                                        <div class="input-group col-sm-8">
-                                            <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="jenis" required="" >
-                                            <option selected><?php echo $row['jenis']; ?></option>
-                                            <option value="pemasukan">Pemasukan</option>
-                                            <option  value="pengeluaran">Pengeluaran</option>
-                                            </select>
-                                            <div class="input-group-append">
-                                        </div>
-                                        </div>
-                                        </div>
+                            <div class="row mb-3">
+                            <label class="col-sm-3">Jenis</label>
+                            <div class="input-group col-sm-8">
+                                <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="jenis" required="" >
+                                <option selected><?php echo $row['jenis'];?></option>
+                                <option value="Surat Masuk">Surat Masuk</option>
+                                <option  value="Surat Keluar">Surat Keluar</option>
+                                </select>
+                                <div class="input-group-append">
+                            </div>
+                            </div>
+                            </div>
             
                                                 </section>
                                                 
@@ -462,7 +475,7 @@ if(isset($_COOKIE['ceadmin'])&&$_COOKIE['ceadmin']=="asjbmbnsugaldsks22"){
                                     </div>
                                 </div>
                                 </div>
-                            <a href="kas/hapus_kas.php?id=<?php echo $row['id']; ?>" onclick="return confirm('Anda yakin akan menghapus data ini?')">Hapus</a>
+                            <a href="no_surat/hapus_surat.php?id=<?php echo $row['id_surat']; ?>" onclick="return confirm('Anda yakin akan menghapus data ini?')">Hapus</a>
                         </td>
                     </tr>
                         

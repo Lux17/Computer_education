@@ -1,13 +1,13 @@
 <?php
 include('../koneksi.php'); 
-session_start();
+session_start();   
 if(isset($_COOKIE['ceadmin'])&&$_COOKIE['ceadmin']=="asjbmbnsugaldsks22"){
     echo "";
     }else{
         session_unset();
-        session_destroy(); 
+        session_destroy();  
         header("Location:../index.php");
-    }   
+    }     
 ?>
 
 <!DOCTYPE html>
@@ -55,8 +55,8 @@ if(isset($_COOKIE['ceadmin'])&&$_COOKIE['ceadmin']=="asjbmbnsugaldsks22"){
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
-<!-- Nav Item - Dashboard -->
-<li class="nav-item active">
+           <!-- Nav Item - Dashboard -->
+           <li class="nav-item active">
                 <a class="nav-link" href="dashboard.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
@@ -111,6 +111,12 @@ if(isset($_COOKIE['ceadmin'])&&$_COOKIE['ceadmin']=="asjbmbnsugaldsks22"){
             </li>
 
             <li class="nav-item">
+                <a class="nav-link" href="inventaris.php">
+                    <i class="fas fa-fw fa-dollar-sign"></i>
+                    <span>inventaris</span></a>
+            </li>
+
+            <li class="nav-item">
                 <a class="nav-link" href="proker.php">
                     <i class="fas fa-fw fa-clipboard-check"></i>
                     <span>Proker</span></a>
@@ -126,14 +132,12 @@ if(isset($_COOKIE['ceadmin'])&&$_COOKIE['ceadmin']=="asjbmbnsugaldsks22"){
                     <i class="fas fa-fw fa-upload"></i>
                     <span>File</span></a>
             </li>
-
+            <!-- Nav Item - Tables -->
             <li class="nav-item">
                 <a class="nav-link" href="blog.php">
                     <i class="fas fa-fw fa-globe"></i>
                     <span>Blog</span></a>
             </li>
-            <!-- Nav Item - Tables -->
-
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
             <div class="sidebar-heading">
@@ -171,15 +175,35 @@ if(isset($_COOKIE['ceadmin'])&&$_COOKIE['ceadmin']=="asjbmbnsugaldsks22"){
                         <i class="fa fa-bars"></i>
                     </button>
 
-        
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
-                        
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                            placeholder="Search for..." aria-label="Search"
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
 
-                        
-                        
+                      
                         <div class="topbar-divider d-none d-sm-block"></div>
 
                         <!-- Nav Item - User Information -->
@@ -187,7 +211,7 @@ if(isset($_COOKIE['ceadmin'])&&$_COOKIE['ceadmin']=="asjbmbnsugaldsks22"){
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">                               
-                                <?php
+                                 <?php
                                 echo $_SESSION['username'];
                                 ?>
                                 </span>
@@ -218,27 +242,28 @@ if(isset($_COOKIE['ceadmin'])&&$_COOKIE['ceadmin']=="asjbmbnsugaldsks22"){
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Kas</h1>
-                    <p class="mb-4">Kas Computer Education.</p>
+                    <h1 class="h3 mb-2 text-gray-800">Inventaris</h1>
+                    <p class="mb-4">List Data Inventaris Computer Education</p>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-success">Data Tabel Kas</h6>
+                            <h6 class="m-0 font-weight-bold text-success">Inventaris</h6>
                         </div>
+
                         <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">    
-                                        <center><h3>Data Kas</h3>
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                        <center><h3>Inventaris</h3>
                                            
                                                          <!-- Button trigger modal -->
 <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
-  Tambah Kas
+  Tambah
 </button>
 </center>
-    <br>
 
+<br>
 <div class="ml-4">
-<a href="export_kas.php" class="d-sm-inline-block btn btn-sm btn-success shadow-sm"><i
+<a href="export_inv.php" class="d-sm-inline-block btn btn-sm btn-success shadow-sm"><i
                         class="fas fa-download fa-sm text-white-50"></i> Download</a>
 </div>
                    <!-- Modal -->
@@ -246,80 +271,24 @@ if(isset($_COOKIE['ceadmin'])&&$_COOKIE['ceadmin']=="asjbmbnsugaldsks22"){
         <div class="modal-dialog" role="document">
             <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Tambah Kas</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Tambah Data</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-            <div>
-            <form method="POST" action="kas/tambah_kas.php" enctype="multipart/form-data" >
+            <form method="POST" action="inventaris/tambah_inventaris.php" enctype="multipart/form-data" >
                         <section class="base align-items-center ">
-
+                            
                         <div class="row mb-3">
-                            <label class="col-sm-3">Bulan</label>
-                            <div class="input-group col-sm-8">
-                                <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="bulan" required="" >
-                                <option selected>Pilih...</option>
-                                <option value="Januari">Januari</option>
-                                <option  value="Februari">Februari</option>
-                                <option  value="Maret">Maret</option>
-                                <option value="April">April</option>
-                                <option  value="Mei">Mei</option>
-                                <option  value="Juni">Juni</option>
-                                <option value="Juli">Juli</option>
-                                <option  value="Agustus">Agustus</option>
-                                <option  value="September">September</option>
-                                <option value="Oktober">Oktober</option>
-                                <option  value="November">November</option>
-                                <option  value="Desember">Desember</option>
-
-                                </select>
-                                <div class="input-group-append">
-                            </div>
-                            </div>
-                            </div>
-
-                            
-                            <div class="row mb-3">
-                            <label for="Jumlah Kas" class="col-sm-3 col-form-label">Tahun</label>
+                            <label for="Nama inventaris" class="col-sm-3 col-form-label">Nama Data</label>
                             <div class="col-sm-8">
-                            <input type="text" class="form-control" name="tahun"  />
+                            <input type="text" class="form-control"  name="nama_data" autofocus="" required="" />
                             </div>
                             </div>
-
-                            <div class="row mb-3">
-                            <label for="Jumlah Kas" class="col-sm-3 col-form-label">Keterangan</label>
-                            <div class="col-sm-8">
-                            <textarea type="text" class="form-control" name="keterangan" > </textarea>
-                            </div>
-                            </div>
-                            
-                            <div class="row mb-3">
-                            <label for="Jumlah Kas" class="col-sm-3 col-form-label">Jumlah</label>
-                            <div class="col-sm-8">
-                            <input type="text" class="form-control" name="jumlah_kas"  />
-                            </div>
-                            </div>
-
-                            <div class="row mb-3">
-                            <label class="col-sm-3">Jenis</label>
-                            <div class="input-group col-sm-8">
-                                <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="jenis" required="" >
-                                <option selected>Pilih...</option>
-                                <option value="pemasukan">Pemasukan</option>
-                                <option  value="pengeluaran">Pengeluaran</option>
-                                </select>
-                                <div class="input-group-append">
-                            </div>
-                            </div>
-                            </div>
-   
-           
                         </section>
                         
             </div>
-</div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Tutup</button>
                 <button type="submit" class="btn btn-primary">Simpan</button>
@@ -335,11 +304,7 @@ if(isset($_COOKIE['ceadmin'])&&$_COOKIE['ceadmin']=="asjbmbnsugaldsks22"){
                     <thead>
                         <tr>
                         <th scope="col">No</th>
-                        <th scope="col">Bulan</th>
-                        <th scope="col">Tahun</th>
-                        <th scope="col">Keterangan</th>
-                        <th scope="col">Jumlah</th>
-                        <th scope="col">Jenis</th>
+                        <th scope="col">Nama Data</th>
                         <th scope="col"></th>
                    
                         </tr>
@@ -347,7 +312,7 @@ if(isset($_COOKIE['ceadmin'])&&$_COOKIE['ceadmin']=="asjbmbnsugaldsks22"){
                     <tbody>
                     <?php
                     // jalankan query untuk menampilkan semua data diurutkan berdasarkan nim
-                    $query = "SELECT * FROM kas ORDER BY id ASC";
+                    $query = "SELECT * FROM inventaris ORDER BY id_inventaris ASC";
                     $result = mysqli_query($kon, $query);
                     //mengecek apakah ada error ketika menjalankan query
                     if(!$result){
@@ -364,105 +329,53 @@ if(isset($_COOKIE['ceadmin'])&&$_COOKIE['ceadmin']=="asjbmbnsugaldsks22"){
                     ?>
                     <tr>
                         <td  scope="row"><?php echo $no; ?></td>
-                        <td  scope="row"><?php echo $row['bulan']; ?></td>
-                        <td  scope="row"><?php echo $row['tahun']; ?></td>
-                        <td  scope="row"><?php echo $row['keterangan']; ?></td>
-                        <td  scope="row">Rp <?php echo $row['jumlah_kas']; ?></td>
-                        <td  scope="row"><?php echo $row['jenis']; ?></td>
+                        <td  scope="row"><?php echo $row['nama_data']; ?></td>
+                       
                     
                         <td  scope="row">
-                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal<?php echo $row['id'];?>">
+                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal<?php echo $row['id_inventaris'];?>">
                             Edit
                             </button>
    
-                                <div class="modal fade" id="exampleModal<?php echo $row['id'];?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Edit Kas</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                    <form method="POST" action="kas/edit_kas.php" enctype="multipart/form-data" >
-                                    
-                                                <section class="base align-items-center ">
-                                                <div>
-                                                    
-                                                    <input type="hidden" value="<?php echo $row['id']; ?>" name="id" required="" />
-                                                    </div>
-                                                    <div>
-                                                    <div class="row mb-3">
-                                                    <label for="Bulan" class="col-sm-3 col-form-label">Bulan</label>
-                                                    <div class="input-group col-sm-8">
-                                                        <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="bulan" required="" >
-                                                        <option selected velue="<?php echo $row['bulan']; ?>"><?php echo $row['bulan']; ?></option>
-                                                        <option value="Januari">Januari</option>
-                                                        <option  value="Februari">Februari</option>
-                                                        <option  value="Maret">Maret</option>
-                                                        <option value="April">April</option>
-                                                        <option  value="Mei">Mei</option>
-                                                        <option  value="Juni">Juni</option>
-                                                        <option value="Juli">Juli</option>
-                                                        <option  value="Agustus">Agustus</option>
-                                                        <option  value="September">September</option>
-                                                        <option value="Oktober">Oktober</option>
-                                                        <option  value="November">November</option>
-                                                        <option  value="Desember">Desember</option>
-
-                                                        </select>
-                                                        <div class="input-group-append">
-                                                    </div>
-                                                    </div>
-                                            </div>
-                                        
-                                                        <div class="row mb-3">
-                                        <label for="Jumlah Kas" class="col-sm-3 col-form-label">Tahun</label>
-                                        <div class="col-sm-8">
-                                        <input type="text" class="form-control" name="tahun" value="<?php echo $row['tahun']; ?>" />
-                                        </div>
-                                        </div>
-
-                                        <div class="row mb-3">
-                                        <label for="Jumlah Kas" class="col-sm-3 col-form-label">Keterangan</label>
-                                        <div class="col-sm-8">
-                                        <textarea type="text" class="form-control" name="keterangan" ><?php echo $row['keterangan']; ?> </textarea>
-                                        </div>
-                                        </div>
-                                        
-                                        <div class="row mb-3">
-                                        <label for="Jumlah Kas" class="col-sm-3 col-form-label">Jumlah</label>
-                                        <div class="col-sm-8">
-                                        <input type="text" class="form-control" name="jumlah_kas" value="<?php echo $row['jumlah_kas']; ?>" />
-                                        </div>
-                                        </div>
-
-                                        <div class="row mb-3">
-                                        <label class="col-sm-3">Jenis</label>
-                                        <div class="input-group col-sm-8">
-                                            <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="jenis" required="" >
-                                            <option selected><?php echo $row['jenis']; ?></option>
-                                            <option value="pemasukan">Pemasukan</option>
-                                            <option  value="pengeluaran">Pengeluaran</option>
-                                            </select>
-                                            <div class="input-group-append">
-                                        </div>
-                                        </div>
-                                        </div>
+        <div class="modal fade" id="exampleModal<?php echo $row['id_inventaris'];?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Edit Kas</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+            <form method="POST" action="inventaris/edit_inventaris.php" enctype="multipart/form-data" >
             
-                                                </section>
-                                                
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Tutup</button>
-                                        <button type="submit" class="btn btn-primary">Simpan</button>
-                                    </div>
-                                    </form>
-                                    </div>
-                                </div>
-                                </div>
-                            <a href="kas/hapus_kas.php?id=<?php echo $row['id']; ?>" onclick="return confirm('Anda yakin akan menghapus data ini?')">Hapus</a>
+                        <section class="base align-items-center ">
+                        <div>
+                        
+                            <input type="hidden" value="<?php echo $row['id_inventaris']; ?>" name="id_inventaris" required="" />
+                            </div>
+
+                            <div class="row mb-3">
+                            <label for="Nama inventaris" class="col-sm-3 col-form-label">Nama Data</label>
+                            <div class="col-sm-8">
+                            <input type="text" class="form-control" value="<?php echo $row['nama_data']; ?>" name="nama_data" autofocus="" required=""  />
+                            </div>
+                            </div>
+
+
+                            
+                        </section>
+                        
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Tutup</button>
+                <button type="submit" class="btn btn-primary">Simpan</button>
+            </div>
+            </form>
+            </div>
+        </div>
+        </div>
+                            <a href="inventaris/hapus_inventaris.php?id=<?php echo $row['id_inventaris']; ?>" onclick="return confirm('Anda yakin akan menghapus data ini?')">Hapus</a>
                         </td>
                     </tr>
                         
