@@ -21,7 +21,7 @@ if(isset($_COOKIE['ceadmin'])&&$_COOKIE['ceadmin']=="asjbmbnsugaldsks22"){
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Computer Education- Dashboard</title>
+    <title>Computer Education - Surat</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -56,7 +56,7 @@ if(isset($_COOKIE['ceadmin'])&&$_COOKIE['ceadmin']=="asjbmbnsugaldsks22"){
             <hr class="sidebar-divider my-0">
 
 <!-- Nav Item - Dashboard -->
-<li class="nav-item active">
+    <li class="nav-item ">
                 <a class="nav-link" href="dashboard.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
@@ -102,12 +102,23 @@ if(isset($_COOKIE['ceadmin'])&&$_COOKIE['ceadmin']=="asjbmbnsugaldsks22"){
                     <i class="fas fa-fw fa-bullseye"></i>
                     <span>Visi-Misi</span></a>
             </li>
-
             <!-- Nav Item - Charts -->
+            <li class="nav-item active">
+                <a class="nav-link" href="no_surat.php">
+                    <i class="fas fa-fw fa-clipboard-list"></i>
+                    <span>Surat</span></a>
+            </li>
+
             <li class="nav-item">
                 <a class="nav-link" href="kas.php">
                     <i class="fas fa-fw fa-dollar-sign"></i>
                     <span>Kas</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="kegiatan.php">
+                    <i class="fas fa-fw fa-check-circle"></i>
+                    <span>Kegiatan</span></a>
             </li>
 
             <li class="nav-item">

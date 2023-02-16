@@ -45,7 +45,7 @@ $qr["img"]= $url;
     crossorigin="anonymous"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
-    <title>Computer Education- Dashboard</title>
+    <title>Computer Education - QR Code</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -81,7 +81,7 @@ $qr["img"]= $url;
             <hr class="sidebar-divider my-0">
 
 <!-- Nav Item - Dashboard -->
-<li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="dashboard.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
@@ -97,7 +97,7 @@ $qr["img"]= $url;
 
 
             <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-wrench"></i>
@@ -131,9 +131,21 @@ $qr["img"]= $url;
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
+                <a class="nav-link" href="no_surat.php">
+                    <i class="fas fa-fw fa-clipboard-list"></i>
+                    <span>Surat</span></a>
+            </li>
+
+            <li class="nav-item">
                 <a class="nav-link" href="kas.php">
                     <i class="fas fa-fw fa-dollar-sign"></i>
                     <span>Kas</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="kegiatan.php">
+                    <i class="fas fa-fw fa-check-circle"></i>
+                    <span>Kegiatan</span></a>
             </li>
 
             <li class="nav-item">

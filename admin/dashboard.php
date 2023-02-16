@@ -103,12 +103,23 @@ if(isset($_COOKIE['ceadmin'])&&$_COOKIE['ceadmin']=="asjbmbnsugaldsks22"){
                     <i class="fas fa-fw fa-bullseye"></i>
                     <span>Visi-Misi</span></a>
             </li>
-
             <!-- Nav Item - Charts -->
+            <li class="nav-item">
+                <a class="nav-link" href="no_surat.php">
+                    <i class="fas fa-fw fa-clipboard-list"></i>
+                    <span>Surat</span></a>
+            </li>
+
             <li class="nav-item">
                 <a class="nav-link" href="kas.php">
                     <i class="fas fa-fw fa-dollar-sign"></i>
                     <span>Kas</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="kegiatan.php">
+                    <i class="fas fa-fw fa-check-circle"></i>
+                    <span>Kegiatan</span></a>
             </li>
 
             <li class="nav-item">
@@ -232,17 +243,29 @@ if(isset($_COOKIE['ceadmin'])&&$_COOKIE['ceadmin']=="asjbmbnsugaldsks22"){
 
                                             <?php
 
-                                            $data_kas = mysqli_query($kon,"SELECT SUM(jumlah_kas) AS total_kas FROM kas");
-                                            $total =0;
+                                            $data_kas = mysqli_query($kon,"SELECT SUM(jumlah_kas) AS total_pemasukan FROM kas order by jenis='Pemasukan'");
+                                            $data_kas2 = mysqli_query($kon, "SELECT SUM(jumlah_kas) AS total_pengeluaran FROM kas order by jenis='Pengeluaran'");
+
+                                            $total = 0;
 
                                             while($row = mysqli_fetch_assoc($data_kas))
                                             {
-                                                $total += $row['total_kas'];
+                                                $pemasukan = $total += $row['total_pemasukan'];
+                                                
+
                                             }
+
+                                            while($row = mysqli_fetch_assoc($data_kas2))
+                                            {
+                                                $pengeluaran = $total += $row['total_pengeluaran'];
+
+                                            }
+
+                                            $total_kas = $pemasukan - $pengeluaran;
                                             ?>
 
                                             
-                                            <p>Rp. <?php echo $total; ?></b></p>
+                                            <p>Rp. <?php echo $total_kas; ?></b></p>
                                             </div>
                                         </div>
                                         <div class="col-auto">
