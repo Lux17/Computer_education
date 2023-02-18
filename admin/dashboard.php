@@ -243,26 +243,33 @@ if(isset($_COOKIE['ceadmin'])&&$_COOKIE['ceadmin']=="asjbmbnsugaldsks22"){
 
                                             <?php
 
-                                            $data_kas = mysqli_query($kon,"SELECT SUM(jumlah_kas) AS total_pemasukan FROM kas order by jenis='Pemasukan'");
-                                            $data_kas2 = mysqli_query($kon, "SELECT SUM(jumlah_kas) AS total_pengeluaran FROM kas order by jenis='Pengeluaran'");
+                                            $data_kas = mysqli_query($kon,"SELECT sum(jumlah_kas) as total_pemasukan FROM kas where jenis='Pemasukan'");
+                                            
 
                                             $total = 0;
 
                                             while($row = mysqli_fetch_assoc($data_kas))
                                             {
                                                 $pemasukan = $total += $row['total_pemasukan'];
-                                                
-
+                                            
                                             }
+                                            ?>
+
+                                            <?php
+                                            $data_kas2 = mysqli_query($kon,"SELECT sum(jumlah_kas) as total_pengeluaran FROM kas where jenis='Pengeluaran'");
+                                            
+
+                                            $total = 0;
 
                                             while($row = mysqli_fetch_assoc($data_kas2))
                                             {
                                                 $pengeluaran = $total += $row['total_pengeluaran'];
+                                            
 
                                             }
-
                                             $total_kas = $pemasukan - $pengeluaran;
                                             ?>
+                                         
 
                                             
                                             <p>Rp. <?php echo $total_kas; ?></b></p>

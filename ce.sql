@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 18, 2022 at 05:21 AM
+-- Generation Time: Feb 18, 2023 at 07:36 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -56,7 +56,7 @@ CREATE TABLE `anggota` (
   `lahir` varchar(50) NOT NULL,
   `nomer_hp` varchar(50) NOT NULL,
   `prodi` varchar(50) NOT NULL,
-  `alamat` varchar(60) NOT NULL,
+  `alamat` varchar(250) NOT NULL,
   `jabatan` varchar(60) NOT NULL,
   `divisi` varchar(20) NOT NULL,
   `sub_divisi` varchar(20) NOT NULL
@@ -67,8 +67,8 @@ CREATE TABLE `anggota` (
 --
 
 INSERT INTO `anggota` (`id`, `nama`, `no_anggota`, `lahir`, `nomer_hp`, `prodi`, `alamat`, `jabatan`, `divisi`, `sub_divisi`) VALUES
-(1, 'Lucky  Saputra', 'CE 20.21.031', 'Cirebon, 17 Januari 2002', '08818285309', 'Teknik Informatika', 'Jl.Luwung Blok Sigebang Kec Mundu Kab Cirebon', 'Pengurus', 'Ketua Div Komputer', ''),
-(4, 'Mohammad Ridwan', 'CE 20.21.019', 'Cirebon, 19 November 2022', '08818377223', 'Teknik Informatika', ' ', 'Pengurus', 'Ketua umum', '');
+(5, 'Setiawan', 'CE 19.20.052', 'Cirebon, 21 Februari 2001', '08818285309', 'Teknik Informatika', ' ss', 'Demisioner', '', ''),
+(17, 'Lucky  Saputra', 'CE 20.21.031', 'Cirebon, 17 Januari 2002', '08818285309', 'Teknik Informatika', ' Munduss', 'Pengurus', 'Ketua Div Organisasi', '');
 
 -- --------------------------------------------------------
 
@@ -98,22 +98,70 @@ INSERT INTO `blog` (`id`, `title`, `description`, `date`, `image`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `inventaris`
+--
+
+CREATE TABLE `inventaris` (
+  `id_inventaris` int(11) NOT NULL,
+  `nama_data` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data for table `inventaris`
+--
+
+INSERT INTO `inventaris` (`id_inventaris`, `nama_data`) VALUES
+(2, 'Lemari '),
+(3, 'Printer ');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `kas`
 --
 
 CREATE TABLE `kas` (
   `id` int(11) NOT NULL,
   `bulan` varchar(20) NOT NULL,
-  `jumlah_kas` varchar(100) NOT NULL
+  `jumlah_kas` varchar(100) NOT NULL,
+  `tahun` varchar(16) NOT NULL,
+  `keterangan` varchar(120) NOT NULL,
+  `jenis` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `kas`
 --
 
-INSERT INTO `kas` (`id`, `bulan`, `jumlah_kas`) VALUES
-(1, 'Januari', '1000000'),
-(3, 'Februari', '500000');
+INSERT INTO `kas` (`id`, `bulan`, `jumlah_kas`, `tahun`, `keterangan`, `jenis`) VALUES
+(3, 'Februari', '500000', '2023', 'minum    ', 'Pemasukan'),
+(9, 'Juli', '10000', '2023', ' membeli sedotan ', 'Pengeluaran'),
+(10, 'Oktober', '10000', '2023', ' vv', 'Pemasukan'),
+(11, 'Oktober', '50000', '2023', ' sedekah', 'Pemasukan'),
+(12, 'September', '5000', '2023', ' jaket', 'Pengeluaran'),
+(13, 'Pilih...', '1000000', '2023', ' sdd', 'Pemasukan');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `kegiatan`
+--
+
+CREATE TABLE `kegiatan` (
+  `id` int(16) NOT NULL,
+  `nama_kegiatan` varchar(100) NOT NULL,
+  `tanggal` date NOT NULL,
+  `waktu` varchar(25) NOT NULL,
+  `tempat` varchar(250) NOT NULL,
+  `keterangan` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data for table `kegiatan`
+--
+
+INSERT INTO `kegiatan` (`id`, `nama_kegiatan`, `tanggal`, `waktu`, `tempat`, `keterangan`) VALUES
+(1, 'Makrab CE', '2023-03-01', '08.00-selesai', 'ipukan', 'Terlaksana');
 
 -- --------------------------------------------------------
 
@@ -141,18 +189,44 @@ INSERT INTO `ketum` (`id`, `visi`, `misi`) VALUES
 --
 
 CREATE TABLE `proker` (
-  `id` int(11) NOT NULL,
-  `nama_proker` varchar(50) NOT NULL,
-  `stat` varchar(50) NOT NULL,
-  `divisi` varchar(50) NOT NULL
+  `id` int(16) NOT NULL,
+  `nama_kegiatan` varchar(100) NOT NULL,
+  `tanggal` date NOT NULL,
+  `waktu` varchar(25) NOT NULL,
+  `tempat` varchar(250) NOT NULL,
+  `pemateri` varchar(100) DEFAULT NULL,
+  `divisi` varchar(50) NOT NULL,
+  `keterangan` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `proker`
 --
 
-INSERT INTO `proker` (`id`, `nama_proker`, `stat`, `divisi`) VALUES
-(1, 'Webinar', 'Soon', 'Komputer');
+INSERT INTO `proker` (`id`, `nama_kegiatan`, `tanggal`, `waktu`, `tempat`, `pemateri`, `divisi`, `keterangan`) VALUES
+(1, 'Makrab CE', '2023-03-01', '08.00-selesai', 'ipukan', 'Divisi Organisasi', 'Divisi Organisasi', 'Terlaksana');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `surat`
+--
+
+CREATE TABLE `surat` (
+  `id_surat` int(20) NOT NULL,
+  `no_surat` varchar(200) NOT NULL,
+  `jenis` varchar(100) NOT NULL,
+  `perihal` varchar(250) NOT NULL,
+  `kepada` varchar(100) NOT NULL,
+  `tujuan` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data for table `surat`
+--
+
+INSERT INTO `surat` (`id_surat`, `no_surat`, `jenis`, `perihal`, `kepada`, `tujuan`) VALUES
+(1, '123/pab/2022', 'Surat Masuk', 'Undangan', 'WR3', 'undangnb');
 
 --
 -- Indexes for dumped tables
@@ -177,9 +251,21 @@ ALTER TABLE `blog`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `inventaris`
+--
+ALTER TABLE `inventaris`
+  ADD PRIMARY KEY (`id_inventaris`);
+
+--
 -- Indexes for table `kas`
 --
 ALTER TABLE `kas`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `kegiatan`
+--
+ALTER TABLE `kegiatan`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -195,6 +281,12 @@ ALTER TABLE `proker`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `surat`
+--
+ALTER TABLE `surat`
+  ADD PRIMARY KEY (`id_surat`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -208,7 +300,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `anggota`
 --
 ALTER TABLE `anggota`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `blog`
@@ -217,10 +309,22 @@ ALTER TABLE `blog`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
+-- AUTO_INCREMENT for table `inventaris`
+--
+ALTER TABLE `inventaris`
+  MODIFY `id_inventaris` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `kas`
 --
 ALTER TABLE `kas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
+--
+-- AUTO_INCREMENT for table `kegiatan`
+--
+ALTER TABLE `kegiatan`
+  MODIFY `id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `ketum`
@@ -232,7 +336,13 @@ ALTER TABLE `ketum`
 -- AUTO_INCREMENT for table `proker`
 --
 ALTER TABLE `proker`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `surat`
+--
+ALTER TABLE `surat`
+  MODIFY `id_surat` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

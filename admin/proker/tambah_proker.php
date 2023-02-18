@@ -1,16 +1,23 @@
+
 <?php
 // memanggil file koneksi.php untuk melakukan koneksi database
 include 'koneksi.php';
 session_start();	
-	
-$nama_proker = isset($_POST['nama_proker']) ? $_POST['nama_proker'] : '';
-$stat= isset($_POST['stat']) ? $_POST['stat'] : '';
+
+
+$nama = isset($_POST['nama_kegiatan']) ? $_POST['nama_kegiatan'] : '';
+$tanggal = isset($_POST['tanggal']) ? $_POST['tanggal'] : '';
+$waktu = isset($_POST['waktu']) ? $_POST['waktu'] : '';
+$tempat= isset($_POST['tempat']) ? $_POST['tempat'] : '';
+$pemateri= isset($_POST['pemateri']) ? $_POST['pemateri'] : '';
 $divisi= isset($_POST['divisi']) ? $_POST['divisi'] : '';
+$keterangan = isset($_POST['keterangan']) ? $_POST['keterangan'] : '';
 
 
-$query = "INSERT INTO proker (nama_proker,stat,divisi) VALUES ('$nama_proker', '$stat', '$divisi')";
+
+$query = "INSERT INTO proker (nama_kegiatan, tanggal, waktu,tempat,pemateri,divisi, keterangan) VALUES ('$nama', '$tanggal', '$waktu', '$tempat','$pemateri','$divisi','$keterangan')";
 $result = mysqli_query($kon, $query);
-
+                  // periska query apakah ada error
 // $jumlah = mysqli_num_rows($result);
 
 if(!$result){
@@ -19,24 +26,5 @@ if(!$result){
 } else {                      
 echo "<script>alert('Data berhasil ditambah.');window.location='../proker.php';</script>";
 }
+      
             
-
-// if ($jumlah>0) {
-// 	$row = mysqli_fetch_assoc($hasil);
-// 	$_SESSION['id'] = $data['id'];
-// 	$_SESSION['nama'] = $username;
-// 	$_SESSION['no_anggota'] = $nomer;
-//     $_SESSION['lahir'] = $lahir;
-// 	$_SESSION['nomer_hp'] = $nomer;
-//     $_SESSION['prodi'] = $prodi;
-// 	$_SESSION['alamat'] = $alamat;
-//     $_SESSION['jabatan'] = $jabatan;
-//     echo "<script>alert('Data berhasil ditambah.');window.location='../anggota.php';</script>";
-
-// else{
-//     echo "<script>alert('Data Gagal ditambah.');</script>";
-// }
-
-
-
-

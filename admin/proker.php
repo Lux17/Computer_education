@@ -1,13 +1,13 @@
 <?php
 include('../koneksi.php'); 
-session_start();   
+session_start();
 if(isset($_COOKIE['ceadmin'])&&$_COOKIE['ceadmin']=="asjbmbnsugaldsks22"){
     echo "";
     }else{
         session_unset();
-        session_destroy();  
+        session_destroy(); 
         header("Location:../index.php");
-    }     
+    }
 ?>
 
 <!DOCTYPE html>
@@ -33,6 +33,7 @@ if(isset($_COOKIE['ceadmin'])&&$_COOKIE['ceadmin']=="asjbmbnsugaldsks22"){
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
+
 </head>
 
 
@@ -47,7 +48,7 @@ if(isset($_COOKIE['ceadmin'])&&$_COOKIE['ceadmin']=="asjbmbnsugaldsks22"){
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard.php">
                 <div class="sidebar-brand-icon">
-                    <img src="../assets/img/favicon1.png" alt="" width="43" height="45" class="d-inline-block align-text-top">
+                <img src="../assets/img/favicon1.png" alt="" width="43" height="45" class="d-inline-block align-text-top">
                 </div>
                 <div class="sidebar-brand-text mx-3">Computer Education </div>
             </a>
@@ -55,12 +56,12 @@ if(isset($_COOKIE['ceadmin'])&&$_COOKIE['ceadmin']=="asjbmbnsugaldsks22"){
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
-           <!-- Nav Item - Dashboard -->
-           <li class="nav-item">
+        <!-- Nav Item - Dashboard -->
+        <li class="nav-item">
                 <a class="nav-link" href="dashboard.php">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
-            </li>
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>Dashboard</span></a>
+        </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider">
@@ -121,6 +122,8 @@ if(isset($_COOKIE['ceadmin'])&&$_COOKIE['ceadmin']=="asjbmbnsugaldsks22"){
                     <i class="fas fa-fw fa-check-circle"></i>
                     <span>Kegiatan</span></a>
             </li>
+
+
             <li class="nav-item active">
                 <a class="nav-link" href="proker.php">
                     <i class="fas fa-fw fa-clipboard-check"></i>
@@ -137,7 +140,7 @@ if(isset($_COOKIE['ceadmin'])&&$_COOKIE['ceadmin']=="asjbmbnsugaldsks22"){
                     <i class="fas fa-fw fa-upload"></i>
                     <span>File</span></a>
             </li>
-            <!-- Nav Item - Tables -->
+            <!-- Nav Item - Tables -->  
             <li class="nav-item">
                 <a class="nav-link" href="blog.php">
                     <i class="fas fa-fw fa-globe"></i>
@@ -162,7 +165,6 @@ if(isset($_COOKIE['ceadmin'])&&$_COOKIE['ceadmin']=="asjbmbnsugaldsks22"){
             </div>
 
 
-
         </ul>
         <!-- End of Sidebar -->
 
@@ -180,35 +182,9 @@ if(isset($_COOKIE['ceadmin'])&&$_COOKIE['ceadmin']=="asjbmbnsugaldsks22"){
                         <i class="fa fa-bars"></i>
                     </button>
 
-
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
-                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-                        <li class="nav-item dropdown no-arrow d-sm-none">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-search fa-fw"></i>
-                            </a>
-                            <!-- Dropdown - Messages -->
-                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                aria-labelledby="searchDropdown">
-                                <form class="form-inline mr-auto w-100 navbar-search">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-0 small"
-                                            placeholder="Search for..." aria-label="Search"
-                                            aria-describedby="basic-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-primary" type="button">
-                                                <i class="fas fa-search fa-sm"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </li>
-
-                      
                         <div class="topbar-divider d-none d-sm-block"></div>
 
                         <!-- Nav Item - User Information -->
@@ -216,7 +192,7 @@ if(isset($_COOKIE['ceadmin'])&&$_COOKIE['ceadmin']=="asjbmbnsugaldsks22"){
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">                               
-                                 <?php
+                                <?php
                                 echo $_SESSION['username'];
                                 ?>
                                 </span>
@@ -227,13 +203,13 @@ if(isset($_COOKIE['ceadmin'])&&$_COOKIE['ceadmin']=="asjbmbnsugaldsks22"){
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="#">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profile
+                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Profile
                                 </a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="logout.php" data-toggle="modal" data-target="#logoutModal">
-                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
+                                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Logout
                                 </a>
                             </div>
                         </li>
@@ -248,25 +224,33 @@ if(isset($_COOKIE['ceadmin'])&&$_COOKIE['ceadmin']=="asjbmbnsugaldsks22"){
 
                     <!-- Page Heading -->
                     <h1 class="h3 mb-2 text-gray-800">Program Kerja</h1>
-                    <p class="mb-4">List Program Kerja Computer Education</p>
+                    <p class="mb-4">List Program Kerja Computer Education.</p>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-success">Program Kerja</h6>
-                        </div>
+                        <h6 class="m-0 font-weight-bold text-success">Data Tabel Program Kerja</h6>
+                    </div>
 
-                        <div class="table-responsive">
+                
+                        <div class="card-body">
+                            <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                        <center><h3>Program Kerja</h3>
-                                           
-                                                         <!-- Button trigger modal -->
+<!-- Button trigger modal -->
+
+
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
 <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
-  Tambah
+Tambah 
 </button>
-</center>
-    <br>
-                   <!-- Modal -->
+                
+                    </div>
+                    <a href="export_proker.php" class="d-sm-inline-block btn btn-sm btn-success shadow-sm"><i
+                        class="fas fa-download fa-sm text-white-50"></i> Download</a>
+
+
+
+<!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -279,39 +263,61 @@ if(isset($_COOKIE['ceadmin'])&&$_COOKIE['ceadmin']=="asjbmbnsugaldsks22"){
             <div class="modal-body">
             <form method="POST" action="proker/tambah_proker.php" enctype="multipart/form-data" >
                         <section class="base align-items-center ">
-                            
-                        <div class="row mb-3">
-                            <label for="Nama Proker" class="col-sm-3 col-form-label">Nama Proker</label>
+                            <div class="row mb-3">
+                            <label for="Nama" class="col-sm-3 col-form-label">Nama Kegiatan</label>
                             <div class="col-sm-8">
-                            <input type="text" class="form-control"  name="nama_proker" autofocus="" required="" />
+                            <input type="text" class="form-control" name="nama_kegiatan" autofocus="" required=""  />
                             </div>
                             </div>
 
-                            
                             <div class="row mb-3">
-                            <label class="col-sm-3">Status</label>
-                            <div class="input-group col-sm-8">
-                            <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="stat" >
-                                    <option selected>Pilih...</option>
-                                    <option value="Soon">Soon</option>
-                                    <option value="On Progress">On Progress</option>
-                                    <option  value="Finish">Finish</option>
-                                    
-                            </select>
-                            <div class="input-group-append">
+                            <label for="TTL" class="col-sm-3 col-form-label">Tanggal</label>
+                            <div class="col-sm-8">
+                            <input type="date"  class="form-control"  name="tanggal" required="" />
                             </div>
                             </div>
+
+                            <div class="row mb-3">
+                            <label for="waktu" class="col-sm-3 col-form-label">Waktu</label>
+                            <div class="col-sm-8">
+                            <input type="text" class="form-control" name="waktu" required="" />
                             </div>
-                   
+                            </div>
+
+                            <div class="row mb-3">
+                            <label for="tempat" class="col-sm-3 col-form-label">Tempat</label>
+                            <div class="col-sm-8">
+                            <textarea type="text" class="form-control" name="tempat" required="" > </textarea>
+                            </div>
+                            </div>
+
+                            <div class="row mb-3">
+                            <label for="tempat" class="col-sm-3 col-form-label">Pemateri</label>
+                            <div class="col-sm-8">
+                            <textarea type="text" class="form-control" name="pemateri" required="" > </textarea>
+                            </div>
+                            </div>
+
                             <div class="row mb-3">
                             <label class="col-sm-3">Divisi</label>
                             <div class="input-group col-sm-8">
                                 <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="divisi" required="" >
-                                <option selected>Pilih...</option>
-                                <option value="Organisasi">Organisasi</option>
-                                <option  value="Komputer">Komputer</option>
-                                <option  value="BPH">BPH</option>
+                                <option selected value="">Pilih...</option> 
+                                <option value="Divisi Komputer">Divisi Komputer</option>
+                                <option  value="Divisi Organisasi">Divisi Organisasi</option>
+                                </select>
+                                <div class="input-group-append">
+                            </div>
+                            </div>
+                            </div>
 
+                            <div class="row mb-3">
+                            <label class="col-sm-3">Keterangan</label>
+                            <div class="input-group col-sm-8">
+                                <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="keterangan" required="" >
+                                <option selected value="">Pilih...</option> 
+                                <option value="Terlaksana">Terlaksana</option>
+                                <option  value="Tidak Terlaksana">Tidak Terlaksana</option>
                                 </select>
                                 <div class="input-group-append">
                             </div>
@@ -323,61 +329,80 @@ if(isset($_COOKIE['ceadmin'])&&$_COOKIE['ceadmin']=="asjbmbnsugaldsks22"){
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Tutup</button>
-                <button type="submit" class="btn btn-primary">Simpan</button>
+                <button type="submit" name="simpan" class="btn btn-primary">Simpan</button>
             </div>
             </form>
             </div>
         </div>
         </div>
-                    <br/>
 
-                    <table class="table table-hover">
 
-                    <thead>
-                        <tr>
-                        <th scope="col">No</th>
-                        <th scope="col">Nama Proker</th>
-                        <th scope="col">Divisi</th>
-                        <th scope="col">Status</th>
-                        <th scope="col"></th>
-                   
-                        </tr>
-                    </thead>
-                    <tbody>
-                    <?php
-                    // jalankan query untuk menampilkan semua data diurutkan berdasarkan nim
-                    $query = "SELECT * FROM proker ORDER BY id ASC";
-                    $result = mysqli_query($kon, $query);
-                    //mengecek apakah ada error ketika menjalankan query
-                    if(!$result){
-                        die ("Query Error: ".mysqli_errno($kon).
-                        " - ".mysqli_error($kon));
-                    }
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Nama</th>
+                                            <th>Tanggal</th>
+                                            <th>Waktu</th>
+                                            <th>Tempat</th>
+                                            <th>Pemateri</th>
+                                            <th>Divisi</th>
+                                            <th>Keterangan</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                        <th>No</th>
+                                            <th>Nama</th>
+                                            <th>Tanggal</th>
+                                            <th>Waktu</th>
+                                            <th>Tempat</th>
+                                            <th>Pemateri</th>
+                                            <th>Divisi</th>
+                                            <th>Keterangan</th>
+                                            <th></th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                    <?php
 
-                    //buat perulangan untuk element tabel dari data mahasiswa
-                    $no = 1; //variabel untuk membuat nomor urut
-                    // hasil query akan disimpan dalam variabel $data dalam bentuk array
-                    // kemudian dicetak dengan perulangan while
-                    while($row = mysqli_fetch_assoc($result))
-                    {
-                    ?>
-                    <tr>
-                        <td  scope="row"><?php echo $no; ?></td>
-                        <td  scope="row"><?php echo $row['nama_proker']; ?></td>
-                        <td  scope="row"><?php echo $row['divisi'];?></td>
-                        <td  scope="row"><?php echo $row['stat'];?></td>
-                       
-                    
-                        <td  scope="row">
-                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal<?php echo $row['id'];?>">
-                            Edit
-                            </button>
-   
+                           // jalankan query untuk menampilkan semua data diurutkan berdasarkan 
+                        $query = "SELECT * FROM proker ORDER BY id ASC";
+                        $result = mysqli_query($kon, $query);
+                           //mengecek apakah ada error ketika menjalankan query
+                        if(!$result){
+                            die ("Query Error: ".mysqli_errno($kon).
+                            " - ".mysqli_error($kon));
+                        }
+
+                           //buat perulangan untuk element tabel dari data mahasiswa
+                           $no = 1; //variabel untuk membuat nomor urut
+                           // hasil query akan disimpan dalam variabel $data dalam bentuk array
+                           // kemudian dicetak dengan perulangan while
+                        while($row = mysqli_fetch_assoc($result))
+                        {
+                        ?>
+                                    <tr>
+                                        <td><?php echo $no; ?></td>
+                                        <td><?php echo $row['nama_kegiatan']; ?></td>
+                                        <td><?php echo $row['tanggal']; ?></td>
+                                        <td><?php echo $row['waktu']; ?></td>
+                                        <td><?php echo $row['tempat'];?></td>
+                                        <td><?php echo $row['pemateri'];?></td>
+                                        <td><?php echo $row['divisi'];?></td>
+                                        <td><?php echo $row['keterangan']; ?></td>
+
+                                        
+
+                                        <td>
+        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal<?php echo $row['id'];?>">
+        Edit
+        </button>
         <div class="modal fade" id="exampleModal<?php echo $row['id'];?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Edit Kas</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Edit Anggota</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>
@@ -387,70 +412,103 @@ if(isset($_COOKIE['ceadmin'])&&$_COOKIE['ceadmin']=="asjbmbnsugaldsks22"){
             
                         <section class="base align-items-center ">
                         <div>
-                        
                             <input type="hidden" value="<?php echo $row['id']; ?>" name="id" required="" />
-                            </div>
+                        </div>
+                        <div class="row mb-3">
+                        <label for="Nama" class="col-sm-3 col-form-label">Nama Kegiatan</label>
+                        <div class="col-sm-8">
+                        <input type="text" class="form-control" value="<?php echo $row['nama_kegiatan']; ?>" name="nama_kegiatan" autofocus="" required="" />
+                        </div>
+                        </div>
 
-                            <div class="row mb-3">
-                            <label for="Nama Proker" class="col-sm-3 col-form-label">Nama Proker</label>
-                            <div class="col-sm-8">
-                            <input type="text" class="form-control" value="<?php echo $row['nama_proker']; ?>" name="nama_proker" autofocus="" required=""  />
-                            </div>
-                            </div>
+
+                        <div class="row mb-3">
+                        <label for="TTL" class="col-sm-3 col-form-label">Tanggal</label>
+                        <div class="col-sm-8">
+                        <input type="date"  class="form-control"  value="<?php echo $row['tanggal']; ?>" name="tanggal" required="" />
+                        </div>
+                        </div>
+
+                        <div class="row mb-3">
+                        <label for="waktu" class="col-sm-3 col-form-label">Waktu</label>
+                        <div class="col-sm-8">
+                        <input type="text" class="form-control" value="<?php echo $row['waktu']; ?>" name="waktu" required="" />
+                        </div>
+                        </div>
+
+                        <div class="row mb-3">
+                        <label for="tempat" class="col-sm-3 col-form-label">Tempat</label>
+                        <div class="col-sm-8">
+                        <textarea type="text" class="form-control" value="<?php echo $row['tempat']; ?>" name="tempat" required="" ><?php echo $row['tempat']; ?></textarea>
+                        </div>
+                        </div>
+
+                        <div class="row mb-3">
+                        <label for="tempat" class="col-sm-3 col-form-label">Pemateri</label>
+                        <div class="col-sm-8">
+                        <textarea type="text" class="form-control" value="<?php echo $row['pemateri']; ?>" name="pemateri" required="" ><?php echo $row['pemateri']; ?></textarea>
+                        </div>
+                        </div>
 
 
-                            
-                            <div class="row mb-3">
-                            <label class="col-sm-3">Status</label>
-                            <div class="input-group col-sm-8">
-                            <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="stat" >
-                                    <option selected value="<?php echo $row['stat']; ?>"><?php echo $row['stat']; ?></option>
-                                    <option value="Soon">Soon</option>
-                                    <option value="On Progress">On Progress</option>
-                                    <option  value="Finish">Finish</option>
-                                    
-                            </select>
-                            <div class="input-group-append">
-                            </div>
-                            </div>
-                            </div>
-                   
-                            <div class="row mb-3">
+                        <div class="row mb-3">
                             <label class="col-sm-3">Divisi</label>
                             <div class="input-group col-sm-8">
                                 <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="divisi" required="" >
                                 <option selected value="<?php echo $row['divisi']; ?>"><?php echo $row['divisi']; ?></option> 
-                                <option value="Organisasi">Organisasi</option>
-                                <option  value="Komputer">Komputer</option>
-                                <option  value="BPH">BPH</option>
-
+                                <option value="Divisi Komputer">Divisi Komputer</option>
+                                <option  value="Divisi Organisasi">Divisi Organisasi</option>
                                 </select>
                                 <div class="input-group-append">
                             </div>
                             </div>
                             </div>
+
+
+                        <div class="row mb-3">
+                            <label class="col-sm-3">Keterangan</label>
+                            <div class="input-group col-sm-8">
+                                <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" name="keterangan" required="" >
+                                <option selected value="<?php echo $row['keterangan']; ?>"><?php echo $row['keterangan']; ?></option> 
+                                <option value="Terlaksana">Terlaksana</option>
+                                <option  value="Tidak Terlaksana">Tidak Terlaksana</option>
+                                </select>
+                                <div class="input-group-append">
+                            </div>
+                            </div>
+                            </div>
+
                         </section>
                         
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Tutup</button>
-                <button type="submit" class="btn btn-primary">Simpan</button>
+                <button type="submit"  class="btn btn-primary">Simpan</button>
             </div>
             </form>
             </div>
         </div>
         </div>
-                            <a href="proker/hapus_proker.php?id=<?php echo $row['id']; ?>" onclick="return confirm('Anda yakin akan menghapus data ini?')">Hapus</a>
-                        </td>
-                    </tr>
-                        
-                    <?php
-                        $no++; //untuk nomor urut terus bertambah 1
-                    }
-                    ?>
-                    </tbody>
-                    </table>
+                                        |
+                                            <a  href="proker/hapus_proker.php?id=<?php echo $row['id']; ?>" onclick="return confirm('Anda yakin akan menghapus data ini?')">Hapus</a>
+                                        </td>
+                                    </tr>
+                                        
+                                    <?php
+                                        $no++; //untuk nomor urut terus bertambah 1
+                                    }
+                                    ?>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
 
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
@@ -492,6 +550,8 @@ if(isset($_COOKIE['ceadmin'])&&$_COOKIE['ceadmin']=="asjbmbnsugaldsks22"){
             </div>
         </div>
     </div>
+
+
 
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
