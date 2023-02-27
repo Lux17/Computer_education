@@ -3,9 +3,11 @@ session_start();
 include "koneksi.php";
 
 // pemeriksaan menggunakan fungsi isset()
-$username = isset($_POST['username']) ? $_POST['username'] : '';
-// pemeriksaan menggunakan fungsi empty()
-$password = isset($_POST['password']) ? sha1($_POST['password']) : '';
+// $username = isset($_POST['username']) ? $_POST['username'] : '';
+// // pemeriksaan menggunakan fungsi empty()
+// $password = isset($_POST['password']) ? sha1($_POST['password']) : '';
+$username = mysqli_real_escape_string($kon,$_POST['username']);
+$password = mysqli_real_escape_string($kon,sha1($_POST['password']));
 
 $sql = "select * from admin where username='$username' and password='$password'";
 $hasil = mysqli_query ($kon,$sql);

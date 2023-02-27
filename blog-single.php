@@ -105,23 +105,35 @@ include('koneksi.php');
             <article class="entry entry-single">
             <?php
 
-            $id = $_GET['id'];
+            // $id = $_GET['id'];
              
-             // jalankan query untuk menampilkan semua data diurutkan berdasarkan 
-             $query = "SELECT * FROM blog WHERE id='$id'";
-             $result = mysqli_query($kon, $query);
-             //mengecek apakah ada error ketika menjalankan query
-             if(!$result){
-                 die ("Query Error: ".mysqli_errno($kon).
-                 " - ".mysqli_error($kon));
-             }
+            //  // jalankan query untuk menampilkan semua data diurutkan berdasarkan 
+            //  $query = "SELECT * FROM blog WHERE id='$id'";
+            if (is_numeric($_GET['id']) && abs($_GET['id']) == $_GET['id']) {
+              $query = "SELECT * FROM blog WHERE id = ".$_GET['id'];
+              $result = mysqli_query($kon, $query);
+              //mengecek apakah ada error ketika menjalankan query
+
+
+              $no = 1; //variabel untuk membuat nomor urut
+              // hasil query akan disimpan dalam variabel $data dalam bentuk array
+              // kemudian dicetak dengan perulangan while
+           } else {
+              echo "Sorry, only positive integers allowed here!";
+           }
+
+
+
+           if(!$result){
+            die ("Query Error: ".mysqli_errno($kon).
+            " - ".mysqli_error($kon));
+            }
+
+           while($row = mysqli_fetch_assoc($result))
+           {
 
              //buat perulangan untuk element tabel dari data mahasiswa
-             $no = 1; //variabel untuk membuat nomor urut
-             // hasil query akan disimpan dalam variabel $data dalam bentuk array
-             // kemudian dicetak dengan perulangan while
-             while($row = mysqli_fetch_assoc($result))
-             {
+
              ?>
               <center>
               <div class="entry-img">
