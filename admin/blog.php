@@ -167,6 +167,11 @@
                     <i class="fas fa-fw fa-globe"></i>
                     <span>Blog</span></a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="sertif.php">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Sertifikat</span></a>
+            </li>
             <!-- Nav Item - Tables -->  
 
             <!-- Divider -->
